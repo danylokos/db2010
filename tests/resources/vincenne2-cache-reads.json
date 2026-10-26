@@ -1,0 +1,347 @@
+{
+  "source_main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+  "table": 1159263260,
+  "switch_branch_table": 1152181588,
+  "skipped_indices": [
+    1,
+    2,
+    3,
+    18,
+    24,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    41,
+    42,
+    43,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "reads": [
+    {
+      "index": 0,
+      "register": 32,
+      "value": 227,
+      "hypothesis": "sibling ID"
+    },
+    {
+      "index": 4,
+      "register": 36,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 5,
+      "register": 37,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 6,
+      "register": 38,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 7,
+      "register": 39,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 8,
+      "register": 54,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 9,
+      "register": 55,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 10,
+      "register": 56,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 11,
+      "register": 64,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 12,
+      "register": 65,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 13,
+      "register": 66,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 14,
+      "register": 67,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 15,
+      "register": 68,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 16,
+      "register": 69,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 17,
+      "register": 80,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 19,
+      "register": 96,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 20,
+      "register": 97,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 21,
+      "register": 98,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 22,
+      "register": 99,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 23,
+      "register": 112,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 25,
+      "register": 114,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 26,
+      "register": 115,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 34,
+      "register": 132,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 35,
+      "register": 134,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 36,
+      "register": 135,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 37,
+      "register": 136,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 38,
+      "register": 137,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 39,
+      "register": 144,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 40,
+      "register": 145,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 44,
+      "register": 160,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 45,
+      "register": 161,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 46,
+      "register": 176,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 52,
+      "register": 182,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 53,
+      "register": 183,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 54,
+      "register": 184,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 55,
+      "register": 185,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 56,
+      "register": 192,
+      "value": "last-write",
+      "hypothesis": "explicit write latch"
+    },
+    {
+      "index": 57,
+      "register": 193,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 58,
+      "register": 194,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 59,
+      "register": 195,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 60,
+      "register": 196,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 61,
+      "register": 197,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 62,
+      "register": 198,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 63,
+      "register": 199,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 64,
+      "register": 200,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 65,
+      "register": 201,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 66,
+      "register": 202,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 67,
+      "register": 203,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 68,
+      "register": 204,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 69,
+      "register": 205,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 70,
+      "register": 206,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 71,
+      "register": 207,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    },
+    {
+      "index": 72,
+      "register": 208,
+      "value": 0,
+      "hypothesis": "explicit zero byte, no physical/reset/read-clear claim"
+    }
+  ]
+}

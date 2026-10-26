@@ -1,0 +1,93 @@
+{
+  "policy": "Maintained native-QEMU fixture adaptations; reference CPU adapter and research artifact reads removed. Original identities below are provenance only. Pure device oracles separately retain exact source bytes.",
+  "sources": {
+    "startup_status_fixtures.py": {
+      "original_source": "tools/qemu/startup_status_fixtures.py",
+      "sha256": "97231a3d4375060dfab8ac95a5582c8a589a971c80faabfcf541e4858d533ee1"
+    },
+    "dsp_peer_fixtures.py": {
+      "original_source": "tools/qemu/dsp_peer_fixtures.py",
+      "sha256": "f4ded251841ea9f71b177f56b0cf0718fc4dbd716abf6c8f9d57c52e4abfda58"
+    },
+    "component_test.py": {
+      "original_source": "tools/qemu/component_test.py",
+      "sha256": "2b8f81cab317ade355210452b9c4db590606bd05c97f8b0bdcee47f90d5add94"
+    },
+    "cpu_clock_fixtures.py": {
+      "original_source": "tools/qemu/cpu_clock_fixtures.py",
+      "sha256": "a073f3d7cc4cc5613ed623c0d5d1d2d12b051a356529896de36a7b6774bbb7aa"
+    },
+    "fa_transfer_fixtures.py": {
+      "original_source": "tools/qemu/fa_transfer_fixtures.py",
+      "sha256": "1835ae9a09ef2833daa076ace38cda7f856cbf117d7ac8c273a78891c4f8ed1a"
+    },
+    "lcd_partial_fixtures.py": {
+      "original_source": "tools/qemu/lcd_partial_fixtures.py",
+      "sha256": "19ed2594cbb95f94946d849f1df748e95072f2e20951c7d7d6a8811aa4f26a8d"
+    },
+    "kgen_candidate.py": {
+      "original_source": "tools/qemu/kgen_candidate.py",
+      "sha256": "0d09fff4b7bbb8fff262d05c76dcdc8bceb925eaacc5d7595a82b5372e2a31ae"
+    },
+    "kgen_fixtures.py": {
+      "original_source": "tools/qemu/kgen_fixtures.py",
+      "sha256": "eebbe1cffca16af8fb7f92ac30bd2b354907f82fe4383cd957f0876bed2931cf"
+    },
+    "terminal.py": {
+      "original_source": "tools/qemu/live_console_audit.py",
+      "sha256": "b317e65cc8fa4aa09e55062c2553348e9bb8fe71f98324ae6a415a10d2fcd56f"
+    },
+    "fixtures.py": {
+      "original_source": "tools/qemu/fixtures.py",
+      "sha256": "3d9a0cedaef9f62d506dd87355ce1c8d5ec623ee456916efe0c6e83dcee20d37"
+    },
+    "i2c_interleave_fixtures.py": {
+      "original_source": "tools/qemu/i2c_interleave_fixtures.py",
+      "sha256": "36c263a70236f85f560fd95f07a521680fa9725e439210c80b433b676e5f86c8"
+    },
+    "fm_radio_fixtures.py": {
+      "original_source": "tools/qemu/fm_radio_fixtures.py",
+      "sha256": "a72d32c223d5bbced54db710a6b90fe4f4d5ca666b3488a7aaa47fcefcf01e60"
+    },
+    "fa_dma_fixtures.py": {
+      "original_source": "tools/qemu/fa_dma_fixtures.py",
+      "sha256": "39b65e18eb7248bc280fe01810b1bc39e6f9bd54db155a58dac90635f3444c46"
+    },
+    "etx_fixtures.py": {
+      "original_source": "tools/qemu/etx_fixtures.py",
+      "sha256": "b8b89a8c6f420b62e6398515dd44f97553b3b9ab8456c2ad87f52c5ed80c7915"
+    },
+    "mma_mode_fixtures.py": {
+      "original_source": "tools/qemu/mma_mode_fixtures.py",
+      "sha256": "31a89e511afeedd36f8127b008947779f9b35beeee3c071253cec3fc1a3923ad"
+    },
+    "audio_control_fixtures.py": {
+      "original_source": "tools/qemu/audio_control_fixtures.py",
+      "sha256": "5208435598e258999227ff9b505fd280c81269aab94683320b41675d2f8ccc23"
+    },
+    "nor_fixtures.py": {
+      "original_source": "tools/qemu/nor_fixtures.py",
+      "sha256": "0d0b4e24d31aac266b3dfe59acbb2e2bfa17d6dafae35c550ac6904c7a09c1e7"
+    },
+    "kgen_final_fixtures.py": {
+      "original_source": "tools/qemu/kgen_final_fixtures.py",
+      "sha256": "ef7a4f5803a0ae2c0819a16ada1dcc623e172f020d37b9e763bdf0020aa79143"
+    },
+    "checkpoint_audit.py": {
+      "original_source": "tools/qemu/checkpoint_audit.py",
+      "sha256": "76bf9c4aa7eb3413c2ae8a0c743b8f3821ada1d0716f1448370a591af04427bb"
+    },
+    "fa_wire10_fixtures.py": {
+      "original_source": "tools/qemu/fa_wire10_fixtures.py",
+      "sha256": "e1bc1f2eda60a2e4cd0eb7e40aefbd75330bf0df478993edff97600db330602c"
+    },
+    "fa_modexp_fixtures.py": {
+      "original_source": "tools/qemu/fa_modexp_fixtures.py",
+      "sha256": "27d68e517a72fa00cb2aa78a7bbbc7cfd5b5600d1af1d49c8cd2f8bfcdc7b786"
+    },
+    "mma_ring_fixtures.py": {
+      "original_source": "tools/qemu/mma_ring_fixtures.py",
+      "sha256": "70b45ba2e4cc3386026db4bb4be113f7890e60983fe08d717b1e716e50d0d68c"
+    }
+  }
+}

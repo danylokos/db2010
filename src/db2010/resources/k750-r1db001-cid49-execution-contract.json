@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "payload_sha256": "50fa19d1de377197b7312b87f37ebac6c2895276c1ef9440e95705171386e635",
+  "semantics": "Expected original MAIN bytes at approved RAM fetches; proof bytes do not seed RAM.",
+  "mappings": [
+    {
+      "address": 1275068416,
+      "source": 1140990976,
+      "size": 36008,
+      "sha256": "83d4678df271d1688a8092d92a5ab590caa83862790ceae85fdbde8962e22eac"
+    }
+  ],
+  "provenance": {
+    "run": "artifacts/0269-k750-cid49-prefix-v5",
+    "trace": {
+      "size_bytes": 345438,
+      "sha256": "f200e516d94d47957bcf562c01c0abc43460686b7128449909706d2f92dfb276"
+    },
+    "bus": {
+      "size_bytes": 333401,
+      "sha256": "5c55a86f7fa51a52b1164ef9e327ded52e88023a89a3725e54816a657224c0b9"
+    },
+    "seal": {
+      "size_bytes": 4018,
+      "sha256": "450ebb08a302c4be24e45f2e9bff3f0fe5bc73a07663cee89707134abe4ac405"
+    },
+    "copy_halfwords": 18004,
+    "first_write_event": 1529,
+    "last_write_event": 55538,
+    "first_write_index": 3367,
+    "last_write_index": 129388,
+    "load_pc": 1140988714,
+    "store_pc": 1140988718,
+    "verification": "Every paired original MAIN load and RAM store matches; no other stores target this aperture."
+  }
+}

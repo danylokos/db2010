@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>W800i · DB2010</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+  <script type="module" src="/audio-client.js"></script>
+  <script src="/files.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="app-bar">
+    <dl class="runtime-stats" aria-label="Execution statistics">
+      <div class="metric"><dt>Elapsed</dt><dd class="elapsed-value"><span id="connection" class="connection-dot connecting" role="status" aria-label="Connecting" title="Connecting"></span><span id="elapsed">0.0 s</span></dd></div>
+      <div class="metric"><dt>Instructions</dt><dd id="observations">—</dd></div>
+      <div class="metric"><dt>Rate</dt><dd id="rate">—</dd></div>
+      <div class="metric"><dt>PC</dt><dd id="pc">—</dd></div>
+    </dl>
+    <p id="outcome" role="status"></p>
+  </header>
+
+  <nav class="mobile-tabs" role="tablist" aria-label="Workspace">
+    <button id="tab-phone" type="button" role="tab" aria-controls="phone-panel" aria-selected="true">Phone</button>
+    <button id="tab-files" type="button" role="tab" aria-controls="files-panel" aria-selected="false" tabindex="-1">Files</button>
+  </nav>
+
+  <section class="workspace" data-mobile-view="phone" aria-label="Phone and files">
+    <div class="phone-view" id="phone-panel">
+    <div class="view-controls">
+      <button type="button" id="front-view" hidden>Front view</button>
+    </div>
+    <div class="handset" id="handset" tabindex="0" role="group" aria-label="W800i keypad">
+      <div id="three-stage">
+        <span id="unknown" role="status" aria-label="Waiting for display"></span>
+      </div>
+      <p id="view-state" role="status">Loading 3D…</p>
+      <canvas id="lcd" width="176" height="220" hidden></canvas>
+      <div class="keypad" aria-label="Handset contacts">
+        <button type="button" data-key="soft-left" aria-label="Left soft key" aria-pressed="false" title="Left soft key · Shift+Left" disabled>—</button>
+        <button type="button" data-key="walkman" aria-label="Walkman" aria-pressed="false" title="Walkman · Shift+Enter" disabled>W</button>
+        <button type="button" data-key="soft-right" aria-label="Right soft key" aria-pressed="false" title="Right soft key · Shift+Right" disabled>—</button>
+        <button type="button" data-key="back" aria-label="Back" aria-pressed="false" title="Back · Esc" disabled>↩</button>
+        <button type="button" data-key="up" aria-label="Joystick up" aria-pressed="false" title="Joystick up · Up" disabled>▲</button>
+        <button type="button" data-key="left" aria-label="Joystick left" aria-pressed="false" title="Joystick left · Left" disabled>◀</button>
+        <button type="button" data-key="select" aria-label="Joystick press" aria-pressed="false" title="Joystick press · Enter" disabled>●</button>
+        <button type="button" data-key="right" aria-label="Joystick right" aria-pressed="false" title="Joystick right · Right" disabled>▶</button>
+        <button type="button" data-key="down" aria-label="Joystick down" aria-pressed="false" title="Joystick down · Down" disabled>▼</button>
+        <button type="button" data-key="clear" aria-label="Clear" aria-pressed="false" title="Clear · Backspace" disabled>C</button>
+        <button type="button" data-key="1" aria-label="Number 1" aria-pressed="false" title="Number 1 · 1" disabled>1</button>
+        <button type="button" data-key="2" aria-label="Number 2" aria-pressed="false" title="Number 2 · 2" disabled>2</button>
+        <button type="button" data-key="3" aria-label="Number 3" aria-pressed="false" title="Number 3 · 3" disabled>3</button>
+        <button type="button" data-key="4" aria-label="Number 4" aria-pressed="false" title="Number 4 · 4" disabled>4</button>
+        <button type="button" data-key="5" aria-label="Number 5" aria-pressed="false" title="Number 5 · 5" disabled>5</button>
+        <button type="button" data-key="6" aria-label="Number 6" aria-pressed="false" title="Number 6 · 6" disabled>6</button>
+        <button type="button" data-key="7" aria-label="Number 7" aria-pressed="false" title="Number 7 · 7" disabled>7</button>
+        <button type="button" data-key="8" aria-label="Number 8" aria-pressed="false" title="Number 8 · 8" disabled>8</button>
+        <button type="button" data-key="9" aria-label="Number 9" aria-pressed="false" title="Number 9 · 9" disabled>9</button>
+        <button type="button" data-key="star" aria-label="Star" aria-pressed="false" title="Star · *" disabled>*</button>
+        <button type="button" data-key="0" aria-label="Number 0" aria-pressed="false" title="Number 0 · 0" disabled>0</button>
+        <button type="button" data-key="hash" aria-label="Hash" aria-pressed="false" title="Hash · #" disabled>#</button>
+        <button type="button" data-key="volume-up" aria-label="Volume up" aria-pressed="false" title="Volume up · Page Up" disabled>+</button>
+        <button type="button" data-key="volume-down" aria-label="Volume down" aria-pressed="false" title="Volume down · Page Down" disabled>−</button>
+        <button type="button" data-key="play-pause" aria-label="Play/pause" aria-pressed="false" title="Play/pause · Space" disabled>Play/pause</button>
+        <button type="button" data-key="camera-focus" aria-label="Camera half press" aria-pressed="false" title="Camera half press · Shift+C or Shift+click camera" disabled>Focus</button>
+        <button type="button" data-key="camera" aria-label="Camera full press" aria-pressed="false" title="Camera full press · C" disabled>Camera</button>
+        <button type="button" data-key="power" aria-label="Power" aria-pressed="false" title="Power · P" disabled>Power</button>
+      </div>
+    </div>
+    </div>
+    <aside class="files" id="files-panel" aria-labelledby="files-title">
+      <div class="files-heading"><div><h2 id="files-title">Files</h2><p id="files-state" role="status">Waiting for phone…</p></div><button id="files-connect" type="button" disabled>Connect</button><button id="files-disconnect" type="button" hidden>Disconnect</button></div>
+      <nav id="files-path" aria-label="Phone folders"><span>Phone</span></nav>
+      <div class="file-actions"><button id="files-up" type="button" disabled>Up</button><button id="files-refresh" type="button" disabled>Refresh</button><button id="files-upload" type="button" disabled>Upload file</button><input id="files-input" type="file" hidden></div>
+      <p id="files-error" role="alert" hidden></p>
+      <div class="file-list"><table><thead><tr><th scope="col">Name</th><th scope="col">Size</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead><tbody id="files-entries"><tr><td colspan="3">Connect to browse the phone.</td></tr></tbody></table></div>
+      <section id="file-transfer" aria-label="File transfer" hidden><div class="transfer-heading"><strong id="file-transfer-name"></strong><button id="file-cancel" type="button">Cancel</button></div><p id="file-transfer-state" role="status"></p><progress id="file-progress" max="1" value="0"></progress><p id="file-phone-approval" hidden>Confirm the transfer on the phone if prompted.</p><p id="file-hash"></p><a id="file-save" hidden>Save download</a></section>
+    </aside>
+  </section>
+
+  <details class="uart" open>
+    <summary>UART console</summary>
+    <div class="uart-content">
+      <div class="ports">
+        <div class="port-selection">
+          <label for="port">Port</label>
+          <select id="port">
+            <option value="0">UART 0 · FB060000</option>
+            <option value="1">UART 1 · FC040000</option>
+            <option value="2">UART 2 · FC030000 · Hex</option>
+            <option value="3">UART 3 · FB040000</option>
+          </select>
+          <span id="counts">0 bytes</span>
+        </div>
+        <span id="truncated"></span>
+      </div>
+      <pre id="uart" tabindex="0"></pre>
+    </div>
+  </details>
+</main>
+</body>
+</html>

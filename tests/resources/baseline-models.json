@@ -1,0 +1,1369 @@
+{
+  "nor_model": {
+    "address": 1140850688,
+    "size": 33554432,
+    "profile": "intel-l18-256m-top",
+    "manufacturer_id": 137,
+    "device_id": 34829,
+    "partition_size": 2097152,
+    "wp_high": true,
+    "initial_locked": true,
+    "completion": "synchronous",
+    "initial_array": "unknown",
+    "reserved_cfi_words": {
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0
+    },
+    "read_configuration_register": {
+      "profile": "l18-x16-address",
+      "initial_value": 49103
+    },
+    "mirrored_command_bytes": true,
+    "extended_cfi": "intel-l18-256m-top-v1.3",
+    "identifier_cfi": "root-10-34-compatibility-assumption",
+    "factory_unique_id": "0123456789abcdef"
+  },
+  "device_registers": [
+    {
+      "address": 4178116636,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-gating-control"
+    },
+    {
+      "address": 4178116638,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-transition-control"
+    },
+    {
+      "address": 4178116620,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-frequency-setup"
+    },
+    {
+      "address": 4178180096,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 1,
+      "name": "clock-completion-immediate"
+    },
+    {
+      "address": 4178116608,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-barrier-read"
+    },
+    {
+      "address": 4177592336,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0xaa",
+      "access": "write-only",
+      "allowed_writes": [
+        170
+      ]
+    },
+    {
+      "address": 4177592356,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0x5a",
+      "access": "write-only",
+      "allowed_writes": [
+        90
+      ]
+    },
+    {
+      "address": 4177592364,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0xa5",
+      "access": "write-only",
+      "allowed_writes": [
+        165
+      ]
+    },
+    {
+      "address": 4178116612,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090004"
+    },
+    {
+      "address": 4178116614,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090006"
+    },
+    {
+      "address": 4178116630,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090016"
+    },
+    {
+      "address": 4178116632,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090018"
+    },
+    {
+      "address": 4178116634,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf909001a"
+    },
+    {
+      "address": 4178116624,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090010"
+    },
+    {
+      "address": 4178116626,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090012"
+    },
+    {
+      "address": 4178116628,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090014"
+    },
+    {
+      "address": 4178116610,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090002"
+    },
+    {
+      "address": 4178116616,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090008"
+    },
+    {
+      "address": 4178116640,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090020"
+    },
+    {
+      "address": 4178116642,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090022"
+    },
+    {
+      "address": 4211212548,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020104"
+    },
+    {
+      "address": 4211212568,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020118"
+    },
+    {
+      "address": 4211212804,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020204"
+    },
+    {
+      "address": 4211212824,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020218"
+    },
+    {
+      "address": 4211213060,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020304"
+    },
+    {
+      "address": 4211213080,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020318"
+    },
+    {
+      "address": 4177592320,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "keyed-block-control"
+    },
+    {
+      "address": 4211212572,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-0"
+    },
+    {
+      "address": 4211212576,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-1"
+    },
+    {
+      "address": 4211212580,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-2"
+    },
+    {
+      "address": 4211212584,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-3"
+    },
+    {
+      "address": 4211212588,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-4"
+    },
+    {
+      "address": 4211212592,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-5"
+    },
+    {
+      "address": 4211212596,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-6"
+    },
+    {
+      "address": 4211212600,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-7"
+    },
+    {
+      "address": 4211212604,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-8"
+    },
+    {
+      "address": 4211212608,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-9"
+    },
+    {
+      "address": 4211212612,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-10"
+    },
+    {
+      "address": 4211212616,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-11"
+    },
+    {
+      "address": 4211212620,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-12"
+    },
+    {
+      "address": 4211212624,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-13"
+    },
+    {
+      "address": 4211212628,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-14"
+    },
+    {
+      "address": 4211212632,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-15"
+    },
+    {
+      "address": 4211212636,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-16"
+    },
+    {
+      "address": 4211212640,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-17"
+    },
+    {
+      "address": 4211212644,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-18"
+    },
+    {
+      "address": 4211212648,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-19"
+    },
+    {
+      "address": 4211212652,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-20"
+    },
+    {
+      "address": 4211212656,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-21"
+    },
+    {
+      "address": 4211212660,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-22"
+    },
+    {
+      "address": 4211212664,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-23"
+    },
+    {
+      "address": 4211212668,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-24"
+    },
+    {
+      "address": 4211212672,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-25"
+    },
+    {
+      "address": 4211212676,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-26"
+    },
+    {
+      "address": 4211212680,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-27"
+    },
+    {
+      "address": 4211212684,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-28"
+    },
+    {
+      "address": 4211212688,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-29"
+    },
+    {
+      "address": 4211212692,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-30"
+    },
+    {
+      "address": 4211212696,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-31"
+    },
+    {
+      "address": 4211212828,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-0"
+    },
+    {
+      "address": 4211212832,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-1"
+    },
+    {
+      "address": 4211212836,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-2"
+    },
+    {
+      "address": 4211212840,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-3"
+    },
+    {
+      "address": 4211212844,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-4"
+    },
+    {
+      "address": 4211212848,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-5"
+    },
+    {
+      "address": 4211212852,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-6"
+    },
+    {
+      "address": 4211212856,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-7"
+    },
+    {
+      "address": 4211212860,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-8"
+    },
+    {
+      "address": 4211212864,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-9"
+    },
+    {
+      "address": 4211212868,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-10"
+    },
+    {
+      "address": 4211212872,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-11"
+    },
+    {
+      "address": 4211212876,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-12"
+    },
+    {
+      "address": 4211212880,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-13"
+    },
+    {
+      "address": 4211212884,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-14"
+    },
+    {
+      "address": 4211212888,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-15"
+    },
+    {
+      "address": 4211212892,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-16"
+    },
+    {
+      "address": 4211212896,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-17"
+    },
+    {
+      "address": 4211212900,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-18"
+    },
+    {
+      "address": 4211212904,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-19"
+    },
+    {
+      "address": 4211212908,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-20"
+    },
+    {
+      "address": 4211212912,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-21"
+    },
+    {
+      "address": 4211212916,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-22"
+    },
+    {
+      "address": 4211212920,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-23"
+    },
+    {
+      "address": 4211212924,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-24"
+    },
+    {
+      "address": 4211212928,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-25"
+    },
+    {
+      "address": 4211212932,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-26"
+    },
+    {
+      "address": 4211212936,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-27"
+    },
+    {
+      "address": 4211212940,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-28"
+    },
+    {
+      "address": 4211212944,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-29"
+    },
+    {
+      "address": 4211212948,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-30"
+    },
+    {
+      "address": 4211212952,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-31"
+    },
+    {
+      "address": 4211213084,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-0"
+    },
+    {
+      "address": 4211213088,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-1"
+    },
+    {
+      "address": 4211213092,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-2"
+    },
+    {
+      "address": 4211213096,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-3"
+    },
+    {
+      "address": 4211213100,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-4"
+    },
+    {
+      "address": 4211213104,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-5"
+    },
+    {
+      "address": 4211213108,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-6"
+    },
+    {
+      "address": 4211213112,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-7"
+    },
+    {
+      "address": 4211213116,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-8"
+    },
+    {
+      "address": 4211213120,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-9"
+    },
+    {
+      "address": 4211213124,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-10"
+    },
+    {
+      "address": 4211213128,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-11"
+    },
+    {
+      "address": 4211213132,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-12"
+    },
+    {
+      "address": 4211213136,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-13"
+    },
+    {
+      "address": 4211213140,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-14"
+    },
+    {
+      "address": 4211213144,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-15"
+    },
+    {
+      "address": 4211213148,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-16"
+    },
+    {
+      "address": 4211213152,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-17"
+    },
+    {
+      "address": 4211213156,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-18"
+    },
+    {
+      "address": 4211213160,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-19"
+    },
+    {
+      "address": 4211213164,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-20"
+    },
+    {
+      "address": 4211213168,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-21"
+    },
+    {
+      "address": 4211213172,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-22"
+    },
+    {
+      "address": 4211213176,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-23"
+    },
+    {
+      "address": 4211213180,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-24"
+    },
+    {
+      "address": 4211213184,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-25"
+    },
+    {
+      "address": 4211213188,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-26"
+    },
+    {
+      "address": 4211213192,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-27"
+    },
+    {
+      "address": 4211213196,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-28"
+    },
+    {
+      "address": 4211213200,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-29"
+    },
+    {
+      "address": 4211213204,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-30"
+    },
+    {
+      "address": 4211213208,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-31"
+    },
+    {
+      "address": 4143972904,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "cdi-activation-command",
+      "access": "write-only",
+      "allowed_writes": [
+        255
+      ]
+    },
+    {
+      "address": 4177854558,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "rtc-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        2
+      ]
+    },
+    {
+      "address": 4177854540,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-absolute-year-century"
+    },
+    {
+      "address": 4177854538,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-absolute-year-low"
+    },
+    {
+      "address": 4177854496,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-alarm-control"
+    },
+    {
+      "address": 4177854486,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-selector-control"
+    },
+    {
+      "address": 4177854488,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-secondary-control"
+    },
+    {
+      "address": 4177854492,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-selected-control"
+    },
+    {
+      "address": 4211474442,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7,
+        256
+      ]
+    },
+    {
+      "address": 4211474450,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-init-control"
+    },
+    {
+      "address": 4228120586,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-1-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4228120594,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-1-init-control"
+    },
+    {
+      "address": 4228055050,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4228055058,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-init-control"
+    },
+    {
+      "address": 4211343370,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-4-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4211343378,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-4-init-control"
+    },
+    {
+      "address": 4178116618,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "irda-clock-gate-control"
+    },
+    {
+      "address": 4228186120,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0x8"
+    },
+    {
+      "address": 4228186124,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0xc"
+    },
+    {
+      "address": 4228186140,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0x1c"
+    },
+    {
+      "address": 4177526784,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-0"
+    },
+    {
+      "address": 4177526786,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-2"
+    },
+    {
+      "address": 4177526788,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-4"
+    },
+    {
+      "address": 4177526794,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-0"
+    },
+    {
+      "address": 4177526796,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-2"
+    },
+    {
+      "address": 4177526798,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-4"
+    },
+    {
+      "address": 4177526804,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-0"
+    },
+    {
+      "address": 4177526806,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-2"
+    },
+    {
+      "address": 4177526808,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-4"
+    },
+    {
+      "address": 4177526814,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-0"
+    },
+    {
+      "address": 4177526816,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-2"
+    },
+    {
+      "address": 4177526818,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-4"
+    },
+    {
+      "address": 4177526824,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-0"
+    },
+    {
+      "address": 4177526826,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-2"
+    },
+    {
+      "address": 4177526828,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-4"
+    },
+    {
+      "address": 4177526844,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-0-event-mask-control"
+    },
+    {
+      "address": 4177526848,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-1-event-mask-control"
+    },
+    {
+      "address": 4177526852,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-2-event-mask-control"
+    },
+    {
+      "address": 4177526856,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-3-event-mask-control"
+    },
+    {
+      "address": 4177526892,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-4-event-mask-control"
+    },
+    {
+      "address": 4177592324,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "tick-channel-one-load-command",
+      "access": "write-only",
+      "allowed_writes": [
+        130,
+        139
+      ]
+    },
+    {
+      "address": 4177526790,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-0-mode-control"
+    },
+    {
+      "address": 4177526800,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-1-mode-control"
+    },
+    {
+      "address": 4177526810,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-2-mode-control"
+    },
+    {
+      "address": 4177526820,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-3-mode-control"
+    },
+    {
+      "address": 4177526830,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-4-mode-control"
+    },
+    {
+      "address": 4177592348,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "idle-tick-counter-zero-mock"
+    },
+    {
+      "address": 4211474436,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-4",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4211474444,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-c",
+      "access": "write-only",
+      "allowed_writes": [
+        6145
+      ]
+    },
+    {
+      "address": 4211474454,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-16",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4211474464,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-20",
+      "access": "write-only",
+      "allowed_writes": [
+        1,
+        4
+      ]
+    },
+    {
+      "address": 4211474466,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-22",
+      "access": "write-only",
+      "allowed_writes": [
+        9
+      ]
+    },
+    {
+      "address": 4211474470,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-26",
+      "access": "write-only",
+      "allowed_writes": [
+        13000
+      ]
+    },
+    {
+      "address": 4110419996,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "f500_081c_zero_command_capture",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    }
+  ],
+  "rtc_counter": {
+    "profile": "instruction-clock-low8",
+    "address": 4177854464,
+    "initial_ticks": 0,
+    "frequency_hz": 32768,
+    "instruction_hz": 13000000,
+    "calendar_epoch": "2000-01-01T00:00:00",
+    "control_initial_value": 0,
+    "status_initial_value": 192,
+    "control_writable": true
+  },
+  "nand": {
+    "profile": "samsung-256m-x8-reset-id-status",
+    "address": 1342177280,
+    "manufacturer_id": 236,
+    "device_id": 53,
+    "completion": "immediate-ready",
+    "write_protected": false,
+    "spare_read": {
+      "profile": "samsung-x8-read2-unknown-contents"
+    },
+    "spare_program": {
+      "profile": "samsung-x8-known-spare-byte-program"
+    },
+    "synthetic_spare": {
+      "profile": "first-erase-block-ff-valid-footer"
+    }
+  }
+}

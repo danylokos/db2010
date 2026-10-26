@@ -1,0 +1,8 @@
+{
+  "source_main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+  "start": 1152223826,
+  "end": 1152223836,
+  "hex": "2168072229600a432260",
+  "instruction_count": 5,
+  "meaning": "Original Thumb zero-mode load/save/OR7/store slice; subsequent clock call remains native in full boot"
+}

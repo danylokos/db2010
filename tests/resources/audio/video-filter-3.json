@@ -1,0 +1,7 @@
+{
+  "source": "Original W800i R1L002 MAIN 4438124E; native Demo Tour 48-tap coefficient upload",
+  "main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+  "size_bytes": 96,
+  "sha256": "cf89d8b13fcee588edc1c17ee9f15c0f6765780245c666c98366c47b1e857eff",
+  "format": "48 little-endian signed16 coefficient words; host conversion substitutes for DSP filter arithmetic"
+}

@@ -1,0 +1,947 @@
+{
+  "body_mask_static_screen_omitted_pixels": [
+    315,
+    540,
+    576,
+    835
+  ],
+  "earpiece_holes": {
+    "material": "Same near-black matte material as lanyard interior; original silver lips retained",
+    "node": "body-earpiece",
+    "selection": "Three original front recess interiors; whole-quad centers: abs(X)<0.4, -4.4<Z<-4.23, 1.65<Y<1.73",
+    "triangles": 672
+  },
+  "front_surround": "Silver as supplied Render_01/04; black aperture and uniform added LCD frame",
+  "glb": {
+    "bytes": 7607492,
+    "sha256": "f63d8e1ea919b361bdbbd77d99c41bd60043eac9a070b76fabd525db8f811b00"
+  },
+  "infrared_window": {
+    "base_color": [
+      10,
+      3,
+      2
+    ],
+    "interpretation": "User-identified infrared window; visual dark reddish-brown plastic, not measured material",
+    "metallic": 0,
+    "node": "body-infrared",
+    "roughness": 0.2,
+    "selection": "Original top-left insert surface bounded by recessed seam; adjacency angle <0.2 radians",
+    "triangles": 156
+  },
+  "joystick_tip": {
+    "center_xz": [
+      -0.0054,
+      1.5129
+    ],
+    "material": "Same orange casing material, textures and original UVs",
+    "max_radius": 0.1585,
+    "min_y": 1.8358,
+    "remainder": "same silver hardware as camera button"
+  },
+  "lanyard_recess": {
+    "base_color": [
+      1,
+      1,
+      1
+    ],
+    "interpretation": "User-identified lanyard hole; dark matte interior behind original orange lip",
+    "metallic": 0,
+    "node": "body-lanyard",
+    "roughness": 0.95,
+    "selection": "Original top-center recessed floor and inner walls; whole-quad centers: abs(X)<0.4, 0.5<Y<0.8, -4.78<Z<-4.6",
+    "triangles": 400
+  },
+  "mappings": {
+    "Sony_Ericsson_w800i_Camera": {
+      "contact": null,
+      "source_bounds": [
+        [
+          0.2332,
+          0.0059,
+          -1.9525
+        ],
+        [
+          1.0513,
+          0.1209,
+          -1.1293
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Camera",
+      "triangles": 928
+    },
+    "Sony_Ericsson_w800i_Cammod": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.2817,
+          -0.1236,
+          -2.9685
+        ],
+        [
+          1.547,
+          0.2641,
+          -0.1399
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Cammod",
+      "triangles": 3544
+    },
+    "Sony_Ericsson_w800i_FL": {
+      "contact": null,
+      "source_bounds": [
+        [
+          1.5211,
+          -0.0103,
+          -2.2685
+        ],
+        [
+          1.9595,
+          0.2291,
+          -0.806
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_FL",
+      "triangles": 6226
+    },
+    "Sony_Ericsson_w800i_Logo-0": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.8628,
+          0.0352,
+          1.4641
+        ],
+        [
+          -1.2884,
+          0.0756,
+          2.037
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Logo",
+      "triangles": 6784
+    },
+    "Sony_Ericsson_w800i_Logo-1": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.8602,
+          0.0262,
+          1.4647
+        ],
+        [
+          -1.2862,
+          0.0783,
+          2.0382
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Logo",
+      "triangles": 10160
+    },
+    "Sony_Ericsson_w800i_cob": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -0.9604,
+          -0.0197,
+          -3.3887
+        ],
+        [
+          -0.3231,
+          0.0571,
+          -2.7514
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_cob",
+      "triangles": 1600
+    },
+    "body-aperture": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.6163,
+          1.7128,
+          -3.8083
+        ],
+        [
+          1.6055,
+          1.7128,
+          -0.0606
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 1224
+    },
+    "body-earpiece": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -0.3188,
+          1.6582,
+          -4.3907
+        ],
+        [
+          0.3081,
+          1.7311,
+          -4.2433
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 672
+    },
+    "body-infrared": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.5513,
+          1.0355,
+          -4.7916
+        ],
+        [
+          -0.3897,
+          1.3878,
+          -4.7016
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 156
+    },
+    "body-ivory": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -2.2215,
+          -0.0117,
+          -4.7776
+        ],
+        [
+          2.2107,
+          1.7335,
+          5.1104
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 78864
+    },
+    "body-lanyard": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -0.3284,
+          0.5597,
+          -4.786
+        ],
+        [
+          0.3176,
+          0.7259,
+          -4.6772
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 400
+    },
+    "body-orange": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -2.3146,
+          -0.0111,
+          -4.7969
+        ],
+        [
+          2.3074,
+          1.7044,
+          5.1392
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Body",
+      "triangles": 32288
+    },
+    "hardware-1": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -1.0142,
+          0.7788,
+          4.6189
+        ],
+        [
+          1.0042,
+          1.2727,
+          5.025
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 6680
+    },
+    "hardware-4": {
+      "contact": null,
+      "source_bounds": [
+        [
+          1.523,
+          -0.0029,
+          -0.0214
+        ],
+        [
+          2.0007,
+          0.2081,
+          1.2518
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 2536
+    },
+    "joystick": {
+      "contact": "joystick",
+      "source_bounds": [
+        [
+          -0.3742,
+          1.4572,
+          1.1441
+        ],
+        [
+          0.3634,
+          1.8716,
+          1.8817
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 960
+    },
+    "joystick-tip": {
+      "contact": "joystick",
+      "source_bounds": [
+        [
+          -0.1629,
+          1.8359,
+          1.3571
+        ],
+        [
+          0.1522,
+          1.8445,
+          1.6687
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 128
+    },
+    "key-0": {
+      "contact": "0",
+      "source_bounds": [
+        [
+          -0.6308,
+          1.6384,
+          3.8919
+        ],
+        [
+          0.62,
+          1.7558,
+          4.3037
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-1": {
+      "contact": "1",
+      "source_bounds": [
+        [
+          -1.7536,
+          1.6384,
+          2.0943
+        ],
+        [
+          -0.6582,
+          1.7558,
+          2.506
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-2": {
+      "contact": "2",
+      "source_bounds": [
+        [
+          -0.6308,
+          1.6384,
+          2.0943
+        ],
+        [
+          0.62,
+          1.7558,
+          2.506
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-3": {
+      "contact": "3",
+      "source_bounds": [
+        [
+          0.6474,
+          1.6384,
+          2.0943
+        ],
+        [
+          1.7428,
+          1.7558,
+          2.506
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-4": {
+      "contact": "4",
+      "source_bounds": [
+        [
+          -1.7537,
+          1.6384,
+          2.6929
+        ],
+        [
+          -0.6582,
+          1.7558,
+          3.1047
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-5": {
+      "contact": "5",
+      "source_bounds": [
+        [
+          -0.6308,
+          1.6384,
+          2.6929
+        ],
+        [
+          0.62,
+          1.7836,
+          3.1047
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 960
+    },
+    "key-6": {
+      "contact": "6",
+      "source_bounds": [
+        [
+          0.6474,
+          1.6384,
+          2.6929
+        ],
+        [
+          1.7429,
+          1.7558,
+          3.1047
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-7": {
+      "contact": "7",
+      "source_bounds": [
+        [
+          -1.7536,
+          1.6384,
+          3.2976
+        ],
+        [
+          -0.6582,
+          1.7558,
+          3.7094
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-8": {
+      "contact": "8",
+      "source_bounds": [
+        [
+          -0.6308,
+          1.6384,
+          3.2976
+        ],
+        [
+          0.62,
+          1.7558,
+          3.7094
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-9": {
+      "contact": "9",
+      "source_bounds": [
+        [
+          0.6474,
+          1.6384,
+          3.2976
+        ],
+        [
+          1.7429,
+          1.7558,
+          3.7094
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-back": {
+      "contact": "back",
+      "source_bounds": [
+        [
+          -1.749,
+          1.6421,
+          1.3094
+        ],
+        [
+          -0.6111,
+          1.8016,
+          1.8442
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 688
+    },
+    "key-camera": {
+      "contact": "camera",
+      "source_bounds": [
+        [
+          2.108,
+          0.7061,
+          1.0333
+        ],
+        [
+          2.3135,
+          1.1034,
+          2.1332
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 592
+    },
+    "key-clear": {
+      "contact": "clear",
+      "source_bounds": [
+        [
+          0.6003,
+          1.6421,
+          1.3094
+        ],
+        [
+          1.7382,
+          1.8016,
+          1.8442
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 688
+    },
+    "key-hash": {
+      "contact": "hash",
+      "source_bounds": [
+        [
+          0.6474,
+          1.6384,
+          3.8919
+        ],
+        [
+          1.7429,
+          1.7558,
+          4.3037
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-play-pause": {
+      "contact": "play-pause",
+      "source_bounds": [
+        [
+          -2.3056,
+          0.7173,
+          -3.9855
+        ],
+        [
+          -2.1048,
+          1.122,
+          -2.9227
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 2256
+    },
+    "key-power": {
+      "contact": "power",
+      "source_bounds": [
+        [
+          0.7731,
+          0.6482,
+          -4.7824
+        ],
+        [
+          1.2953,
+          1.1775,
+          -4.5978
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 1312
+    },
+    "key-soft-left": {
+      "contact": "soft-left",
+      "source_bounds": [
+        [
+          -1.7699,
+          1.6422,
+          0.3461
+        ],
+        [
+          -0.4564,
+          1.7981,
+          1.2129
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 1160
+    },
+    "key-soft-right": {
+      "contact": "soft-right",
+      "source_bounds": [
+        [
+          0.4456,
+          1.6422,
+          0.3461
+        ],
+        [
+          1.7591,
+          1.7981,
+          1.2129
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 1160
+    },
+    "key-star": {
+      "contact": "star",
+      "source_bounds": [
+        [
+          -1.7537,
+          1.6384,
+          3.8919
+        ],
+        [
+          -0.6582,
+          1.7558,
+          4.3037
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 352
+    },
+    "key-volume-down": {
+      "contact": "volume-down",
+      "source_bounds": [
+        [
+          2.1282,
+          0.7141,
+          -3.4496
+        ],
+        [
+          2.3146,
+          1.0963,
+          -2.7655
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 1536
+    },
+    "key-volume-up": {
+      "contact": "volume-up",
+      "source_bounds": [
+        [
+          2.1282,
+          0.7142,
+          -4.1347
+        ],
+        [
+          2.3146,
+          1.0959,
+          -3.4496
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Buttons",
+      "triangles": 2656
+    },
+    "key-walkman": {
+      "contact": "walkman",
+      "source_bounds": [
+        [
+          -0.4431,
+          1.6422,
+          0.3461
+        ],
+        [
+          0.4323,
+          1.7981,
+          0.9795
+        ]
+      ],
+      "source_object": "Sony_Ericsson_W800i_Keyb",
+      "triangles": 1952
+    },
+    "rear-selfie-mirror": {
+      "contact": null,
+      "source_bounds": [
+        [
+          -0.6569,
+          -0.0964,
+          -1.8726
+        ],
+        [
+          -0.0252,
+          -0.0788,
+          -1.2544
+        ]
+      ],
+      "source_object": "Sony_Ericsson_w800i_Cammod",
+      "triangles": 128
+    }
+  },
+  "materials": "Reconstructed from supplied renders, UVs and masks; not recovered Corona parameters",
+  "normal_maps": "DirectX green inverted; unused dark background replaced by flat tangent normal",
+  "normal_scale": 0.18,
+  "orientation": "Y up, front +Z, normalized height 1",
+  "original_triangles": {
+    "Sony_Ericsson_W800i_Keyb": 10480,
+    "Sony_Ericsson_w800i_Body": 113604,
+    "Sony_Ericsson_w800i_Buttons": 18656,
+    "Sony_Ericsson_w800i_Camera": 928,
+    "Sony_Ericsson_w800i_Cammod": 3672,
+    "Sony_Ericsson_w800i_FL": 6226,
+    "Sony_Ericsson_w800i_Logo": 16944,
+    "Sony_Ericsson_w800i_cob": 1600
+  },
+  "rear_materials": {
+    "camera_finish": {
+      "base_color": [
+        179,
+        186,
+        183
+      ],
+      "lighting": "Same as camera button; no reflection environment",
+      "metallic": 0.7,
+      "roughness": 0.27
+    },
+    "camera_surround": "Rim and inner fill match camera button silver; supplied lettering mask inverted to dark legends; original lens unchanged",
+    "emblem": "Largest source piece silver/gray; other piece green (swapped from initial reconstruction)",
+    "flash": {
+      "base_color": [
+        210,
+        223,
+        228
+      ],
+      "ior": 1.45,
+      "material": "Frosted LED flash glass",
+      "metallic": 0,
+      "roughness": 0.58,
+      "texture": "Original ribbed Flglass normal map",
+      "thickness": 0.003,
+      "transmission": 0.25
+    },
+    "lighting": "Local studio reflection texture applied only to selfie mirror and frosted flash glass",
+    "mirror": {
+      "adjacency_angle": 0.2,
+      "metallic": 1,
+      "node": "rear-selfie-mirror",
+      "roughness": 0.06,
+      "seed": [
+        -0.5,
+        -0.12,
+        -1.55
+      ],
+      "triangles": 128
+    },
+    "outer_surround": "1058 original triangles following raised outer trim into the side; same orange casing material"
+  },
+  "screen": {
+    "carrier_source_y": 1.7353,
+    "fit": "176:220 unchanged size, centered in uniform black frame, no stretch",
+    "flip_y": false,
+    "frame_node": "lcd-frame",
+    "frame_source_width": 0.11182000000000003,
+    "node": "lcd",
+    "pixels": [
+      176,
+      220
+    ],
+    "source_aperture_aspect": 0.8596739333457855
+  },
+  "side_controls": {
+    "camera": "Full shutter closes focus and snap; Shift+pointer holds focus only",
+    "camera_material": "Silver hardware; unchanged metallic finish",
+    "orange_material": "Volume rocker, play/pause and power share the exact orange casing material, textures and original UVs",
+    "play_pause": "Original left-side music button",
+    "power": "Original top button; runtime KEYIN0 closure, no supply/reset effects",
+    "volume": "Original right-side rocker split at source Z midpoint"
+  },
+  "silver_controls": {
+    "base_color": [
+      179,
+      186,
+      183
+    ],
+    "contacts": [
+      "back",
+      "clear",
+      "soft-left",
+      "soft-right",
+      "walkman"
+    ],
+    "joystick": true,
+    "key_texture": "White background preserves shared hardware base factor; supplied legends and normals",
+    "lighting": "Same as camera button; no reflection environment",
+    "metallic": 0.7,
+    "roughness": 0.27
+  },
+  "source": {
+    "bytes": 23043233,
+    "members": {
+      "Maps/Sony ericsson W800 Body NM.jpg": {
+        "bytes": 106809,
+        "sha256": "b9b906e04572db41c0285c636711e856c954b1b2d657b7539efa5ce6fad42c2b"
+      },
+      "Maps/Sony ericsson W800 Body Screen.jpg": {
+        "bytes": 99286,
+        "sha256": "b7c3cd4f0a193f69e4663aa0ca5bb0f6128435515c8beaebb4bdd95af62adabf"
+      },
+      "Maps/Sony ericsson W800 Body mask.jpg": {
+        "bytes": 70305,
+        "sha256": "da936c198dfb1518e040d759d4627d42bdd7c77eb631cb3d5b45706148b3e6a7"
+      },
+      "Maps/Sony ericsson W800 Cammod glos.jpg": {
+        "bytes": 953006,
+        "sha256": "b2ce5b75688f177e3b2270072ffe3b7898abe3b500d9a597485b56084abdbeca"
+      },
+      "Maps/Sony ericsson W800 Cammod maps.jpg": {
+        "bytes": 581123,
+        "sha256": "9653dd3ec328a890a4f9c722bfaa31d5ccbd52888a3518cbab09c0f712dac138"
+      },
+      "Maps/Sony ericsson W800 Cammod normalmap.jpg": {
+        "bytes": 1054156,
+        "sha256": "2795705ff5063e02f4c1e33574ca28091b05983c97fb0060188a9bdf5d86c22c"
+      },
+      "Maps/Sony ericsson W800 Flglass glos.jpg": {
+        "bytes": 62200,
+        "sha256": "07406016afc559d660f359933f2d58ef1ceefce210d0691d8dd62af35de15f36"
+      },
+      "Maps/Sony ericsson W800 Flglass mask.jpg": {
+        "bytes": 67684,
+        "sha256": "ad4183a92cc14ded51077cd7052c54fbe696d60ec5b5d6673ad3b5c1a79dcb3f"
+      },
+      "Maps/Sony ericsson W800 Flglass normalmap.jpg": {
+        "bytes": 183435,
+        "sha256": "f531110517e7bec96cda486c0c7f7c6083dcffd388af6bf24f0d63c0a29a9b31"
+      },
+      "Maps/Sony ericsson W800 Keyb NM.jpg": {
+        "bytes": 80878,
+        "sha256": "cd73603a3b0280dfe97dc975859655a3e9e3726e3cc849987f1629a94540f553"
+      },
+      "Maps/Sony ericsson W800 Keyb maps.jpg": {
+        "bytes": 57448,
+        "sha256": "f80ec4e32deee9574e1dd9c77b573d3551bc9d4319113312417a8830f0ac1f3e"
+      },
+      "Render_01.jpg": {
+        "bytes": 782168,
+        "sha256": "c5a94a1cf68d7dacf0205a17a5a14edd7d014867db7e31b63e6a02dc33ea7377"
+      },
+      "Render_02.jpg": {
+        "bytes": 791728,
+        "sha256": "b827f36fbe567710409909054febe70aa9edd0b5993cd359095e4bdafd2bb853"
+      },
+      "Render_03.jpg": {
+        "bytes": 1069008,
+        "sha256": "d80cdbbcc3d9b02c399df051d6e2fb3d216e95bd3e5cfdadcc297395929a9b7c"
+      },
+      "Render_04.jpg": {
+        "bytes": 812184,
+        "sha256": "08add2716c58e5861845a189a01e4618254ecf81f188c157642fd94127e9f99a"
+      },
+      "Render_05.jpg": {
+        "bytes": 877050,
+        "sha256": "2a0e61296385117e86a078fd0bd4a059bd0dfc715ea24421ebcf20a69082b4c3"
+      },
+      "Render_06.jpg": {
+        "bytes": 883154,
+        "sha256": "6fd64b3a5eeee877b5847a9a5a225ce64822483f2f949ddf5a80304def92fadd"
+      },
+      "Render_07.jpg": {
+        "bytes": 1148691,
+        "sha256": "470e283eac5492ee925b295a36600ea55083297877a316768946cbe06c1e74ad"
+      },
+      "Render_08.jpg": {
+        "bytes": 689941,
+        "sha256": "dc4252c8d0e8e536261c29f911ad7d15342dceb3e545747ad624168989e1d918"
+      },
+      "Sony Ericsson w800i Corona 2015.max": {
+        "bytes": 17063936,
+        "sha256": "77b8ab3c3a16da7e94534d6f1609322c9b399223a54344c00597e94ac8f2fd13"
+      },
+      "Sony Ericsson w800i Corona 2018.max": {
+        "bytes": 17043456,
+        "sha256": "57854515f0614f47560910de0ba99b1f74b67bc26e9e5927dd4764f642794430"
+      },
+      "Sony Ericsson w800i.mtl": {
+        "bytes": 822,
+        "sha256": "2bd1b413c0e1275da966b5365e9e6182a6f7b4b50b83a5d806d9df7585c18851"
+      },
+      "Sony Ericsson w800i.obj": {
+        "bytes": 11913989,
+        "sha256": "897060ce3e443f0e3e064ad580264c3bdf50aa717431e0cd8a79111ce0a6f807"
+      }
+    },
+    "path": "references/models/w800i/Sony_Ericsson_W800i.zip",
+    "provenance": "User supplied; author and source URL not provided",
+    "sha256": "623dac62959837f44d739f9ce37821041fd3308a09fc22c8d1d4a63fa57aa612"
+  },
+  "tools": {
+    "numpy": "2.3.4",
+    "pillow": "13.0.0",
+    "trimesh": "5.1.1"
+  },
+  "transform": [
+    [
+      0.10064310946951018,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -0.10064310946951018,
+      0.017225068185706665
+    ],
+    [
+      0.0,
+      0.10064310946951018,
+      0.0,
+      -0.08796207767635189
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "source_main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+  "initializer": 1152182652,
+  "source_table": 1159263260,
+  "runtime_table": 1275467724,
+  "stride": 3,
+  "table_entries": 73,
+  "writes": [
+    {
+      "index": 19,
+      "register": 96,
+      "value": 136
+    },
+    {
+      "index": 20,
+      "register": 97,
+      "value": 19
+    },
+    {
+      "index": 11,
+      "register": 64,
+      "value": 42
+    },
+    {
+      "index": 14,
+      "register": 67,
+      "value": 4
+    },
+    {
+      "index": 12,
+      "register": 65,
+      "value": 38
+    },
+    {
+      "index": 13,
+      "register": 66,
+      "value": 162
+    },
+    {
+      "index": 15,
+      "register": 68,
+      "value": 10
+    },
+    {
+      "index": 6,
+      "register": 38,
+      "value": 8
+    },
+    {
+      "index": 7,
+      "register": 39,
+      "value": 114
+    },
+    {
+      "index": 10,
+      "register": 56,
+      "value": 27
+    },
+    {
+      "index": 45,
+      "register": 161,
+      "value": 12
+    },
+    {
+      "index": 17,
+      "register": 80,
+      "value": 0
+    },
+    {
+      "index": 52,
+      "register": 182,
+      "value": 146
+    },
+    {
+      "index": 25,
+      "register": 114,
+      "value": 243
+    },
+    {
+      "index": 26,
+      "register": 115,
+      "value": 0
+    },
+    {
+      "index": 44,
+      "register": 160,
+      "value": 0
+    },
+    {
+      "index": 8,
+      "register": 54,
+      "value": 0
+    },
+    {
+      "index": 22,
+      "register": 99,
+      "value": 0
+    },
+    {
+      "index": 56,
+      "register": 192,
+      "value": 0
+    },
+    {
+      "index": 46,
+      "register": 176,
+      "value": 4
+    },
+    {
+      "index": 47,
+      "register": 177,
+      "value": 0
+    },
+    {
+      "index": 48,
+      "register": 178,
+      "value": 0
+    },
+    {
+      "index": 49,
+      "register": 179,
+      "value": 0
+    },
+    {
+      "index": 50,
+      "register": 180,
+      "value": 0
+    },
+    {
+      "index": 51,
+      "register": 181,
+      "value": 0
+    },
+    {
+      "index": 46,
+      "register": 176,
+      "value": 244
+    },
+    {
+      "index": 40,
+      "register": 145,
+      "value": 128
+    }
+  ]
+}

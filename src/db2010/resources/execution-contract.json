@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "payload_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+  "semantics": "Expected original MAIN bytes at approved RAM fetches; proof bytes do not seed RAM.",
+  "mappings": [
+    {
+      "address": 1275068416,
+      "source": 1140986880,
+      "size": 36008,
+      "sha256": "0d2ca8523105da53ff4cdee7c1f1ead96b24cc3db57c1f0f0d567aba7d5449e9"
+    },
+    {
+      "address": 1275104432,
+      "source": 1141022896,
+      "size": 2668,
+      "sha256": "3a46fed80e5d9b77f86b433e2510e8807a6ea25f3f7b58314977e3b9f5195506"
+    }
+  ],
+  "provenance": {
+    "payload_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+    "source_run": "derived/experiments/0058-w800-uart-capture-idle-counter",
+    "source_artifacts_sha256": "b5229eb3086ad47bf449985778cee6b2fa23d526703f155510b7d22279de9fb4",
+    "producer_sha256": "68d67c8b81c96282a3a557091833f4951733987ab611fa824ced7218ce096f62",
+    "source_experiment": "0058-w800-uart-capture-idle-counter",
+    "destination": [
+      1275104432,
+      1275107100
+    ],
+    "source": [
+      1141022896,
+      1141025564
+    ],
+    "copy_words": 667,
+    "first_copy_index": 129401,
+    "last_copy_index": 134063,
+    "later_guest_stores": [
+      {
+        "index": 1964230,
+        "pc": 1150158572,
+        "address": 1275107044,
+        "size": 4,
+        "value": 1141267176
+      }
+    ],
+    "helper_source": "0x4402aae8",
+    "helper_sha256": "a3454abb7493e74648b4b7c04d7f85931f720722cf3deac6be86bf9e794ec397",
+    "verification": "Every copied word matches original MAIN; chronological guest-store replay matches final RAM; all helper bytes match original MAIN."
+  },
+  "promotion": {
+    "source_run": "0234-mma-fresh-normal-v2",
+    "execution_provenance_sha256": "671cec9747ce39a06bef93f262d22d4ac4df8da7f7eca7c26332db0c93acd26d",
+    "policy": "Maintained original-MAIN copy contract; historical evidence is provenance, never a runtime input.",
+    "retained_source_identities": {
+      "run.json": "f4f4e35b2c4d3b7324328209f8ab64658af81bf03a6ead4f10c4a1fe9b7a73f3",
+      "artifacts.sha256.json": "4e180b454c2a8cd4a961dfad498ea0c466bfed4a7da980f578db41b5dcc3219b",
+      "provenance/ram_execution_evidence.json": "a0392dbcce1fc7fd2621a707c130dfea92179437df87779d457035fbae120240",
+      "provenance/additional_ram_execution_evidence.json": "4739c43514914cdf7922660ee58ba2c6daf042b32668a517f4d68d1e95b34546"
+    }
+  }
+}

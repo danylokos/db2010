@@ -1,0 +1,20 @@
+{
+  "encoded": {
+    "size_bytes": 832,
+    "sha256": "a3fbeec895bd20d4c8d0e0c9bfdc98ea8cf5faeb45e611d6b7b8c2a8b8bc1c9b"
+  },
+  "source_frames": 4608,
+  "output_frames": 5016,
+  "source_pcm_sha256": "0e58b77ec1f5f53f1a684eee2b61b1aa62d0b05d867db7bf082148ba0fde7f20",
+  "output_pcm_sha256": "b172fe0db78d84e0c575ebf7bd1df00d200f1d0a783e69208337468f50bbcc49",
+  "output_pcm_fnv1a64": "450ff80c614de499",
+  "nonzero_samples": 7988,
+  "provenance": {
+    "capture": "0246-coo-coo-readonly-v2",
+    "source": "First4 complete frames from consecutive original4488F2E4 source-adapter returns, directly matched to native ring data.",
+    "file": "/tpa/user/audio/Ringtones/Coo-Coo.mp3",
+    "source_prefix_sha256": "8ac5fdd32bf52420402c08907c2645745efa8369f79ec94c394c0d187bbc0078",
+    "source_format": "MPEG1/LayerIII,64kbit/s,44100Hz,mono,no CRC",
+    "main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d"
+  }
+}

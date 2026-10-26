@@ -1,0 +1,2640 @@
+{
+  "format_version": 1,
+  "experiment": "0159",
+  "baseline": "baseline.json",
+  "machine": "db2010",
+  "scope": "Bounded PMIC cached ADC result reads interleaved with existing native sampling",
+  "instruction_limit": 320000000,
+  "seconds": 300,
+  "memory_controller": {
+    "profile": "word-latches-fixed-bank",
+    "bank_word": 67207264
+  },
+  "assumptions": [
+    "Preserve 0075's authenticated inputs and CPU/TCM/RAM assumptions.",
+    "Controller offsets00/08/0C/10/14/18/1C/20/24 are full-word latches, initially unknown until native guest stores establish values. No clock or physical decoder side effects are supplied.",
+    "Bank decoder offset28 begins at the inherited loader-state hypothesis 0x04018060. Only identical full-word stores are supported; changes, wrong widths, unused offsets and unknown reads stop before effects.",
+    "The 24 region words begin at explicitly assumed zero, with no measured handset reset-state claim. Only aligned full-word latch accesses are supported.",
+    "The disjoint identity-section generator and tlb-boundary staging policy are inherited conditional hypotheses from 0073; native QEMU handles MMU translation, domain/AP checks and TLB instructions.",
+    "Power-hold permits only bit0 and inherited RTC-init bits8C to change; hold release and unknown initial-state accesses stop.",
+    "169 plain exact-register hypotheses are copied from the frozen 0073 inventory. Timer-owned words and five registers requiring TIMER1/IRQ or serial-line modifiers are omitted until their specialized models are ported. Names describe experimental contracts, not measured handset identities.",
+    "Configured read masks are explicit mocks. Only exact addresses, widths, initial values and allowed commands are accepted; page padding, unsupported keys and write-only reads stop.",
+    "Intel L18 geometry, synchronous completion, initial locks, RCR, CFI/PRI fields, root-CFI alias and synthetic factory identity are inherited hypotheses from 0073, not handset measurements.",
+    "Byte commands accept only declared steered query/reset operations, outside pending sequences. Scoped probe responses require exact original PC/address and, for x16 retry, declared registers; they never initialize NOR array bytes.",
+    "Use native QEMU ROM-device backing: commands change device state without overwriting array bytes. Command/query/status fetches, unknown array bytes, unsupported sequences and widths remain guarded. Unicorn native backing overwrite is not reproduced.",
+    "The declared bank1 aperture [46000000,46002000) returns all ones for aligned byte/halfword/word reads and ignores supported native stores. This is an absent-device hypothesis, never writable known RAM; all other accesses remain guarded.",
+    "Other specialized peripheral dependencies remain unported.",
+    "Use the exact0080 engine contracts with the independently implemented confirmed Python host app. No new peripheral response or firmware byte is introduced; four UART backends are supervised but their devices remain unported.",
+    "The optional plugin memory stream reports successful guest data transactions only; rejected attempts remain model stops. It supplies no device response, and bus traffic alone is not a rendered display.",
+    "Debugger sessions are labeled interventions. GDB may change execution or state; hardware breakpoints and inspection do not establish new handset behavior. Guards remain active on guest execution; debugger accesses are outside the guest bus ledger.",
+    "Expected original RAM code bytes are host-authenticated from frozen chronological copy evidence. Proof data does not seed RAM or replace native copies; changed instruction fetches stop explicitly.",
+    "TIMER1 advances at floor(accepted instruction observations*131072/13000000) plus declared WFI idle cycles. Native QEMU performs IRQ entry/return; rejected pre-IRQ candidate observations are recorded separately. Clock and cascade behavior are inherited hypotheses, not physical measurements.",
+    "ARMv5 exception entry does not set the ARMv6-only CPSR.A bit; native vector/LR/SPSR behavior is retained, with a feature-gated CPU correction supported by ARM ARM A2.5.6.",
+    "RTC epoch2000/clock32768Hz and GPIO UART0-high/UART1-low pads are inherited input assumptions. UART free slots=1 and immediate drain are declared mocks; only original firmware writes produce output.",
+    "PL080 starts cold/disabled with zero status and eight channels. Native initialization is captured; channel starts, software requests and wider transfer behavior remain unsupported.",
+    "Power slave4A register23 exposes only declared USB-high/charger-low presence bits. Two recovered writes B0=00 and B1=AA are captured; other slaves/registers remain unknown. Completion latency2 instructions is an inherited assumption.",
+    "Host explicitly supplies1048576 synthetic NAND spare bytes, FF except little-endian1254 at spare14/15 in the first page of each32-page erase block (2048 footers). Slot headers remainFFFFFFFF. All bad-block markers are assumed FF; no physical NAND contents are claimed. Main-page contents and erase/ECC/copy-back remain unknown/unsupported. Native Read2/status restoration and up to3 known-spare program pulses per page remain inherited hypotheses.",
+    "Raise only execution safety budgets to150M observations/10000 IRQs/240s so the complete NAND metadata scan can expose a device boundary; timer frequency and firmware behavior remain unchanged.",
+    "NAND erase60/two row cycles/D0 follows retained Samsung rev1.1 pp10/31; low five row bits select within the same32-page block. Confirmation sets all512-byte main/16-byte spare pages in that block to knownFF and resets partial-program counts. Completion/success are immediateC0 under inherited WP-high assumption; no handset erase latency/endurance/bad-block behavior is measured. Main commands remain guarded until their observed implementation is verified.",
+    "F9050054 is an exact byte latch with unknown initial state. Only A5/5A stores establish a readable value, matching original helpers44CDD680/44CDD670 and getter44CDD690. No retention across reset, watchdog/power effect or measured handset response is claimed; wider/neighbor accesses and other values remain guarded.",
+    "FA040008 accepts only aligned full-word1 stores, observed in native ITCM initializer0756 and original transfer helpers preparing FA040040/FA040080 halfword windows. Capture the command with no assumed reset/transfer/interrupt/readback effects. Every read, other value/width and neighboring access remains guarded; physical identity remains unresolved.",
+    "Original Thumb4490D058 small FA020/FA030 halfword writes are exact write-only captures. Ports003E accept only1/0; FA020 setup values are only3000/7000 at000E,1010 at0010,0CB2 at001E/0020,0 at0022/0024,1 at0026,003C at0028 and0028 at002A. No reset, transfer, electrical, interrupt or readback effects are supplied; other values/widths/reads remain guarded.",
+    "FA020000 andFA030000 control words begin at explicitly assumed zero, not measured reset values. Only native halfword readback and observed control stores0200/0201 are supported, preserving the original OR200/OR1 path. These are control-latch mocks with no transfer, clock, interrupt, ready/data or physical interface effects. Other values/widths and offsets remain guarded.",
+    "FA040010 is explicitly held at word0 (no pending events), with no read-clear/IRQ/peer response effects; only word0 stores are permitted by the exact-register mock. This is a controlled hypothesis, not measured reset state. Packet data and callbacks remain unsupported until separately probed.",
+    "FA04000C is an explicitly cold-zero full-word latch, supporting only initializer clear and ordered slot0/1/2 registration values0/3/1B/DF. It raises no IRQ and supplies no peer messages or reset-state measurement; other values/widths/neighbors remain guarded.",
+    "F9030004 is an exact aligned word cold-zero latch allowing only0 stores, solely to observe original bit0-clear sleep/retry and competing native processes. No measured ETX state, timing, ROM execution, DSP message or hardware completion is claimed; unsupported accesses remain guarded.",
+    "F9090000 exact halfword register begins at8040, a firmware-recognized chip-ID hypothesis, not a measured W800 handset revision. Other contract fields unchanged. No ETX verifier, signature, ROM bytes, DSP message, ready-status change or additional peripheral response is supplied.",
+    "0105 opt-in I2C setup capture accepts only idle staged-zero/control-zero then control84/clock60 ordering. Treat these as native initialization stores, not measured reset or hardware bit semantics. Asynchronous START A4, IRQ/completion, message and peer responses remain unsupported. F909 chip8040 is the externally supported W800i profile accepted by the user.",
+    "0106 supports only one native initialization START/data01/STOP. Completion latency2 accepted observations is inherited. Bus states08/48/F8 are explicit hypotheses consistent with standard Philips I2C statuses; START byte01 must not be acknowledged. Read-only native kernel binding identifies vector70/compact70 for worker4490D730 (distinct from PID10089), routed through edge-sensitive tertiary IRQ10 / primary30. Selection clears the controller edge latch while retaining peripheral SI until native control80/90; tertiary agreement1 precedes primary agreement1. Timer retains selection preference if both sources are eligible. No OS completion signal, slave payload or ETX result is injected.",
+    "0107: two ordered power4A writes60=88 and61=13 only; controller START08/addressACK18/dataACK28/STOPidleF8 and latency2 mocked; no physical regulator effects or arbitrary slave replies.",
+    "0108: F5000800 exact halfword is a zero-initialized bit14 latch hypothesis; accept only0/4000 and readback, no physical power/timer effects; other widths/neighbors remain guarded.",
+    "0108: permit all27 exact ordered writes from original44ACE97C/cache4518F41C, using inherited08/18/28/F8 ACK/IRQ mocks. Capture the following combined register21 read through10 repeatedSTART/40 read-addressACK, but reject receive trigger before unknown status byte, without synthesizing OS messages or power inputs.",
+    "0109 explicit byte inputs21=0,22=0; null remains unknown. Clear status bytes are a quiescent event-input scenario, not measured handset values. Read one byte then NACK58/STOPF8 through original worker; no read-clear semantics, physical PMIC IRQ or OS reply injection. Three ordered reads21/22/23 only, with23 inherited from explicit USB/charger inputs; later operations guarded.",
+    "0110: permit exactly one halfword startup release at original44ACEAB8 from8D to8C. Capture/readback latch only; keep the emulated CPU supplied as an explicit conditional hypothesis, not measured handset power behavior. Low-battery44A949BA, other PCs/values, unknown state, widths/neighbors and repeated releases remain guarded. No I2C/status/ADC or shutdown effect is added.",
+    "0111: ordered post-status register20 responseE3 explicitly hypothesized from K800/K810 manualp59 siblingVincenne2 /4, while W800 service part is/2. Native repeatedSTART/finalNACK/IRQ/28E3 completion retained, no OS injection. Only this extra one-byte read; next dependencies guarded. AB3100 STOP requirement, address, IDs and flags are comparison only and not imported.",
+    "0112: exact53-read list recovered from original73-entry table and51 branch entries. ID20=E3 remains sibling-part hypothesis. Registers written by original27-write initialization read back their final captured value as an explicit latch hypothesis, without regulator/ADC effects. Remaining individually listed configuration bytes explicitly begin0 without effects, not recovered physical reset values. No catch-all register reads; skipped analog/result/status ranges and any later operation stay guarded. AB3100 source is comparison only; use W800 repeatedSTART and native IRQ/messages.",
+    "0113: first bootstrap ADC-result read7A explicitly returns 64. FUN44ACE210 index6 selects logical21/wire7A, stores raw byte andmarks softwarevalid. Service manual backup-cap GP7 test gives1..120 diagnostic interval, but its mapping/scaling to this raw byte is unproven. Raw64 is a conditional positive-result probe, not measured backup voltage. Raw0 andnull are controls. Onlydeclared request;no ADC conversion,physical voltage,readyIRQ or further response.",
+    "0113 final: after7A, helperindex9 requests logical1E/wire77. Return64 as explicit positive raw-result scenario toexercise valid-cache path;zero instead returns before markingvalid. No physicalchannel/scaling claim;do not equate7A/77 withvoltage fromraw64. Original groupmap andflagupdates observed via GDB. Laterread/write traffic remainsguarded.",
+    "0114: exactUART0halfwordFB06000E returns 16 as explicitstatusinput,not a measuredLSR/resetflag. Original44A97904 LSLS27/BMI selectsbit4;setbit bypassesbounded nativeyield/poll,clearbit followswait. No rxbyte,interrupt,acknowledgement ortransfereffect;otherstatusaddresses/writes guarded.",
+    "0115: capture exactlyseven original44A97688 initializer halfwordwrites atUART0 offsets06=80,08=80,18=01,1A=38,1C=11,1E=13,24=0A. Other initializerwords useexistingclosedcaptures;literal1801/32C8 andoriginaltable441D004C+74=4 verified. Writes recordcommandswithout RX/IRQ/data/transfer/readbackeffects;unknownreadsandothercommandsremain guarded.",
+    "0115 refinement: originalnative44A97A76 readsUART0+0A after44A97694 stores0100. Modelthisexactwordasguest-establishedreadbacklatch,initiallyunknown;retainexistingwritewhitelist0007/0100. No registerflag/clock/baudphysicaleffectclaimed;otherunknownreadsremain guarded.",
+    "0115 refinement: original44A97B40 subsequently readsUART0+0C afterinitializer1801 store;allowguest-establishedreadbackwhilepreservingits1801 writewhitelist. Unknowninitialvalue remainsnull;no hardware/FIFO/IRQ effect inferred.",
+    "0115 refinement: original44A976F0 readsUART0+20 afterinitializerstores4 fromoriginaltableword. Allowguest-establishedreadbackonly,withinitialnullandexisting1/4 writewhitelist unchanged. No physical baud/clock effectclaimed.",
+    "0115 refinement: originalbaud-table routine44A976D0 selectsrate115200 andwritesUART0+24=1 at44A97736. Extenditsclosedcommandsetfrominitializer0A to0A/01 only. Originalrate-table selectionandintegerarithmeticexecutenatively;no physicalbaudtimingclaimed.",
+    "0115 rateprogramming: original44A9776C writes+08=F6 (255-floor115200/12500);44A97796 writes+06=D0 (clampsoftwarethreshold512 betweenq and223-q,q=floor115200*125/1000000+1). Literal12500/1000000 verified;codearithmeticsnative. Extendonlyclosedsets08=80/F6 and06=80/D0;no physicaltimeout/baud/FIFOeffect claimed.",
+    "F7000300 is an exact word read/write latch with explicitly declared initial input 0. Only the original initializer-derived command set is accepted. No DMA, stream, interrupt or physical control effects are modeled.",
+    "PDI program storage [F7000100,F7000168) starts zero at the inferred native allocator bound. Only the original 26-byte write program at slot0 with count1..24 executes. Packed data/mask bytes are captured atomically on trigger1; busy bit0 remains set for32 instruction observations. Timing and execution are hypotheses, not measured hardware. Config0200 and control0 only; unknown programs, panel reads and DMA remain guarded.",
+    "0120: capture exact post-startup PMIC wire70=A8 write through inherited ACK/IRQ completion. No ADC conversion, physical voltage or result response follows from this capture. Later accesses stay guarded.",
+    "F5000874 halfword writes11/12 are exact native conversion command captures without conversion/timing effects. The following native PMIC71 read is declared unknown and must stop before receive; no ADC result is invented.",
+    "ADC result71 explicitly returns raw64 in this conditional probe; no voltage, temperature or calibrated channel identity is inferred.",
+    "Native group2 repeats ADCsetup70=AC for channel12. Both result71 reads return declared raw64; no calibrated or measured ADC behavior is claimed.",
+    "After both group2 conversions, native logical21(hex) cached-register read selects7A, the same bootstrap register. Expose its earlier declared raw64 input. The rejected B7 guess remains guarded evidence; no arbitrary response policy is used.",
+    "Native repeat-bootstrap helper next selects77; return its earlier declared raw64. Only these ordered ADC/result reads are authorized by this profile; later transactions remain guarded.",
+    "0121: data/mask word storage reads return only values established by guest writes, retained across transfers. Fresh-packing dirty masks still guard trigger reuse. No initial data bytes, LCDread reply, DMA response or additional pixel bytes are supplied.",
+    "F7000304 initially0 control-latch hypothesis captures native bit0clear, field20 and bit100 enable for display DMA endpointF7000308. No request/data/completion effects yet. PDI trigger5 recognizes the original42-byte DMA-update program at28, variable count38720/repeat2, sends its10-byte address prefix and waits busy for an unmodeled DMA stream.",
+    "0121: opt-in PL080 channel5 exactEA53/config84489004/endpointF7000308 executes only its first4-word(16-byte) burst when PDI program count77440 is armed, stream0304=120 and the accepted address packet selectsR21=0/R22. Each source byte must be known XRAM andzero; nonzero color mapping remains guarded. Atomically capture eight black RGB565 pixels, advance source16 and decrement PDI count16, then stop at the next burst dependency before completion or IRQ. This is a bounded handshake/timing model, not measured DMA throughput.",
+    "0122: PDI requests remaining16-byte bursts from native descriptor count; each source byte must be known/zero. Timing is one burst per virtual instruction-clock unit including inherited WFI idle time. Last request withLLI0 clearsDMAenable and setsTCbit5;PDIbusy clears/errorbit3 staysclear. Completion asserts PDI41 atsecondary13/cascade28 (edge,ILR60) andPL080128/compact77 attertiary17/cascade30 (level,ILR7A). Both native masks are clear. Original selector adds28/60 forbank compact IDs; initial32/64 assumption was rejected byGPIO dispatch. No handler, OS reply, firmware change or unmasking is injected.",
+    "0123: accept exact native PDI stream-control RMW120->320 at44AB88CE after full-frame completion. Existing bounded PDI config bit8/stop trigger5 and PL080 Halt/TC-clear contracts then allow original IRQ handlers to acknowledge; no CPU/OS state changes or interrupt-mask overrides.",
+    "0124: config208 is accepted for the original26-byte write program only after exactly one completed DMA-stop handshake. Native preparation447A0560 preserves bit3 from180208. Treat this as a captured completion-control latch, without inventing undocumented bit semantics, panel readback, later frames or nonzero color ordering.",
+    "0125: RTC preservedwords004E/0050/0052 are explicit cold-zero halfword latches. Original44910AF8 reads lowbytes and restores them, while companion init uses004E bits0/2 as status/control. Field identities and retained handset contents unresolved; no alarm events or measured reset claimed. Shared0054 marker width remains guarded.",
+    "0126: exact0054 byte marker also permits alignedhalfword access with declared zero upperbyte; the lower byte shares native A5/5A-established state, never independentlyzero. Unknownlowerbyte and unsupported upperbyte/values/widths/neighbors remain guarded.0056 is a separate cold-zero preservedhalfword latch. Shared semantics inferred from original RTC preservation and marker helpers, not measured hardware.",
+    "0127: originalRTC loop44910B60..B7A reads25 lowbytes at002A..0042 in5 groups; restore44910C12..C32 writes those same fields. Explicitcold-zero lowbyte latch bank supports only observedhalfword widths including oddaddresses; readupperbytezero andwrites>FF/otherwidths/neighboroffsets guarded. This is a software-defined span, not a physicalretention capacity or event/alarm behavior. The sparseMMIO bus carries native unaligned halfwords without splitting; pre-access guards remain.",
+    "0128: original44911410 restores calendar yearlow/century/month/day/hour/minute/seconds then clears F9050002 high fractional counter tozero. Calendar writes update the existing virtual-clock date offset; time continues at32768Hz, with no hostwalltime dependency. Exact validated fields/halfwords and counterclear0 only; other writes, invaliddates/values guarded. Physical power/masterreset/oscillator behavior remains unmeasured.",
+    "0129: opt-in full-frame stream accepts retained180208/stream320 only after native prior frame completion/stop/TCclear. Every source byte must be known; capture arbitrary native bytes opaquely without assuming nonzero physical color wiring. Same26/42-byte programs, full77440-byte geometry, channel5 request9/EA53/84489004, GRAMaddress0 and clock assumptions retained. Native IRQs/ACKs drive each lifecycle; no injected frames/callbacks. Host RGB565 rendering is labeled interpretation;256-frame evidence capture budget, not hardware limit.",
+    "0131: onlyFC010010 exacthalfword cold-zero latch; original44880F78 ANDFF7F disablesbit7 andstores0. Capture/readback only; no transfer, timing, card/USB/device identity or IRQ effects. Unsupportedvalues/widths/neighbors remain guarded until observed.",
+    "0132: original44880F78 references MEMORY_STICK/MemStickPD andworker44881908. Exactcold-zero halfword08/0C/10 latches capture OR40/same0/OR80 initialization andnativeGPIO3.4 output/high setup. No cardidentity, data, transfer, insertionIRQ or physicalcontrollerreset semantics supplied; othercommands/widths/neighbors guarded. OSEcreate flags80 are not an IRQvector number; actualdynamic route requiresbinding evidence.",
+    "0133: original4490FC24 selector2 packs fields0/1 into logical15/wire62=01 and calls44ACE34C. Capture only this exact native write through existing slave4A ACK/IRQ/STOP completion. No physical charger/regulator effect or register read input invented; later transactions remain guarded.",
+    "0134: original448815FC drains softwareevents then readsFC01002C; nonzero logs Data remains in the FIFO. ExplicitemptyFIFO input0 with no insertedcard/receiveddata/event/transfer supplied; this is a controller-empty hypothesis, not measured physical reset. Exacthalfwordreadonly offset2C only; writes/otherwidths/neighbors remainguarded.",
+    "0134 follow-up: after emptyFIFO count0, original4488147E storesFC010008=60 byOR20 over native40. Capture only the observedcontrol RMW; no cardresponse, clocktiming, completion/event or transfereffect inferred.",
+    "0135: K750 baseband schematic GPIO42/V17 connectsMSDETECT toconnectorINS, with100K pull-up toVDIG. Emptyconnector leaveshigh. Original4487F5BC samplesport4bit2:low=present1/high=absent0. Modelonlyexternalhigh whileGPIO42 directionbit2=0; outputmodes retainguestlatch,unknownwidth/state/neighbors remain guarded. No insertionedge,event,cardidentity/TPCreply/completion/OSstate or firmware change supplied; W800same-platform board applicability is supported by commonhardware documents, exact electricalhandset measurements absent.",
+    "0136 adds only area-A pointer00, three-cycle main read and 80/address/data/10 programming of known cells. Main cells start unknown; guest block erase establishes FF, native programming ANDs supplied masks into known main/spare cells (FF padding preserves earlier metadata). Reads span data into known spare within one528-byte page, resume after70/00 and stop at unknown contents/page wrap. Existing immediate-ready status/WP-high assumptions remain; no ECC/FS return/CPU state is injected. Guards count at most two main-area transactions and the inherited three spare-only transactions separately per page until erase. Cross-area aggregate endurance/program failure is not established by this bounded model;01/copy-back remain guarded.",
+    "0138 ideal-cell/no-wear spare lifecycle: all known clear-only spare transactions commit with inherited immediate C0 status; the reference max3 remains recorded but does not stop this conditional model. Native commit uses AF->AB/AA and other monotonic state flags. Per-page history is uint32, survives command reset and resets on erase; pages exceeding3 are reported. This does not establish actual fourth/later-pulse reliability, failure probability, part revision or wear/endurance. Unknown cells, set-bit attempts, bounds/width/order, main partial-program and copy-back guards remain; no software replies, handler calls or CPU/OS/firmware state are forced.",
+    "0139: explicitly initialize only the 28-byte reset-cause record [42000604,42000620) to zero at direct-MAIN cold startup. This is a declared absent-record hypothesis, not measured SRAM power-on contents. Other DTCM bytes remain unknown; firmware writes are authoritative. Warm-reset retention/reset clearing remains unmodeled. No valid reset header, CPU/register patch or software reply is supplied.",
+    "0139 extended: raise only observation/IRQ safety limits from125M/10000 to150M/20000 after the first run reaches timer_irq_budget. This changes no peripheral timing or firmware state.",
+    "0140: repeat the previously established ADC channel8/channel12 transport:70=A8,71 raw64,70=AC,71 raw64. This reuses explicit uncalibrated ADC inputs and original byte ACK/IRQ/STOP behavior; no physical conversion/calibration is claimed. Other subsequent requests remain guarded.",
+    "The original group2 cache-prime path subsequently rereads wire7A and77, reusing their established uncalibrated raw64 input hypothesis; no additional registers or calibration supplied.",
+    "0140 recurring model: after the seven boot follow-ups, repeat only the observed six-operation group2 cycle at indices7..12 when firmware requests it. Firmware messageB3E reschedules itself for10 ticks. Cursor counts all completed transactions; index wraps, but unknown register/byte/width/order/length and write-capture budget guards remain. No timer message, conversion request, OS reply or callback is injected.",
+    "0141: original f700_set_mode44AD8A30 zero-mode path saves the current2E0 control word, ORs bits0..2, and stores2E7 at44AD8A5A. Extend only the existing exactword latch whitelist; do not invent physical low-power/clock/display/IRQ effects for those bits. Native clock helper and subsequent accesses remain guarded.",
+    "0141 extended: enlarge only observation/IRQ safety budgets to250M/100000 after the native20k timer-IRQ limit. Firmware is still scanning known NAND spare metadata; this does not establish idle or change timing/contents.",
+    "0141 continuation: observed canonical64-write capture budget at211057484 is evidence capacity, not a PMIC failure. Recurring-profile history128 permits longer native service; finite profiles retain64. Raise only safety limits to320M/200000 IRQs/300s. Host QMP frame64MiB admits the accumulated snapshot; no firmware state/timing/inputs changed.",
+    "0142: sourceRead00/status70/8A and three destination addresses copy only known528-byte page-register contents within the same plane(pagebit5). Destinationmain must be known/erased with zero prior main programs; known spare cells receive one-wayAND masks. Existing immediate-ready/no-bit-error hypothesis applies; no CPU/cache/return/ECC patch. Strict variant guards subsequent partial programming of copiedpages until erase, following Samsung manualpage30.",
+    "0142 selected no-wear variant reuses the already-declared ideal-cell NAND lifecycle: subsequent known-cell partial programming aftercopy is diagnosed, not rejected by an invented physical failure. Samsung manualprohibits such partial programming; physical reliability/applicability is not established. Strict profile remains available; unknown cells, planes, erased-main, pointer/column/order/width and main-count guards remain.",
+    "0145: replace only0142 erased NOR[45F00000,46000000) with the authenticated1MiB native0144 restore of all982 logical W800_GDFS.bin records, verified byte-for-byte after Close/Open. No preparation RAM, exclusive owner, synthetic activation or GDB calls enter this cold boot. Backup R1AA008 compatibility with MAIN R1L002/calibration/security is unproven; all existing device/code guards remain. Canonical0142 is unchanged.",
+    "0146: exact native PMIC batch C7=40,CC=40,CC=50,C5=18 is allowed to interleave with the existing ADC sequence without consuming its next operation. Original4518EF55 register/mask/value tuples copied to4C061305 declare these writes under the existing cached-zero startup inputs. Reuse only inherited slave4A byte ACK/STOP, native IRQ completion latency2 and latest-value register latches. Physical analog effects and C7/CC/C5 hardware functions remain unproven; all other pairs/widths/protocols/unknown reads remain guarded. No GDB/OS reply/code mutation in normal boot.",
+    "0147: native uart_open selects firmware unit3/baseFC030000 and shares the authenticated UART0 initializer/configuration code. Declare status offset0E=0010 as the inherited ready-bit4 hypothesis; mirror only exact proven halfword startup/init command sets and guest-established 0A/0C/20 latches from FB060000. This is not measured UART3 reset/LSR state or wire timing. No RX/peer/interrupt data, software completion or callback supplied. Unsupported offsets/values/widths/status writes remain guarded.",
+    "0149 user-authorized SYNTHETIC KGEN behavior: intercept only Thumb ROM InitFFFF12A2 and UpdateFFFF12BE with authenticated original MAIN return sites44D9F9D0/44D9FA34. Standard SHA-1 LE92 state is an assumed default, not recovered ROM behavior or identified randomness hardware. Original BLX executes; model returns to native LR preserving other registers/flags. Context lives in guest RAM. Zero ROM instruction/timing cost is assumed. Unknown inputs, invalid contexts/callers, Final and all other ROM entries remain guarded; add Final only if naturally reached. Device snapshots explicitly report synthetic status/call counts.",
+    "0150: F909000E is an exact halfword RAM-like configuration latch, initialized by explicit hypothesis to 0x18. Original44A36692 uses only its high byte to calculate a bounded software busy-wait before F9090008 bit2 clear. Crash handler44CEC060 writes0018, which motivates the canonical fallback but is not a measured startup/reset value. Only that static-known store0018 is accepted; no physical PLL/frequency, oscillator-ready, timing or analog side effects are supplied. Other widths/neighbors remain guarded. High-byte variants test delay sensitivity and are not canonical.",
+    "0152: FA040024/28/2C are exact full-word command/address/data ports recovered from native449FF6F4 and dsp_manager_functions.c callers. Command1 stores data high16/low16 into peer halfword addresses(port_address-1,port_address); command2 reads that same known pair. Pair address interpretation, idle0 and completion after2 accepted observations are explicit hypotheses, not measured hardware. Source-created peer state is retained as latest memory, with no DSP CPU, IRQ or mailbox reply. Unwritten peer reads, invalid widths/addresses/commands, incomplete staging and writes while busy stop before effects. No initial peer contents supplied in0152.",
+    "0153: Supply exactly two peer halfwords8010=0x0 and8011=0x0 as declared cold inputs for the original loader odd-tail read. Firmware discards the first read halfword, replaces it with its17th source halfword2020, and preserves the second. These are synthetic RAM inputs, not measured DSP reset values; every other unwritten peer halfword remains unknown. Nonzero controls test preservation and whether these cells affect the next path. No DSP execution, mailbox readiness, interrupt or software reply is supplied.",
+    "0154: FB010000 is an exact halfword configuration latch initially unknown until native0121 store. Permit only native init0121 and bit7/bit9 set/clear combinations0121/01A1/0321/03A1 recovered from44911DD4/44911E54/44911E8C/44911E9C. No controller reset, scan, keypress, interrupt or debounce timing effect is supplied. Static row masks3E/3D/3B/37/2F/1F/3F and eight read bits atFB010002 suggest keypad scan software; physical device identity is still being established. Other accesses remain guarded.",
+    "0154 empty-key hypothesis: FB010002 low6 row-select latch starts at explicit zero, while external column inputs bits6..13 are heldFF (no keys closed); bits14..15 stay0. Firmware RMW preserves the high input bits and writes only the seven statically recovered row masks3E/3D/3B/37/2F/1F/3F, so supported halfword store values are3FFE/3FFD/3FFB/3FF7/3FEF/3FDF/3FFF. Controller layout/key scan role is supported by original row masks44430D8B, driver functions44911EB0/44911ECC/44911F84 and KEYPAD/intline60 declarations. No contact closures, key events, hardware debounce, scan timing or IRQ is synthesized. Wider accesses, unsupported row values and other offsets remain guarded.",
+    "0155 user-authorized zero-fill experiment: the complete original counted object4415F5B4..441683E2 contains51 blocks and nine odd-tail read/modify/write pairs. Supply only these18 otherwise-unwritten peer halfwords, upper/lower values 0x0/0x0. Native code replaces each upper with the final source halfword and preserves lower without a value check. These synthetic cold-memory inputs are not measured DSP reset contents or DSP-generated messages. All other unwritten peer cells remain guarded. No DSP execution, IRQ or mailbox acknowledgement is supplied.",
+    "0156: allow only native PL080 channel2 C8C7 enable after captured C8C6/controlA4492038/source-known56words/destinationFA040020/LLI0/global1. Enabling arms the channel and moves no data before a peripheral request. Unsupported configurations/channels remain guarded; no DSP readiness or completion is invented.",
+    "0156: FA040014 initially inactive0 supports only selector0/10/18 without start requests; other values remain guarded. The separate outbound single-slot mailbox declares initial empty0, captures native halfword staging40..7F and commit0000=1, then holds busy1 until unknown peer consumption. No peer consume, DSP reply, FA request, completion callback or interrupt is supplied; repeat commit/overwrite while busy, unknown payload/header and wrong widths remain guarded. This is a software-framing/empty-slot hypothesis, not measured handset mailbox timing/reset.",
+    "0157 user-authorized synthetic DSP contract: only native wire20/op2/logical2/112-halfword request with armed known224-byte channel2 is supported. Consume outbound slot after2 observations, raise mailbox TX event1, request one known32-bit DMA word per observation, then supply DMA TC2 and FA TX event8 after2 observations. FA status is clear-on-read, inferred as a bounded acknowledgement hypothesis from a dispatcher that loops without stores. Native firmware masks/bindings and callbacks run via IRQ9 and existing PL080 IRQ; no CPU/OS edits, DSP ISA execution, application reply or invented incoming payload. Other packets and transfer modes remain guarded. Timing/peer behavior are assumptions, not measured handset behavior.",
+    "0158 F905005C has explicitly assumed initial bits05=0, all other bits zero. Original power initialization reads a halfword, saves bits05 and clears them with a zero byte store. Only this latch clear is modeled; physical flag meanings, IRQ, power and PMIC effects remain unknown. Other widths/writes/neighbors stay guarded.",
+    "0159: independent native B3A/subcommand7 refreshes logical ADC result channels10/11, mapping to wire75/76. Explicit raw input 0 is synthetic, not measured voltage or conversion readiness. Extra reads preserve the existing ordered sampling cursor; unknown inputs stop before receive. Other requests remain guarded.",
+    "0159 RMW: after75/76 refreshes, native B3A/subcommand4 reads logical1A/wire73 and writes (old&~30)|(CF&30). The existing known startup write73=00 supplies latest-value readback, yielding exact write00. Read/write direction follows native repeatedSTART or DATA; no physical analog effect.",
+    "0159 independent sample: original power worker writes logical17/wire70=A1 to select ADC input1; accept only this additional exact command. Its subsequent logical18/wire71 result retains inherited raw64 scenario. F5000874 timing/command latch remains synthetic and unchanged; no measured analog value/conversion IRQ.",
+    "0159: native logical14/wire61 write03 follows input1 sampling. Capture only this observed value with existing ACK/latest-register semantics; physical clock/power effects unknown.",
+    "0159: native B3A/subcommand8 helper44ACDFCC writes logical2E/wireB0=E4, derived from firmware-cached priorF4 clearing bit10. Capture exact value with no physical effect.",
+    "0159: independent logical0E/wire43=04 reuses the exact startup-established configuration value via original44910734 call. ACK/latest-value only; no physical output effect.",
+    "0159: independent70=A8 reuses the established group2 command before the prior ordered62=01 operation. Only values exercised before the new output-control gate are added to independent lists; AC/7A/77 retain their prior ordered contracts."
+  ],
+  "region_registers": {
+    "address": 4261429248,
+    "initial_words": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "section_table": {
+    "address": 4261412864,
+    "profile": "identity-disjoint-sections"
+  },
+  "section_table_update_policy": "tlb-boundary",
+  "power_hold": {
+    "address": 4177854552,
+    "initial_value": 0,
+    "rtc_init_mask": 140,
+    "startup_release": "capture-once-without-supply-effect"
+  },
+  "device_registers": [
+    {
+      "address": 4178116636,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-gating-control"
+    },
+    {
+      "address": 4178116638,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-transition-control"
+    },
+    {
+      "address": 4178116620,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-frequency-setup"
+    },
+    {
+      "address": 4178180096,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 1,
+      "name": "clock-completion-immediate"
+    },
+    {
+      "address": 4178116608,
+      "width": 2,
+      "initial_value": 32832,
+      "read_or_mask": 0,
+      "name": "clock-barrier-read"
+    },
+    {
+      "address": 4177592336,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0xaa",
+      "access": "write-only",
+      "allowed_writes": [
+        170
+      ]
+    },
+    {
+      "address": 4177592356,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0x5a",
+      "access": "write-only",
+      "allowed_writes": [
+        90
+      ]
+    },
+    {
+      "address": 4177592364,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "service-key-0xa5",
+      "access": "write-only",
+      "allowed_writes": [
+        165
+      ]
+    },
+    {
+      "address": 4178116612,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090004"
+    },
+    {
+      "address": 4178116614,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090006"
+    },
+    {
+      "address": 4178116630,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090016"
+    },
+    {
+      "address": 4178116632,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf9090018"
+    },
+    {
+      "address": 4178116634,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-select-gate-0xf909001a"
+    },
+    {
+      "address": 4178116624,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090010"
+    },
+    {
+      "address": 4178116626,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090012"
+    },
+    {
+      "address": 4178116628,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090014"
+    },
+    {
+      "address": 4178116610,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090002"
+    },
+    {
+      "address": 4178116616,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090008"
+    },
+    {
+      "address": 4178116640,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090020"
+    },
+    {
+      "address": 4178116642,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "clock-init-0xf9090022"
+    },
+    {
+      "address": 4211213060,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020304"
+    },
+    {
+      "address": 4211213080,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020318"
+    },
+    {
+      "address": 4211212572,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-0"
+    },
+    {
+      "address": 4211212576,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-1"
+    },
+    {
+      "address": 4211212580,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-2"
+    },
+    {
+      "address": 4211212584,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-3"
+    },
+    {
+      "address": 4211212588,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-4"
+    },
+    {
+      "address": 4211212592,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-5"
+    },
+    {
+      "address": 4211212596,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-6"
+    },
+    {
+      "address": 4211212600,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-7"
+    },
+    {
+      "address": 4211212604,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-8"
+    },
+    {
+      "address": 4211212608,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-9"
+    },
+    {
+      "address": 4211212612,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-10"
+    },
+    {
+      "address": 4211212616,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-11"
+    },
+    {
+      "address": 4211212620,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-12"
+    },
+    {
+      "address": 4211212624,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-13"
+    },
+    {
+      "address": 4211212628,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-14"
+    },
+    {
+      "address": 4211212632,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-15"
+    },
+    {
+      "address": 4211212636,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-16"
+    },
+    {
+      "address": 4211212640,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-17"
+    },
+    {
+      "address": 4211212644,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-18"
+    },
+    {
+      "address": 4211212648,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-19"
+    },
+    {
+      "address": 4211212652,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-20"
+    },
+    {
+      "address": 4211212656,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-21"
+    },
+    {
+      "address": 4211212660,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-22"
+    },
+    {
+      "address": 4211212664,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-23"
+    },
+    {
+      "address": 4211212668,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-24"
+    },
+    {
+      "address": 4211212672,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-25"
+    },
+    {
+      "address": 4211212676,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-26"
+    },
+    {
+      "address": 4211212680,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-27"
+    },
+    {
+      "address": 4211212684,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-28"
+    },
+    {
+      "address": 4211212688,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-29"
+    },
+    {
+      "address": 4211212692,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-30"
+    },
+    {
+      "address": 4211212696,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-0-line-31"
+    },
+    {
+      "address": 4211212828,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-0"
+    },
+    {
+      "address": 4211212832,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-1"
+    },
+    {
+      "address": 4211212836,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-2"
+    },
+    {
+      "address": 4211212840,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-3"
+    },
+    {
+      "address": 4211212844,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-4"
+    },
+    {
+      "address": 4211212848,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-5"
+    },
+    {
+      "address": 4211212852,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-6"
+    },
+    {
+      "address": 4211212856,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-7"
+    },
+    {
+      "address": 4211212860,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-8"
+    },
+    {
+      "address": 4211212864,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-9"
+    },
+    {
+      "address": 4211212868,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-10"
+    },
+    {
+      "address": 4211212872,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-11"
+    },
+    {
+      "address": 4211212876,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-12"
+    },
+    {
+      "address": 4211212880,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-13"
+    },
+    {
+      "address": 4211212884,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-14"
+    },
+    {
+      "address": 4211212888,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-15"
+    },
+    {
+      "address": 4211212892,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-16"
+    },
+    {
+      "address": 4211212896,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-17"
+    },
+    {
+      "address": 4211212900,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-18"
+    },
+    {
+      "address": 4211212904,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-19"
+    },
+    {
+      "address": 4211212908,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-20"
+    },
+    {
+      "address": 4211212912,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-21"
+    },
+    {
+      "address": 4211212916,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-22"
+    },
+    {
+      "address": 4211212920,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-23"
+    },
+    {
+      "address": 4211212924,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-24"
+    },
+    {
+      "address": 4211212928,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-25"
+    },
+    {
+      "address": 4211212932,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-26"
+    },
+    {
+      "address": 4211212936,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-27"
+    },
+    {
+      "address": 4211212940,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-28"
+    },
+    {
+      "address": 4211212944,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-29"
+    },
+    {
+      "address": 4211212948,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-30"
+    },
+    {
+      "address": 4211212952,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-1-line-31"
+    },
+    {
+      "address": 4211213084,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-0"
+    },
+    {
+      "address": 4211213088,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-1"
+    },
+    {
+      "address": 4211213092,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-2"
+    },
+    {
+      "address": 4211213096,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-3"
+    },
+    {
+      "address": 4211213100,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-4"
+    },
+    {
+      "address": 4211213104,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-5"
+    },
+    {
+      "address": 4211213108,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-6"
+    },
+    {
+      "address": 4211213112,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-7"
+    },
+    {
+      "address": 4211213116,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-8"
+    },
+    {
+      "address": 4211213120,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-9"
+    },
+    {
+      "address": 4211213124,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-10"
+    },
+    {
+      "address": 4211213128,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-11"
+    },
+    {
+      "address": 4211213132,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-12"
+    },
+    {
+      "address": 4211213136,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-13"
+    },
+    {
+      "address": 4211213140,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-14"
+    },
+    {
+      "address": 4211213144,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-15"
+    },
+    {
+      "address": 4211213148,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-16"
+    },
+    {
+      "address": 4211213152,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-17"
+    },
+    {
+      "address": 4211213156,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-18"
+    },
+    {
+      "address": 4211213160,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-19"
+    },
+    {
+      "address": 4211213164,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-20"
+    },
+    {
+      "address": 4211213168,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-21"
+    },
+    {
+      "address": 4211213172,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-22"
+    },
+    {
+      "address": 4211213176,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-23"
+    },
+    {
+      "address": 4211213180,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-24"
+    },
+    {
+      "address": 4211213184,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-25"
+    },
+    {
+      "address": 4211213188,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-26"
+    },
+    {
+      "address": 4211213192,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-27"
+    },
+    {
+      "address": 4211213196,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-28"
+    },
+    {
+      "address": 4211213200,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-29"
+    },
+    {
+      "address": 4211213204,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-30"
+    },
+    {
+      "address": 4211213208,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "irq-level-bank-2-line-31"
+    },
+    {
+      "address": 4143972904,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "cdi-activation-command",
+      "access": "write-only",
+      "allowed_writes": [
+        255
+      ]
+    },
+    {
+      "address": 4177854558,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "rtc-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        2
+      ]
+    },
+    {
+      "address": 4177854540,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-absolute-year-century"
+    },
+    {
+      "address": 4177854538,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-absolute-year-low"
+    },
+    {
+      "address": 4177854496,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-alarm-control"
+    },
+    {
+      "address": 4177854486,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-selector-control"
+    },
+    {
+      "address": 4177854488,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-secondary-control"
+    },
+    {
+      "address": 4177854492,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "rtc-selected-control"
+    },
+    {
+      "address": 4211474442,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart0-open-config-0a-latch",
+      "access": "rw",
+      "allowed_writes": [
+        7,
+        256
+      ]
+    },
+    {
+      "address": 4211474450,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-init-control"
+    },
+    {
+      "address": 4228120586,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-1-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4228120594,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-1-init-control"
+    },
+    {
+      "address": 4211343370,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-4-init-command",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4211343378,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-4-init-control"
+    },
+    {
+      "address": 4178116618,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "irda-clock-gate-control"
+    },
+    {
+      "address": 4228186120,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0x8"
+    },
+    {
+      "address": 4228186124,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0xc"
+    },
+    {
+      "address": 4228186140,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fc050-init-control-0x1c"
+    },
+    {
+      "address": 4177526784,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-0"
+    },
+    {
+      "address": 4177526786,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-2"
+    },
+    {
+      "address": 4177526788,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-0-init-word-4"
+    },
+    {
+      "address": 4177526796,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-2"
+    },
+    {
+      "address": 4177526798,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-4"
+    },
+    {
+      "address": 4177526804,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-0"
+    },
+    {
+      "address": 4177526806,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-2"
+    },
+    {
+      "address": 4177526808,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-2-init-word-4"
+    },
+    {
+      "address": 4177526814,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-0"
+    },
+    {
+      "address": 4177526816,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-2"
+    },
+    {
+      "address": 4177526818,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-3-init-word-4"
+    },
+    {
+      "address": 4177526824,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-0"
+    },
+    {
+      "address": 4177526826,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-2"
+    },
+    {
+      "address": 4177526828,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-4-init-word-4"
+    },
+    {
+      "address": 4177526844,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-0-event-mask-control"
+    },
+    {
+      "address": 4177526848,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-1-event-mask-control"
+    },
+    {
+      "address": 4177526852,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-2-event-mask-control"
+    },
+    {
+      "address": 4177526856,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-3-event-mask-control"
+    },
+    {
+      "address": 4177526892,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-4-event-mask-control"
+    },
+    {
+      "address": 4177526790,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-0-mode-control"
+    },
+    {
+      "address": 4177526800,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-1-mode-control"
+    },
+    {
+      "address": 4177526810,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-2-mode-control"
+    },
+    {
+      "address": 4177526820,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-3-mode-control"
+    },
+    {
+      "address": 4177526830,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-group-4-mode-control"
+    },
+    {
+      "address": 4211474436,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-4",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4211474444,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart0-open-config-0c-latch",
+      "access": "rw",
+      "allowed_writes": [
+        6145
+      ]
+    },
+    {
+      "address": 4211474454,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-16",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4211474464,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart0-open-config-20-latch",
+      "access": "rw",
+      "allowed_writes": [
+        1,
+        4
+      ]
+    },
+    {
+      "address": 4211474466,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-22",
+      "access": "write-only",
+      "allowed_writes": [
+        9
+      ]
+    },
+    {
+      "address": 4211474470,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-0-polled-init-26",
+      "access": "write-only",
+      "allowed_writes": [
+        13000
+      ]
+    },
+    {
+      "address": 4110419996,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "f500_081c_zero_command_capture",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4211212548,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020104"
+    },
+    {
+      "address": 4211212568,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020118"
+    },
+    {
+      "address": 4211212804,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020204"
+    },
+    {
+      "address": 4211212824,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "banked-mask-control-0xfb020218"
+    },
+    {
+      "address": 4177526794,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "gpio-bank-1-init-word-0"
+    },
+    {
+      "address": 4177854548,
+      "width": 1,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "startup-A5-5A-byte-marker-hypothesis",
+      "allowed_writes": [
+        165,
+        90
+      ],
+      "rtc_halfword_alias": true
+    },
+    {
+      "address": 4194566152,
+      "width": 4,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa040008-transfer-prepare-command-hypothesis",
+      "access": "write-only",
+      "allowed_writes": [
+        1
+      ]
+    },
+    {
+      "address": 4194435134,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa02003e-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        1,
+        0
+      ]
+    },
+    {
+      "address": 4194500670,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa03003e-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        1,
+        0
+      ]
+    },
+    {
+      "address": 4194435086,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa02000e-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        12288,
+        28672
+      ]
+    },
+    {
+      "address": 4194435088,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020010-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        4112
+      ]
+    },
+    {
+      "address": 4194435102,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa02001e-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        3250
+      ]
+    },
+    {
+      "address": 4194435104,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020020-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        3250
+      ]
+    },
+    {
+      "address": 4194435106,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020022-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4194435108,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020024-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4194435110,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020026-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        1
+      ]
+    },
+    {
+      "address": 4194435112,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa020028-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        60
+      ]
+    },
+    {
+      "address": 4194435114,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "fa-setup-fa02002a-write-capture",
+      "access": "write-only",
+      "allowed_writes": [
+        40
+      ]
+    },
+    {
+      "address": 4194435072,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fa02-control-cold-zero-latch-hypothesis",
+      "allowed_writes": [
+        512,
+        513
+      ]
+    },
+    {
+      "address": 4194500608,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "fa03-control-cold-zero-latch-hypothesis",
+      "allowed_writes": [
+        512,
+        513
+      ]
+    },
+    {
+      "address": 4177723396,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "etx-status-bit0-clear-hypothesis",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4110419968,
+      "width": 2,
+      "name": "power_start_control_bit14_latch_hypothesis",
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0,
+        16384
+      ]
+    },
+    {
+      "address": 4211474446,
+      "width": 2,
+      "initial_value": 16,
+      "read_or_mask": 0,
+      "access": "read-only",
+      "name": "uart0-open-status-bit4-hypothesis"
+    },
+    {
+      "address": 4211474438,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        128,
+        208
+      ],
+      "name": "uart0-open-init-06-capture"
+    },
+    {
+      "address": 4211474440,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        128,
+        246
+      ],
+      "name": "uart0-open-init-08-capture"
+    },
+    {
+      "address": 4211474456,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        1
+      ],
+      "name": "uart0-open-init-18-capture"
+    },
+    {
+      "address": 4211474458,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        56
+      ],
+      "name": "uart0-open-init-1a-capture"
+    },
+    {
+      "address": 4211474460,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        17
+      ],
+      "name": "uart0-open-init-1c-capture"
+    },
+    {
+      "address": 4211474462,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        19
+      ],
+      "name": "uart0-open-init-1e-capture"
+    },
+    {
+      "address": 4211474468,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        10,
+        1
+      ],
+      "name": "uart0-open-init-24-capture"
+    },
+    {
+      "address": 4143973120,
+      "width": 4,
+      "name": "f700_control",
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "access": "rw",
+      "allowed_writes": [
+        0,
+        512,
+        576,
+        704,
+        736,
+        743
+      ]
+    },
+    {
+      "address": 4110420084,
+      "width": 2,
+      "name": "ADC conversion command capture",
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        17,
+        18
+      ]
+    },
+    {
+      "address": 4143973124,
+      "width": 4,
+      "name": "display stream control",
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "access": "rw",
+      "allowed_writes": [
+        0,
+        32,
+        288,
+        800
+      ]
+    },
+    {
+      "address": 4177854542,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0
+      ],
+      "name": "rtc-preserved-word-f905004e"
+    },
+    {
+      "address": 4177854544,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0
+      ],
+      "name": "rtc-preserved-word-f9050050"
+    },
+    {
+      "address": 4177854546,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0
+      ],
+      "name": "rtc-preserved-word-f9050052"
+    },
+    {
+      "address": 4177854550,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0
+      ],
+      "name": "rtc-preserved-word-f9050056"
+    },
+    {
+      "address": 4227923984,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0,
+        128
+      ],
+      "name": "memorystick-interrupt-control-hypothesis"
+    },
+    {
+      "address": 4227923976,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0,
+        64,
+        96
+      ],
+      "name": "memorystick-clock-control-hypothesis"
+    },
+    {
+      "address": 4227923980,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0
+      ],
+      "name": "memorystick-preserved-control-hypothesis"
+    },
+    {
+      "address": 4227924012,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "name": "memorystick-empty-fifo-count-hypothesis",
+      "access": "read-only"
+    },
+    {
+      "address": 4228055050,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart3-open-config-0a-latch",
+      "access": "rw",
+      "allowed_writes": [
+        7,
+        256
+      ]
+    },
+    {
+      "address": 4228055058,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-init-control"
+    },
+    {
+      "address": 4228055044,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-polled-init-4",
+      "access": "write-only",
+      "allowed_writes": [
+        7
+      ]
+    },
+    {
+      "address": 4228055052,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart3-open-config-0c-latch",
+      "access": "rw",
+      "allowed_writes": [
+        6145
+      ]
+    },
+    {
+      "address": 4228055062,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-polled-init-16",
+      "access": "write-only",
+      "allowed_writes": [
+        0
+      ]
+    },
+    {
+      "address": 4228055072,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart3-open-config-20-latch",
+      "access": "rw",
+      "allowed_writes": [
+        4
+      ]
+    },
+    {
+      "address": 4228055074,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-polled-init-22",
+      "access": "write-only",
+      "allowed_writes": [
+        9
+      ]
+    },
+    {
+      "address": 4228055078,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "name": "uart-3-polled-init-26",
+      "access": "write-only",
+      "allowed_writes": [
+        13000
+      ]
+    },
+    {
+      "address": 4228055054,
+      "width": 2,
+      "initial_value": 16,
+      "read_or_mask": 0,
+      "access": "read-only",
+      "name": "uart3-open-status-bit4-hypothesis"
+    },
+    {
+      "address": 4228055046,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        128
+      ],
+      "name": "uart3-open-init-06-capture"
+    },
+    {
+      "address": 4228055048,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        128
+      ],
+      "name": "uart3-open-init-08-capture"
+    },
+    {
+      "address": 4228055064,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        1
+      ],
+      "name": "uart3-open-init-18-capture"
+    },
+    {
+      "address": 4228055066,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        56
+      ],
+      "name": "uart3-open-init-1a-capture"
+    },
+    {
+      "address": 4228055068,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        17
+      ],
+      "name": "uart3-open-init-1c-capture"
+    },
+    {
+      "address": 4228055070,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        19
+      ],
+      "name": "uart3-open-init-1e-capture"
+    },
+    {
+      "address": 4228055076,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "access": "write-only",
+      "allowed_writes": [
+        10
+      ],
+      "name": "uart3-open-init-24-capture"
+    },
+    {
+      "address": 4178116622,
+      "width": 2,
+      "initial_value": 24,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        24
+      ],
+      "name": "clock-transition-delay-config-hypothesis"
+    },
+    {
+      "address": 4211146752,
+      "width": 2,
+      "initial_value": null,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        289,
+        417,
+        801,
+        929
+      ],
+      "name": "fb01-keyscan-config-latch-hypothesis"
+    },
+    {
+      "address": 4211146754,
+      "width": 2,
+      "initial_value": 0,
+      "read_or_mask": 16320,
+      "allowed_writes": [
+        16382,
+        16381,
+        16379,
+        16375,
+        16367,
+        16351,
+        16383
+      ],
+      "name": "keypad-row-latch-empty-column-inputs-hypothesis"
+    },
+    {
+      "address": 4194566164,
+      "width": 4,
+      "initial_value": 0,
+      "read_or_mask": 0,
+      "allowed_writes": [
+        0,
+        16,
+        24
+      ],
+      "name": "mport-inactive-selector-cold-zero-hypothesis"
+    }
+  ],
+  "nor_model": {
+    "address": 1140850688,
+    "size": 33554432,
+    "profile": "intel-l18-256m-top",
+    "manufacturer_id": 137,
+    "device_id": 34829,
+    "partition_size": 2097152,
+    "wp_high": true,
+    "initial_locked": true,
+    "completion": "synchronous",
+    "initial_array": "unknown",
+    "reserved_cfi_words": {
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0
+    },
+    "read_configuration_register": {
+      "profile": "l18-x16-address",
+      "initial_value": 49103
+    },
+    "mirrored_command_bytes": true,
+    "extended_cfi": "intel-l18-256m-top-v1.3",
+    "identifier_cfi": "root-10-34-compatibility-assumption",
+    "factory_unique_id": "0123456789abcdef"
+  },
+  "nor_byte_bridge": {
+    "profile": "steered-query-reset-zero-high"
+  },
+  "nor_probe_placeholders": {
+    "value": 255,
+    "x16_retry": true
+  },
+  "absent_bank": {
+    "address": 1174405120,
+    "size": 8192,
+    "profile": "all-ones-ignore-writes"
+  },
+  "timer_irq": {
+    "profile": "tick1-upcounter-irq-assumption",
+    "frequency_hz": 131072,
+    "instruction_hz": 13000000,
+    "max_irqs": 200000
+  },
+  "rtc_counter": {
+    "profile": "instruction-clock-low8",
+    "address": 4177854464,
+    "initial_ticks": 0,
+    "frequency_hz": 32768,
+    "instruction_hz": 13000000,
+    "calendar_epoch": "2000-01-01T00:00:00",
+    "control_initial_value": 0,
+    "status_initial_value": 192,
+    "control_writable": true,
+    "calendar_writable": true
+  },
+  "serial_lines": {
+    "profile": "port1-rx-levels",
+    "uart0_rx_level": 1,
+    "uart1_rx_level": 0
+  },
+  "uart_transmit": {
+    "profile": "polled-tx-immediate-drain",
+    "free_slots": 1
+  },
+  "pl080_dma": {
+    "profile": "cold-disabled-display-stream-fa-tx",
+    "address": 4060086272,
+    "channels": 8
+  },
+  "i2c_controller": {
+    "profile": "vincenne2-startup-register-reads",
+    "address": 4177788928,
+    "completion_instructions": 2,
+    "power_inputs": {
+      "usb_connected": true,
+      "charger_connected": false
+    },
+    "capture_boot_writes": true,
+    "status_inputs": {
+      "register_21": 0,
+      "register_22": 0
+    },
+    "register_reads": [
+      {
+        "register": 32,
+        "value": 227
+      },
+      {
+        "register": 36,
+        "value": 0
+      },
+      {
+        "register": 37,
+        "value": 0
+      },
+      {
+        "register": 38,
+        "value": "last-write"
+      },
+      {
+        "register": 39,
+        "value": "last-write"
+      },
+      {
+        "register": 54,
+        "value": "last-write"
+      },
+      {
+        "register": 55,
+        "value": 0
+      },
+      {
+        "register": 56,
+        "value": "last-write"
+      },
+      {
+        "register": 64,
+        "value": "last-write"
+      },
+      {
+        "register": 65,
+        "value": "last-write"
+      },
+      {
+        "register": 66,
+        "value": "last-write"
+      },
+      {
+        "register": 67,
+        "value": "last-write"
+      },
+      {
+        "register": 68,
+        "value": "last-write"
+      },
+      {
+        "register": 69,
+        "value": 0
+      },
+      {
+        "register": 80,
+        "value": "last-write"
+      },
+      {
+        "register": 96,
+        "value": "last-write"
+      },
+      {
+        "register": 97,
+        "value": "last-write"
+      },
+      {
+        "register": 98,
+        "value": 0
+      },
+      {
+        "register": 99,
+        "value": "last-write"
+      },
+      {
+        "register": 112,
+        "value": 0
+      },
+      {
+        "register": 114,
+        "value": "last-write"
+      },
+      {
+        "register": 115,
+        "value": "last-write"
+      },
+      {
+        "register": 132,
+        "value": 0
+      },
+      {
+        "register": 134,
+        "value": 0
+      },
+      {
+        "register": 135,
+        "value": 0
+      },
+      {
+        "register": 136,
+        "value": 0
+      },
+      {
+        "register": 137,
+        "value": 0
+      },
+      {
+        "register": 144,
+        "value": 0
+      },
+      {
+        "register": 145,
+        "value": "last-write"
+      },
+      {
+        "register": 160,
+        "value": "last-write"
+      },
+      {
+        "register": 161,
+        "value": "last-write"
+      },
+      {
+        "register": 176,
+        "value": "last-write"
+      },
+      {
+        "register": 182,
+        "value": "last-write"
+      },
+      {
+        "register": 183,
+        "value": 0
+      },
+      {
+        "register": 184,
+        "value": 0
+      },
+      {
+        "register": 185,
+        "value": 0
+      },
+      {
+        "register": 192,
+        "value": "last-write"
+      },
+      {
+        "register": 193,
+        "value": 0
+      },
+      {
+        "register": 194,
+        "value": 0
+      },
+      {
+        "register": 195,
+        "value": 0
+      },
+      {
+        "register": 196,
+        "value": 0
+      },
+      {
+        "register": 197,
+        "value": 0
+      },
+      {
+        "register": 198,
+        "value": 0
+      },
+      {
+        "register": 199,
+        "value": 0
+      },
+      {
+        "register": 200,
+        "value": 0
+      },
+      {
+        "register": 201,
+        "value": 0
+      },
+      {
+        "register": 202,
+        "value": 0
+      },
+      {
+        "register": 203,
+        "value": 0
+      },
+      {
+        "register": 204,
+        "value": 0
+      },
+      {
+        "register": 205,
+        "value": 0
+      },
+      {
+        "register": 206,
+        "value": 0
+      },
+      {
+        "register": 207,
+        "value": 0
+      },
+      {
+        "register": 208,
+        "value": 0
+      },
+      {
+        "register": 122,
+        "value": 64
+      },
+      {
+        "register": 119,
+        "value": 64
+      }
+    ],
+    "post_startup": [
+      {
+        "operation": "write",
+        "register": 112,
+        "value": 168
+      },
+      {
+        "operation": "read",
+        "register": 113,
+        "value": 64
+      },
+      {
+        "operation": "write",
+        "register": 112,
+        "value": 172
+      },
+      {
+        "operation": "read",
+        "register": 113,
+        "value": 64
+      },
+      {
+        "operation": "read",
+        "register": 122,
+        "value": 64
+      },
+      {
+        "operation": "read",
+        "register": 119,
+        "value": 64
+      },
+      {
+        "operation": "write",
+        "register": 98,
+        "value": 1
+      },
+      {
+        "operation": "write",
+        "register": 112,
+        "value": 168
+      },
+      {
+        "operation": "read",
+        "register": 113,
+        "value": 64
+      },
+      {
+        "operation": "write",
+        "register": 112,
+        "value": 172
+      },
+      {
+        "operation": "read",
+        "register": 113,
+        "value": 64
+      },
+      {
+        "operation": "read",
+        "register": 122,
+        "value": 64
+      },
+      {
+        "operation": "read",
+        "register": 119,
+        "value": 64
+      }
+    ],
+    "post_startup_repeat_from": 7,
+    "post_startup_writes": [
+      {
+        "register": 199,
+        "value": 64
+      },
+      {
+        "register": 204,
+        "value": 64
+      },
+      {
+        "register": 204,
+        "value": 80
+      },
+      {
+        "register": 197,
+        "value": 24
+      },
+      {
+        "register": 115,
+        "value": 0
+      },
+      {
+        "register": 112,
+        "value": 161
+      },
+      {
+        "register": 97,
+        "value": 3
+      },
+      {
+        "register": 112,
+        "value": 168
+      },
+      {
+        "register": 176,
+        "value": 228
+      },
+      {
+        "register": 67,
+        "value": 4
+      }
+    ],
+    "post_startup_reads": [
+      {
+        "register": 117,
+        "value": 0
+      },
+      {
+        "register": 118,
+        "value": 0
+      },
+      {
+        "register": 115,
+        "value": "last-write"
+      },
+      {
+        "register": 113,
+        "value": 64
+      }
+    ]
+  },
+  "nand": {
+    "profile": "samsung-256m-x8-reset-id-status",
+    "address": 1342177280,
+    "manufacturer_id": 236,
+    "device_id": 53,
+    "completion": "immediate-ready",
+    "write_protected": false,
+    "spare_read": {
+      "profile": "samsung-x8-read2-unknown-contents"
+    },
+    "spare_program": {
+      "profile": "samsung-x8-known-spare-lifecycle-no-wear"
+    },
+    "synthetic_spare": {
+      "profile": "all-spare-ff-valid-footers"
+    },
+    "block_erase": {
+      "profile": "samsung-x8-block-erase-immediate"
+    },
+    "main_array": {
+      "profile": "samsung-x8-known-main-read-program"
+    },
+    "copy_back": {
+      "profile": "samsung-x8-known-page-copyback-no-wear"
+    }
+  },
+  "f500_command_capture": {
+    "profile": "081c-halfword-zero-command-capture"
+  },
+  "pdi": {
+    "profile": "r61500-write-packets"
+  },
+  "rtc_retained_state": {
+    "profile": "cold-zero-lowbyte-bank"
+  },
+  "memorystick_slot": {
+    "profile": "gpio42-empty-slot"
+  },
+  "dtcm_reset_record": {
+    "profile": "cold-zero-reset-record",
+    "address": 1107297796,
+    "size": 28,
+    "fill": 0
+  },
+  "nor_gdfs_image": {
+    "profile": "native-generated-gdfs-bank",
+    "address": 1173356544,
+    "end": 1174405120,
+    "input_path": "fw/non-provisioned/w800i-r1l002-cid49-gdfs.bin",
+    "size_bytes": 1048576,
+    "sha256": "4118eb7369b5c2e8f8258591bd60c4a3e51eeeb9e6b6c917fb68e59b344a9e46"
+  },
+  "synthetic_kgen": {
+    "profile": "sha1-le92-init-update-8040"
+  },
+  "fa_transfer": {
+    "profile": "word-pairs-latency2",
+    "initial_halfwords": [
+      {
+        "address": 32784,
+        "value": 0
+      },
+      {
+        "address": 32785,
+        "value": 0
+      },
+      {
+        "address": 46012,
+        "value": 0
+      },
+      {
+        "address": 46013,
+        "value": 0
+      },
+      {
+        "address": 46378,
+        "value": 0
+      },
+      {
+        "address": 46379,
+        "value": 0
+      },
+      {
+        "address": 46688,
+        "value": 0
+      },
+      {
+        "address": 46689,
+        "value": 0
+      },
+      {
+        "address": 46524,
+        "value": 0
+      },
+      {
+        "address": 46525,
+        "value": 0
+      },
+      {
+        "address": 49148,
+        "value": 0
+      },
+      {
+        "address": 49149,
+        "value": 0
+      },
+      {
+        "address": 46752,
+        "value": 0
+      },
+      {
+        "address": 46753,
+        "value": 0
+      },
+      {
+        "address": 47482,
+        "value": 0
+      },
+      {
+        "address": 47483,
+        "value": 0
+      },
+      {
+        "address": 47530,
+        "value": 0
+      },
+      {
+        "address": 47531,
+        "value": 0
+      },
+      {
+        "address": 49084,
+        "value": 0
+      },
+      {
+        "address": 49085,
+        "value": 0
+      }
+    ]
+  },
+  "fa_mailbox_tx": {
+    "profile": "outbound-single-slot"
+  },
+  "dsp_peer": {
+    "profile": "wire20-op2-logical2-sink",
+    "latency_observations": 2
+  },
+  "startup_status": {
+    "profile": "mask05-lowbyte-clear",
+    "initial_value": 0
+  }
+}

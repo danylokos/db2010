@@ -1,0 +1,19 @@
+{
+  "encoded": {
+    "size_bytes": 3344,
+    "sha256": "7180f77e96b7dcefb766b3016284b753da4e65111048f0d052067508872ba4bd"
+  },
+  "source_frames": 9216,
+  "output_frames": 20063,
+  "source_pcm_sha256": "fd15f58738318315f20d41d2abc39c2a5255b6ee01cac705991077b8a155a582",
+  "output_pcm_sha256": "1e2ec5d72e77a53d594bf29f1870f38dc01dca4eb29d88002be2b01c2baab2e2",
+  "output_pcm_fnv1a64": "b48b833334cccf5b",
+  "nonzero_samples": 25868,
+  "provenance": {
+    "source": "Consecutive native4488F2E4 return bytes in0249-opera-processing-readonly; first16 complete frames.",
+    "format": "MPEG2/LIII64kbit/s22050Hz stereo;576 samples per frame.",
+    "decoder_source_sha256": "51b46b6307a2588fbec436b6eb656b7e62e9ec65977f8aa195757fc48a78d185",
+    "main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+    "policy": "Known ID2 filter is replaced by host scalar decoding and integer linear320/147 conversion; not original DSP fidelity."
+  }
+}

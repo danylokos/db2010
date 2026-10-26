@@ -1,0 +1,44 @@
+{
+  "format_version": 1,
+  "profile": "w800i-r1l002-minimal-customization-raw-fs",
+  "stock_container": {
+    "input_path": "/home/danylokos/workplace/db2010/fw/w800i/images/R1L002/cid49/sony-ericsson/W800_R1L002_FS_EMEA1_RED49.bin",
+    "size_bytes": 10636376,
+    "sha256": "774aef3a3f9c786283de04d92ffd711d4eafdc1e8429bee478c846e7dedc07ee"
+  },
+  "stock_payload": {
+    "size_bytes": 10632384,
+    "sha256": "77669be675402fa584ed424b5cc7bc18169bb4bafe85f60ca8a9fababe63e13f"
+  },
+  "customization_archive": {
+    "input_path": "/home/danylokos/workplace/db2010/fw/w800i/customization/minimal-english.zip",
+    "size_bytes": 326,
+    "sha256": "98fc49967057641b976426c659ef1517a1f953f841d447ca72fcdb30ae7b4b03"
+  },
+  "installed_files": [
+    {
+      "path": "tpa/preset/custom/customize.xml",
+      "size_bytes": 166,
+      "sha256": "02c5a25c8296324639d593b4cd2e99be839935541157f3f71bc75067c40b80a5"
+    }
+  ],
+  "omitted_files": [],
+  "selection": "Only tpa/preset/custom files; preserve stock drivers and other mounts.",
+  "output": {
+    "address": 1161822208,
+    "end": 1173356544,
+    "size_bytes": 11534336,
+    "sha256": "f0e3aa2d9b9007a87fcb186b812eee43074fd8bb105ed52f238dce57c79150b3",
+    "file": "w800i-r1l002-cid49-fs-minimal-english.bin"
+  },
+  "tail": {
+    "fill": 255,
+    "span_size": 262144,
+    "footer_value": 4692,
+    "footer_count": 44,
+    "physical_contents_established": false
+  },
+  "storage_input_derivation": true,
+  "firmware_code_changes": false,
+  "debugger_interventions": []
+}

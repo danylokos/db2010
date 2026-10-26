@@ -1,0 +1,88 @@
+{
+  "format_version": 1,
+  "manifest": "firmware-manifest.json",
+  "manifest_id": "main",
+  "cpu": "ARM926",
+  "cpsr": 211,
+  "registers": {
+    "r0": 0,
+    "r1": 0,
+    "r2": 0,
+    "r3": 0,
+    "r4": 0,
+    "r5": 0,
+    "r6": 0,
+    "r7": 0,
+    "r8": 0,
+    "r9": 0,
+    "r10": 0,
+    "r11": 0,
+    "r12": 0,
+    "lr": 0
+  },
+  "banked_sp": {
+    "usr": 0,
+    "fiq": 0,
+    "irq": 0,
+    "svc": 0,
+    "abt": 0,
+    "und": 0
+  },
+  "cp15_control_clear_mask": 12421,
+  "memory": [
+    {
+      "name": "external_ram",
+      "address": 1275068416,
+      "size": 8388608,
+      "permissions": "rwx"
+    },
+    {
+      "name": "internal_stack",
+      "address": 4076863488,
+      "size": 4096,
+      "permissions": "rw"
+    },
+    {
+      "name": "internal_ram_f600",
+      "address": 4127195136,
+      "size": 12288,
+      "permissions": "rw"
+    }
+  ],
+  "executable_ranges": [
+    [
+      1140981760,
+      1159482296
+    ],
+    [
+      1275068416,
+      1275104424
+    ],
+    [
+      1275104432,
+      1275107100
+    ]
+  ],
+  "ram_initialization": {
+    "region": "external_ram",
+    "fill_byte": 0
+  },
+  "fs_image": {
+    "manifest_id": "fs",
+    "sha256": "774aef3a3f9c786283de04d92ffd711d4eafdc1e8429bee478c846e7dedc07ee",
+    "payload_sha256": "77669be675402fa584ed424b5cc7bc18169bb4bafe85f60ca8a9fababe63e13f"
+  },
+  "fs_nor_tail": {
+    "profile": "synthetic-erased-fs-remainder-valid-footers",
+    "address": 1172454592,
+    "end": 1173356544,
+    "fill": 255,
+    "footer_value": 4692,
+    "footer_addresses": [
+      1172570110,
+      1172832254,
+      1173094398,
+      1173356542
+    ]
+  }
+}

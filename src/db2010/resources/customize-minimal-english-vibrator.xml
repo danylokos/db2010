@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customization>
+  <mmi>
+    <profile id="0">
+      <vibrator>on-if-silent</vibrator>
+    </profile>
+    <settings>
+      <default-language>en</default-language>
+    </settings>
+  </mmi>
+</customization>

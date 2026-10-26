@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "images": {
+    "main": {
+      "input_path": "fw/non-provisioned/w800i-r1l002-cid49-main.bin",
+      "size_bytes": 18500536,
+      "sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d"
+    },
+    "fs": {
+      "input_path": "fw/non-provisioned/w800i-r1l002-cid49-fs.bin",
+      "size_bytes": 11534336,
+      "sha256": "f0e3aa2d9b9007a87fcb186b812eee43074fd8bb105ed52f238dce57c79150b3"
+    },
+    "gdfs": {
+      "input_path": "fw/non-provisioned/w800i-r1l002-cid49-gdfs.bin",
+      "size_bytes": 1048576,
+      "sha256": "4118eb7369b5c2e8f8258591bd60c4a3e51eeeb9e6b6c917fb68e59b344a9e46"
+    }
+  },
+  "main": "Original authenticated MAIN payload, extracted without changes.",
+  "fs": "Derived one-file English-only customization without region/provider/profile declarations, WAP profiles or certificate installs;0268 models firmware-derived PMIC vibration fields. See adjacent .bin.json and PMIC vibration investigation.",
+  "gdfs": "Native-generated bank from the retained GDFS restore experiment; not a factory handset dump."
+}

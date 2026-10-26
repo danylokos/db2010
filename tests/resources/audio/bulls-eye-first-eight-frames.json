@@ -1,0 +1,24 @@
+{
+  "encoded": {
+    "size_bytes": 1671,
+    "sha256": "228125ec9dd33ae5c360f748f469a0a5f4ab839fc9213d87fa69eb12606cc4f8"
+  },
+  "source_frames": 9216,
+  "output_frames": 10032,
+  "source_pcm_sha256": "f3c84ab275170d245d04640f502194c11451a27b6d0fe750302185b724720a8c",
+  "output_pcm_sha256": "03d245b1aa6555cd10815302be15ded0cc80ac226c0f1b777afc5c5dbaea97bc",
+  "output_pcm_fnv1a64": "05e0a1ad9853c991",
+  "nonzero_samples": 11130,
+  "provenance": {
+    "capture": "0246-mono-decode-readonly",
+    "file": "/tpa/user/audio/Ringtones/Bulls Eye.mp3",
+    "source": "Consecutive original source-adapter return bytes at4488F2E4, first8 complete MPEG frames; no ID3 or decoder resynchronization.",
+    "main_sha256": "46e09443e9d35fb3a4a3891e235af0b19180501ad9d57f959baf7869fd83fa8d",
+    "decoder_source_sha256": "f16e818d8323a9e2fc63a249f61e8a18d0b1532504a81ff7a1a2f8f79ba01b6d",
+    "minimp3": {
+      "size_bytes": 76831,
+      "sha256": "57e437c5c1f0e8b243885d3929c8973b5e6c778451e0100ab4251d19915cb3ad"
+    },
+    "authenticated_final_capture": "0246-mono-final-readonly: native source-adapter bytes and ring halfwords both match this fixture."
+  }
+}

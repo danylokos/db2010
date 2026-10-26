@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "images": {
+    "main": {
+      "input_path": "fw/provisioned/w800i-r1l002-cid49-main.bin",
+      "size_bytes": 20840448,
+      "sha256": "02b488e09aadebc67fa5346ff2d0a3b1379019b23b429027946c04f8eb9de69c"
+    },
+    "fs": {
+      "input_path": "fw/provisioned/w800i-r1l002-cid49-fs.bin",
+      "size_bytes": 11534336,
+      "sha256": "337433575500653d4af96223f065b8f56d15be3eb042d48de48a1ff1c0751a30"
+    },
+    "gdfs": {
+      "input_path": "fw/provisioned/w800i-r1l002-cid49-gdfs.bin",
+      "size_bytes": 1048576,
+      "sha256": "0f3d9fa732615ca64b32308b1ac680468eaba243f3e54024e72b73f04e511b4f"
+    },
+    "nand-main": {
+      "input_path": "fw/provisioned/w800i-r1l002-cid49-nand-main.bin",
+      "size_bytes": 33554432,
+      "sha256": "8e66eaaa540172c62d61138dbf97a7ab1cc2eedd5e73375dd419a3470b11ed96"
+    },
+    "nand-spare": {
+      "input_path": "fw/provisioned/w800i-r1l002-cid49-nand-spare.bin",
+      "size_bytes": 1048576,
+      "sha256": "8f084213d7f61fde43afaa0e9f9b52e553debd05117b1e541dc4aabb37e7e694"
+    }
+  }
+}

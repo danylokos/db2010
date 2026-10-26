@@ -1,0 +1,5 @@
+recursive-include dependencies/qemu *.json
+include .gitmodules
+recursive-include native/trace *.c
+recursive-include src/db2010/resources *.json
+recursive-include src/db2010/ui/assets *

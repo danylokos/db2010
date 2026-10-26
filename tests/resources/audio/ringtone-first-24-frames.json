@@ -1,0 +1,20 @@
+{
+  "source": "Unchanged W800i native source-adapter capture0244-ringtone-tail-readonly; Anybody there.mp3",
+  "slice_offset": 0,
+  "slice_size_bytes": 10031,
+  "sha256": "420cc7f5e56e364f1da9444f6fd6f4774ca309ffa40fea6aade79d800ad02a4d",
+  "source_format": "MPEG1 LayerIII128kbps44100Hz stereo;23 padded418-byte frames then one417-byte frame",
+  "purpose": "Odd-byte EOF alignment and rate-conversion regression; no runtime dependency on parent artifacts.",
+  "scalar_minimp3_integer_linear_oracle": {
+    "encoded": {
+      "size_bytes": 10031,
+      "sha256": "420cc7f5e56e364f1da9444f6fd6f4774ca309ffa40fea6aade79d800ad02a4d"
+    },
+    "source_frames": 27648,
+    "output_frames": 30094,
+    "source_pcm_sha256": "e55a79a5341d9d07710bedc3db4f1134cfbfef3cd07c25b9ea9b27eb67811fb5",
+    "output_pcm_sha256": "19f00cd63561e0895ee23169a3317105380ef392f1955de244085851e0368c64",
+    "output_pcm_fnv1a64": "175a67e816498d95",
+    "nonzero_samples": 49470
+  }
+}

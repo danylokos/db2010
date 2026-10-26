@@ -1,0 +1,18 @@
+[
+  {
+    "address": 4211474442,
+    "width": 2,
+    "initial_value": null,
+    "read_or_mask": 0,
+    "name": "uart0-open-config-0a-latch",
+    "access": "rw",
+    "allowed_writes": [7, 256]
+  },
+  {
+    "address": 4211474450,
+    "width": 2,
+    "initial_value": null,
+    "read_or_mask": 0,
+    "name": "uart-0-init-control"
+  }
+]

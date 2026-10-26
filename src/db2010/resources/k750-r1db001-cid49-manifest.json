@@ -1,0 +1,2336 @@
+{
+  "format_version": 1,
+  "model": "K750i",
+  "revision": "R1DB001",
+  "cid": 49,
+  "entries": [
+    {
+      "id": "main",
+      "input_path": "fw/k750i/images/R1DB001/cid49/sony-ericsson/K750_R1DB001_MAIN_EU_1_CL_RED49.mbn",
+      "size": 18534368,
+      "sha256": "048999c26718a39afb6bbce268b5bfee7cf70da679c8bd5010f1fd70f1eadbf2",
+      "base": 1140981760,
+      "end": 1159506012,
+      "segments": [
+        {
+          "offset": 1195,
+          "address": 1140981760,
+          "length": 3804
+        },
+        {
+          "offset": 5007,
+          "address": 1140985568,
+          "length": 4838
+        },
+        {
+          "offset": 9853,
+          "address": 1140990976,
+          "length": 36008
+        },
+        {
+          "offset": 45869,
+          "address": 1141026992,
+          "length": 20304
+        },
+        {
+          "offset": 66181,
+          "address": 1141047296,
+          "length": 40500
+        },
+        {
+          "offset": 106689,
+          "address": 1141088000,
+          "length": 24832
+        },
+        {
+          "offset": 131529,
+          "address": 1141112832,
+          "length": 65536
+        },
+        {
+          "offset": 197073,
+          "address": 1141178368,
+          "length": 65536
+        },
+        {
+          "offset": 262617,
+          "address": 1141243904,
+          "length": 65536
+        },
+        {
+          "offset": 328161,
+          "address": 1141309440,
+          "length": 65536
+        },
+        {
+          "offset": 393705,
+          "address": 1141374976,
+          "length": 65536
+        },
+        {
+          "offset": 459249,
+          "address": 1141440512,
+          "length": 65536
+        },
+        {
+          "offset": 524793,
+          "address": 1141506048,
+          "length": 65536
+        },
+        {
+          "offset": 590337,
+          "address": 1141571584,
+          "length": 65536
+        },
+        {
+          "offset": 655881,
+          "address": 1141637120,
+          "length": 65536
+        },
+        {
+          "offset": 721425,
+          "address": 1141702656,
+          "length": 65536
+        },
+        {
+          "offset": 786969,
+          "address": 1141768192,
+          "length": 65536
+        },
+        {
+          "offset": 852513,
+          "address": 1141833728,
+          "length": 65536
+        },
+        {
+          "offset": 918057,
+          "address": 1141899264,
+          "length": 65536
+        },
+        {
+          "offset": 983601,
+          "address": 1141964800,
+          "length": 65536
+        },
+        {
+          "offset": 1049145,
+          "address": 1142030336,
+          "length": 65536
+        },
+        {
+          "offset": 1114689,
+          "address": 1142095872,
+          "length": 65536
+        },
+        {
+          "offset": 1180233,
+          "address": 1142161408,
+          "length": 65536
+        },
+        {
+          "offset": 1245777,
+          "address": 1142226944,
+          "length": 65536
+        },
+        {
+          "offset": 1311321,
+          "address": 1142292480,
+          "length": 65536
+        },
+        {
+          "offset": 1376865,
+          "address": 1142358016,
+          "length": 65536
+        },
+        {
+          "offset": 1442409,
+          "address": 1142423552,
+          "length": 65536
+        },
+        {
+          "offset": 1507953,
+          "address": 1142489088,
+          "length": 65536
+        },
+        {
+          "offset": 1573497,
+          "address": 1142554624,
+          "length": 65536
+        },
+        {
+          "offset": 1639041,
+          "address": 1142620160,
+          "length": 65536
+        },
+        {
+          "offset": 1704585,
+          "address": 1142685696,
+          "length": 65536
+        },
+        {
+          "offset": 1770129,
+          "address": 1142751232,
+          "length": 65536
+        },
+        {
+          "offset": 1835673,
+          "address": 1142816768,
+          "length": 65536
+        },
+        {
+          "offset": 1901217,
+          "address": 1142882304,
+          "length": 65536
+        },
+        {
+          "offset": 1966761,
+          "address": 1142947840,
+          "length": 65536
+        },
+        {
+          "offset": 2032305,
+          "address": 1143013376,
+          "length": 65536
+        },
+        {
+          "offset": 2097849,
+          "address": 1143078912,
+          "length": 65536
+        },
+        {
+          "offset": 2163393,
+          "address": 1143144448,
+          "length": 65536
+        },
+        {
+          "offset": 2228937,
+          "address": 1143209984,
+          "length": 65536
+        },
+        {
+          "offset": 2294481,
+          "address": 1143275520,
+          "length": 65536
+        },
+        {
+          "offset": 2360025,
+          "address": 1143341056,
+          "length": 65536
+        },
+        {
+          "offset": 2425569,
+          "address": 1143406592,
+          "length": 65536
+        },
+        {
+          "offset": 2491113,
+          "address": 1143472128,
+          "length": 65536
+        },
+        {
+          "offset": 2556657,
+          "address": 1143537664,
+          "length": 65536
+        },
+        {
+          "offset": 2622201,
+          "address": 1143603200,
+          "length": 65536
+        },
+        {
+          "offset": 2687745,
+          "address": 1143668736,
+          "length": 65536
+        },
+        {
+          "offset": 2753289,
+          "address": 1143734272,
+          "length": 65536
+        },
+        {
+          "offset": 2818833,
+          "address": 1143799808,
+          "length": 65536
+        },
+        {
+          "offset": 2884377,
+          "address": 1143865344,
+          "length": 65536
+        },
+        {
+          "offset": 2949921,
+          "address": 1143930880,
+          "length": 65536
+        },
+        {
+          "offset": 3015465,
+          "address": 1143996416,
+          "length": 65536
+        },
+        {
+          "offset": 3081009,
+          "address": 1144061952,
+          "length": 65536
+        },
+        {
+          "offset": 3146553,
+          "address": 1144127488,
+          "length": 65536
+        },
+        {
+          "offset": 3212097,
+          "address": 1144193024,
+          "length": 65536
+        },
+        {
+          "offset": 3277641,
+          "address": 1144258560,
+          "length": 65536
+        },
+        {
+          "offset": 3343185,
+          "address": 1144324096,
+          "length": 65536
+        },
+        {
+          "offset": 3408729,
+          "address": 1144389632,
+          "length": 65536
+        },
+        {
+          "offset": 3474273,
+          "address": 1144455168,
+          "length": 65536
+        },
+        {
+          "offset": 3539817,
+          "address": 1144520704,
+          "length": 65536
+        },
+        {
+          "offset": 3605361,
+          "address": 1144586240,
+          "length": 65536
+        },
+        {
+          "offset": 3670905,
+          "address": 1144651776,
+          "length": 65536
+        },
+        {
+          "offset": 3736449,
+          "address": 1144717312,
+          "length": 65536
+        },
+        {
+          "offset": 3801993,
+          "address": 1144782848,
+          "length": 65536
+        },
+        {
+          "offset": 3867537,
+          "address": 1144848384,
+          "length": 65536
+        },
+        {
+          "offset": 3933081,
+          "address": 1144913920,
+          "length": 65536
+        },
+        {
+          "offset": 3998625,
+          "address": 1144979456,
+          "length": 65536
+        },
+        {
+          "offset": 4064169,
+          "address": 1145044992,
+          "length": 65536
+        },
+        {
+          "offset": 4129713,
+          "address": 1145110528,
+          "length": 65536
+        },
+        {
+          "offset": 4195257,
+          "address": 1145176064,
+          "length": 65536
+        },
+        {
+          "offset": 4260801,
+          "address": 1145241600,
+          "length": 65536
+        },
+        {
+          "offset": 4326345,
+          "address": 1145307136,
+          "length": 65536
+        },
+        {
+          "offset": 4391889,
+          "address": 1145372672,
+          "length": 65536
+        },
+        {
+          "offset": 4457433,
+          "address": 1145438208,
+          "length": 65536
+        },
+        {
+          "offset": 4522977,
+          "address": 1145503744,
+          "length": 65536
+        },
+        {
+          "offset": 4588521,
+          "address": 1145569280,
+          "length": 65536
+        },
+        {
+          "offset": 4654065,
+          "address": 1145634816,
+          "length": 65536
+        },
+        {
+          "offset": 4719609,
+          "address": 1145700352,
+          "length": 65536
+        },
+        {
+          "offset": 4785153,
+          "address": 1145765888,
+          "length": 65536
+        },
+        {
+          "offset": 4850697,
+          "address": 1145831424,
+          "length": 65536
+        },
+        {
+          "offset": 4916241,
+          "address": 1145896960,
+          "length": 65536
+        },
+        {
+          "offset": 4981785,
+          "address": 1145962496,
+          "length": 65536
+        },
+        {
+          "offset": 5047329,
+          "address": 1146028032,
+          "length": 65536
+        },
+        {
+          "offset": 5112873,
+          "address": 1146093568,
+          "length": 65536
+        },
+        {
+          "offset": 5178417,
+          "address": 1146159104,
+          "length": 65536
+        },
+        {
+          "offset": 5243961,
+          "address": 1146224640,
+          "length": 65536
+        },
+        {
+          "offset": 5309505,
+          "address": 1146290176,
+          "length": 65536
+        },
+        {
+          "offset": 5375049,
+          "address": 1146355712,
+          "length": 65536
+        },
+        {
+          "offset": 5440593,
+          "address": 1146421248,
+          "length": 65536
+        },
+        {
+          "offset": 5506137,
+          "address": 1146486784,
+          "length": 65536
+        },
+        {
+          "offset": 5571681,
+          "address": 1146552320,
+          "length": 65536
+        },
+        {
+          "offset": 5637225,
+          "address": 1146617856,
+          "length": 65536
+        },
+        {
+          "offset": 5702769,
+          "address": 1146683392,
+          "length": 65536
+        },
+        {
+          "offset": 5768313,
+          "address": 1146748928,
+          "length": 65536
+        },
+        {
+          "offset": 5833857,
+          "address": 1146814464,
+          "length": 65536
+        },
+        {
+          "offset": 5899401,
+          "address": 1146880000,
+          "length": 65536
+        },
+        {
+          "offset": 5964945,
+          "address": 1146945536,
+          "length": 65536
+        },
+        {
+          "offset": 6030489,
+          "address": 1147011072,
+          "length": 65536
+        },
+        {
+          "offset": 6096033,
+          "address": 1147076608,
+          "length": 65536
+        },
+        {
+          "offset": 6161577,
+          "address": 1147142144,
+          "length": 65536
+        },
+        {
+          "offset": 6227121,
+          "address": 1147207680,
+          "length": 65536
+        },
+        {
+          "offset": 6292665,
+          "address": 1147273216,
+          "length": 65536
+        },
+        {
+          "offset": 6358209,
+          "address": 1147338752,
+          "length": 65536
+        },
+        {
+          "offset": 6423753,
+          "address": 1147404288,
+          "length": 65536
+        },
+        {
+          "offset": 6489297,
+          "address": 1147469824,
+          "length": 65536
+        },
+        {
+          "offset": 6554841,
+          "address": 1147535360,
+          "length": 65536
+        },
+        {
+          "offset": 6620385,
+          "address": 1147600896,
+          "length": 65536
+        },
+        {
+          "offset": 6685929,
+          "address": 1147666432,
+          "length": 65536
+        },
+        {
+          "offset": 6751473,
+          "address": 1147731968,
+          "length": 25133
+        },
+        {
+          "offset": 6776614,
+          "address": 1147757104,
+          "length": 40400
+        },
+        {
+          "offset": 6817022,
+          "address": 1147797504,
+          "length": 65536
+        },
+        {
+          "offset": 6882566,
+          "address": 1147863040,
+          "length": 65536
+        },
+        {
+          "offset": 6948110,
+          "address": 1147928576,
+          "length": 65536
+        },
+        {
+          "offset": 7013654,
+          "address": 1147994112,
+          "length": 65536
+        },
+        {
+          "offset": 7079198,
+          "address": 1148059648,
+          "length": 65536
+        },
+        {
+          "offset": 7144742,
+          "address": 1148125184,
+          "length": 65536
+        },
+        {
+          "offset": 7210286,
+          "address": 1148190720,
+          "length": 65536
+        },
+        {
+          "offset": 7275830,
+          "address": 1148256256,
+          "length": 65536
+        },
+        {
+          "offset": 7341374,
+          "address": 1148321792,
+          "length": 65536
+        },
+        {
+          "offset": 7406918,
+          "address": 1148387328,
+          "length": 65536
+        },
+        {
+          "offset": 7472462,
+          "address": 1148452864,
+          "length": 65536
+        },
+        {
+          "offset": 7538006,
+          "address": 1148518400,
+          "length": 65536
+        },
+        {
+          "offset": 7603550,
+          "address": 1148583936,
+          "length": 65536
+        },
+        {
+          "offset": 7669094,
+          "address": 1148649472,
+          "length": 65536
+        },
+        {
+          "offset": 7734638,
+          "address": 1148715008,
+          "length": 65536
+        },
+        {
+          "offset": 7800182,
+          "address": 1148780544,
+          "length": 65536
+        },
+        {
+          "offset": 7865726,
+          "address": 1148846080,
+          "length": 65536
+        },
+        {
+          "offset": 7931270,
+          "address": 1148911616,
+          "length": 65536
+        },
+        {
+          "offset": 7996814,
+          "address": 1148977152,
+          "length": 65536
+        },
+        {
+          "offset": 8062358,
+          "address": 1149042688,
+          "length": 65536
+        },
+        {
+          "offset": 8127902,
+          "address": 1149108224,
+          "length": 65536
+        },
+        {
+          "offset": 8193446,
+          "address": 1149173760,
+          "length": 65536
+        },
+        {
+          "offset": 8258990,
+          "address": 1149239296,
+          "length": 65536
+        },
+        {
+          "offset": 8324534,
+          "address": 1149304832,
+          "length": 65536
+        },
+        {
+          "offset": 8390078,
+          "address": 1149370368,
+          "length": 65536
+        },
+        {
+          "offset": 8455622,
+          "address": 1149435904,
+          "length": 65536
+        },
+        {
+          "offset": 8521166,
+          "address": 1149501440,
+          "length": 65536
+        },
+        {
+          "offset": 8586710,
+          "address": 1149566976,
+          "length": 65536
+        },
+        {
+          "offset": 8652254,
+          "address": 1149632512,
+          "length": 65536
+        },
+        {
+          "offset": 8717798,
+          "address": 1149698048,
+          "length": 65536
+        },
+        {
+          "offset": 8783342,
+          "address": 1149763584,
+          "length": 65536
+        },
+        {
+          "offset": 8848886,
+          "address": 1149829120,
+          "length": 65536
+        },
+        {
+          "offset": 8914430,
+          "address": 1149894656,
+          "length": 65536
+        },
+        {
+          "offset": 8979974,
+          "address": 1149960192,
+          "length": 65536
+        },
+        {
+          "offset": 9045518,
+          "address": 1150025728,
+          "length": 65536
+        },
+        {
+          "offset": 9111062,
+          "address": 1150091264,
+          "length": 65536
+        },
+        {
+          "offset": 9176606,
+          "address": 1150156800,
+          "length": 65536
+        },
+        {
+          "offset": 9242150,
+          "address": 1150222336,
+          "length": 65536
+        },
+        {
+          "offset": 9307694,
+          "address": 1150287872,
+          "length": 65536
+        },
+        {
+          "offset": 9373238,
+          "address": 1150353408,
+          "length": 65536
+        },
+        {
+          "offset": 9438782,
+          "address": 1150418944,
+          "length": 65536
+        },
+        {
+          "offset": 9504326,
+          "address": 1150484480,
+          "length": 65536
+        },
+        {
+          "offset": 9569870,
+          "address": 1150550016,
+          "length": 65536
+        },
+        {
+          "offset": 9635414,
+          "address": 1150615552,
+          "length": 65536
+        },
+        {
+          "offset": 9700958,
+          "address": 1150681088,
+          "length": 65536
+        },
+        {
+          "offset": 9766502,
+          "address": 1150746624,
+          "length": 65536
+        },
+        {
+          "offset": 9832046,
+          "address": 1150812160,
+          "length": 65536
+        },
+        {
+          "offset": 9897590,
+          "address": 1150877696,
+          "length": 65536
+        },
+        {
+          "offset": 9963134,
+          "address": 1150943232,
+          "length": 65536
+        },
+        {
+          "offset": 10028678,
+          "address": 1151008768,
+          "length": 65536
+        },
+        {
+          "offset": 10094222,
+          "address": 1151074304,
+          "length": 65536
+        },
+        {
+          "offset": 10159766,
+          "address": 1151139840,
+          "length": 65536
+        },
+        {
+          "offset": 10225310,
+          "address": 1151205376,
+          "length": 65536
+        },
+        {
+          "offset": 10290854,
+          "address": 1151270912,
+          "length": 65536
+        },
+        {
+          "offset": 10356398,
+          "address": 1151336448,
+          "length": 65536
+        },
+        {
+          "offset": 10421942,
+          "address": 1151401984,
+          "length": 65536
+        },
+        {
+          "offset": 10487486,
+          "address": 1151467520,
+          "length": 65536
+        },
+        {
+          "offset": 10553030,
+          "address": 1151533056,
+          "length": 65536
+        },
+        {
+          "offset": 10618574,
+          "address": 1151598592,
+          "length": 65536
+        },
+        {
+          "offset": 10684118,
+          "address": 1151664128,
+          "length": 65536
+        },
+        {
+          "offset": 10749662,
+          "address": 1151729664,
+          "length": 65536
+        },
+        {
+          "offset": 10815206,
+          "address": 1151795200,
+          "length": 65536
+        },
+        {
+          "offset": 10880750,
+          "address": 1151860736,
+          "length": 65536
+        },
+        {
+          "offset": 10946294,
+          "address": 1151926272,
+          "length": 65536
+        },
+        {
+          "offset": 11011838,
+          "address": 1151991808,
+          "length": 65536
+        },
+        {
+          "offset": 11077382,
+          "address": 1152057344,
+          "length": 65536
+        },
+        {
+          "offset": 11142926,
+          "address": 1152122880,
+          "length": 65536
+        },
+        {
+          "offset": 11208470,
+          "address": 1152188416,
+          "length": 65536
+        },
+        {
+          "offset": 11274014,
+          "address": 1152253952,
+          "length": 65536
+        },
+        {
+          "offset": 11339558,
+          "address": 1152319488,
+          "length": 65536
+        },
+        {
+          "offset": 11405102,
+          "address": 1152385024,
+          "length": 65536
+        },
+        {
+          "offset": 11470646,
+          "address": 1152450560,
+          "length": 65536
+        },
+        {
+          "offset": 11536190,
+          "address": 1152516096,
+          "length": 65536
+        },
+        {
+          "offset": 11601734,
+          "address": 1152581632,
+          "length": 65536
+        },
+        {
+          "offset": 11667278,
+          "address": 1152647168,
+          "length": 65536
+        },
+        {
+          "offset": 11732822,
+          "address": 1152712704,
+          "length": 65536
+        },
+        {
+          "offset": 11798366,
+          "address": 1152778240,
+          "length": 65536
+        },
+        {
+          "offset": 11863910,
+          "address": 1152843776,
+          "length": 65536
+        },
+        {
+          "offset": 11929454,
+          "address": 1152909312,
+          "length": 65536
+        },
+        {
+          "offset": 11994998,
+          "address": 1152974848,
+          "length": 65536
+        },
+        {
+          "offset": 12060542,
+          "address": 1153040384,
+          "length": 65536
+        },
+        {
+          "offset": 12126086,
+          "address": 1153105920,
+          "length": 65536
+        },
+        {
+          "offset": 12191630,
+          "address": 1153171456,
+          "length": 65536
+        },
+        {
+          "offset": 12257174,
+          "address": 1153236992,
+          "length": 65536
+        },
+        {
+          "offset": 12322718,
+          "address": 1153302528,
+          "length": 65536
+        },
+        {
+          "offset": 12388262,
+          "address": 1153368064,
+          "length": 65536
+        },
+        {
+          "offset": 12453806,
+          "address": 1153433600,
+          "length": 65536
+        },
+        {
+          "offset": 12519350,
+          "address": 1153499136,
+          "length": 65536
+        },
+        {
+          "offset": 12584894,
+          "address": 1153564672,
+          "length": 65536
+        },
+        {
+          "offset": 12650438,
+          "address": 1153630208,
+          "length": 65536
+        },
+        {
+          "offset": 12715982,
+          "address": 1153695744,
+          "length": 65536
+        },
+        {
+          "offset": 12781526,
+          "address": 1153761280,
+          "length": 65536
+        },
+        {
+          "offset": 12847070,
+          "address": 1153826816,
+          "length": 65536
+        },
+        {
+          "offset": 12912614,
+          "address": 1153892352,
+          "length": 65536
+        },
+        {
+          "offset": 12978158,
+          "address": 1153957888,
+          "length": 65536
+        },
+        {
+          "offset": 13043702,
+          "address": 1154023424,
+          "length": 65536
+        },
+        {
+          "offset": 13109246,
+          "address": 1154088960,
+          "length": 65536
+        },
+        {
+          "offset": 13174790,
+          "address": 1154154496,
+          "length": 65536
+        },
+        {
+          "offset": 13240334,
+          "address": 1154220032,
+          "length": 65536
+        },
+        {
+          "offset": 13305878,
+          "address": 1154285568,
+          "length": 65536
+        },
+        {
+          "offset": 13371422,
+          "address": 1154351104,
+          "length": 65536
+        },
+        {
+          "offset": 13436966,
+          "address": 1154416640,
+          "length": 65536
+        },
+        {
+          "offset": 13502510,
+          "address": 1154482176,
+          "length": 65536
+        },
+        {
+          "offset": 13568054,
+          "address": 1154547712,
+          "length": 65536
+        },
+        {
+          "offset": 13633598,
+          "address": 1154613248,
+          "length": 65536
+        },
+        {
+          "offset": 13699142,
+          "address": 1154678784,
+          "length": 65536
+        },
+        {
+          "offset": 13764686,
+          "address": 1154744320,
+          "length": 65536
+        },
+        {
+          "offset": 13830230,
+          "address": 1154809856,
+          "length": 65536
+        },
+        {
+          "offset": 13895774,
+          "address": 1154875392,
+          "length": 65536
+        },
+        {
+          "offset": 13961318,
+          "address": 1154940928,
+          "length": 65536
+        },
+        {
+          "offset": 14026862,
+          "address": 1155006464,
+          "length": 65536
+        },
+        {
+          "offset": 14092406,
+          "address": 1155072000,
+          "length": 65536
+        },
+        {
+          "offset": 14157950,
+          "address": 1155137536,
+          "length": 65536
+        },
+        {
+          "offset": 14223494,
+          "address": 1155203072,
+          "length": 65536
+        },
+        {
+          "offset": 14289038,
+          "address": 1155268608,
+          "length": 65536
+        },
+        {
+          "offset": 14354582,
+          "address": 1155334144,
+          "length": 65536
+        },
+        {
+          "offset": 14420126,
+          "address": 1155399680,
+          "length": 65536
+        },
+        {
+          "offset": 14485670,
+          "address": 1155465216,
+          "length": 65536
+        },
+        {
+          "offset": 14551214,
+          "address": 1155530752,
+          "length": 65536
+        },
+        {
+          "offset": 14616758,
+          "address": 1155596288,
+          "length": 65536
+        },
+        {
+          "offset": 14682302,
+          "address": 1155661824,
+          "length": 65536
+        },
+        {
+          "offset": 14747846,
+          "address": 1155727360,
+          "length": 65536
+        },
+        {
+          "offset": 14813390,
+          "address": 1155792896,
+          "length": 65536
+        },
+        {
+          "offset": 14878934,
+          "address": 1155858432,
+          "length": 65536
+        },
+        {
+          "offset": 14944478,
+          "address": 1155923968,
+          "length": 65536
+        },
+        {
+          "offset": 15010022,
+          "address": 1155989504,
+          "length": 65536
+        },
+        {
+          "offset": 15075566,
+          "address": 1156055040,
+          "length": 65536
+        },
+        {
+          "offset": 15141110,
+          "address": 1156120576,
+          "length": 65536
+        },
+        {
+          "offset": 15206654,
+          "address": 1156186112,
+          "length": 65536
+        },
+        {
+          "offset": 15272198,
+          "address": 1156251648,
+          "length": 65536
+        },
+        {
+          "offset": 15337742,
+          "address": 1156317184,
+          "length": 65536
+        },
+        {
+          "offset": 15403286,
+          "address": 1156382720,
+          "length": 65536
+        },
+        {
+          "offset": 15468830,
+          "address": 1156448256,
+          "length": 65536
+        },
+        {
+          "offset": 15534374,
+          "address": 1156513792,
+          "length": 65536
+        },
+        {
+          "offset": 15599918,
+          "address": 1156579328,
+          "length": 65536
+        },
+        {
+          "offset": 15665462,
+          "address": 1156644864,
+          "length": 65536
+        },
+        {
+          "offset": 15731006,
+          "address": 1156710400,
+          "length": 65536
+        },
+        {
+          "offset": 15796550,
+          "address": 1156775936,
+          "length": 65536
+        },
+        {
+          "offset": 15862094,
+          "address": 1156841472,
+          "length": 65536
+        },
+        {
+          "offset": 15927638,
+          "address": 1156907008,
+          "length": 65536
+        },
+        {
+          "offset": 15993182,
+          "address": 1156972544,
+          "length": 65536
+        },
+        {
+          "offset": 16058726,
+          "address": 1157038080,
+          "length": 65536
+        },
+        {
+          "offset": 16124270,
+          "address": 1157103616,
+          "length": 65536
+        },
+        {
+          "offset": 16189814,
+          "address": 1157169152,
+          "length": 65536
+        },
+        {
+          "offset": 16255358,
+          "address": 1157234688,
+          "length": 65536
+        },
+        {
+          "offset": 16320902,
+          "address": 1157300224,
+          "length": 65536
+        },
+        {
+          "offset": 16386446,
+          "address": 1157365760,
+          "length": 65536
+        },
+        {
+          "offset": 16451990,
+          "address": 1157431296,
+          "length": 65536
+        },
+        {
+          "offset": 16517534,
+          "address": 1157496832,
+          "length": 65536
+        },
+        {
+          "offset": 16583078,
+          "address": 1157562368,
+          "length": 65536
+        },
+        {
+          "offset": 16648622,
+          "address": 1157627904,
+          "length": 65536
+        },
+        {
+          "offset": 16714166,
+          "address": 1157693440,
+          "length": 65536
+        },
+        {
+          "offset": 16779710,
+          "address": 1157758976,
+          "length": 65536
+        },
+        {
+          "offset": 16845254,
+          "address": 1157824512,
+          "length": 65536
+        },
+        {
+          "offset": 16910798,
+          "address": 1157890048,
+          "length": 65536
+        },
+        {
+          "offset": 16976342,
+          "address": 1157955584,
+          "length": 65536
+        },
+        {
+          "offset": 17041886,
+          "address": 1158021120,
+          "length": 65536
+        },
+        {
+          "offset": 17107430,
+          "address": 1158086656,
+          "length": 65536
+        },
+        {
+          "offset": 17172974,
+          "address": 1158152192,
+          "length": 65536
+        },
+        {
+          "offset": 17238518,
+          "address": 1158217728,
+          "length": 65536
+        },
+        {
+          "offset": 17304062,
+          "address": 1158283264,
+          "length": 65536
+        },
+        {
+          "offset": 17369606,
+          "address": 1158348800,
+          "length": 65536
+        },
+        {
+          "offset": 17435150,
+          "address": 1158414336,
+          "length": 65536
+        },
+        {
+          "offset": 17500694,
+          "address": 1158479872,
+          "length": 65536
+        },
+        {
+          "offset": 17566238,
+          "address": 1158545408,
+          "length": 65536
+        },
+        {
+          "offset": 17631782,
+          "address": 1158610944,
+          "length": 65536
+        },
+        {
+          "offset": 17697326,
+          "address": 1158676480,
+          "length": 65536
+        },
+        {
+          "offset": 17762870,
+          "address": 1158742016,
+          "length": 65536
+        },
+        {
+          "offset": 17828414,
+          "address": 1158807552,
+          "length": 65536
+        },
+        {
+          "offset": 17893958,
+          "address": 1158873088,
+          "length": 65536
+        },
+        {
+          "offset": 17959502,
+          "address": 1158938624,
+          "length": 65536
+        },
+        {
+          "offset": 18025046,
+          "address": 1159004160,
+          "length": 65536
+        },
+        {
+          "offset": 18090590,
+          "address": 1159069696,
+          "length": 65536
+        },
+        {
+          "offset": 18156134,
+          "address": 1159135232,
+          "length": 65536
+        },
+        {
+          "offset": 18221678,
+          "address": 1159200768,
+          "length": 65536
+        },
+        {
+          "offset": 18287222,
+          "address": 1159266304,
+          "length": 65536
+        },
+        {
+          "offset": 18352766,
+          "address": 1159331840,
+          "length": 10519
+        },
+        {
+          "offset": 18363293,
+          "address": 1159342360,
+          "length": 55016
+        },
+        {
+          "offset": 18418317,
+          "address": 1159397376,
+          "length": 65536
+        },
+        {
+          "offset": 18483861,
+          "address": 1159462912,
+          "length": 42799
+        },
+        {
+          "offset": 18526668,
+          "address": 1159505712,
+          "length": 249
+        },
+        {
+          "offset": 18526925,
+          "address": 1159505964,
+          "length": 48
+        }
+      ],
+      "record_stream_end": 18526973,
+      "payload_sha256": "50fa19d1de377197b7312b87f37ebac6c2895276c1ef9440e95705171386e635",
+      "ranges": [
+        [
+          1140981760,
+          1140985564
+        ],
+        [
+          1140985568,
+          1140990406
+        ],
+        [
+          1140990976,
+          1141026984
+        ],
+        [
+          1141026992,
+          1141087796
+        ],
+        [
+          1141088000,
+          1147757101
+        ],
+        [
+          1147757104,
+          1159342359
+        ],
+        [
+          1159342360,
+          1159505711
+        ],
+        [
+          1159505712,
+          1159505961
+        ],
+        [
+          1159505964,
+          1159506012
+        ]
+      ]
+    },
+    {
+      "id": "fs",
+      "input_path": "fw/k750i/images/R1DB001/cid49/sony-ericsson/K750_R1DB001_FS_EMEA_1_RED49.fbn",
+      "size": 10498016,
+      "sha256": "c69102b6f6fedefeb70ca20c1572b506b7cc531790470a5dbd96503b1f417bf8",
+      "base": 1161822208,
+      "end": 1172308996,
+      "segments": [
+        {
+          "offset": 1065,
+          "address": 1161822208,
+          "length": 65536
+        },
+        {
+          "offset": 66609,
+          "address": 1161887744,
+          "length": 65536
+        },
+        {
+          "offset": 132153,
+          "address": 1161953280,
+          "length": 65536
+        },
+        {
+          "offset": 197697,
+          "address": 1162018816,
+          "length": 65536
+        },
+        {
+          "offset": 263241,
+          "address": 1162084352,
+          "length": 65536
+        },
+        {
+          "offset": 328785,
+          "address": 1162149888,
+          "length": 65536
+        },
+        {
+          "offset": 394329,
+          "address": 1162215424,
+          "length": 65536
+        },
+        {
+          "offset": 459873,
+          "address": 1162280960,
+          "length": 65536
+        },
+        {
+          "offset": 525417,
+          "address": 1162346496,
+          "length": 65536
+        },
+        {
+          "offset": 590961,
+          "address": 1162412032,
+          "length": 65536
+        },
+        {
+          "offset": 656505,
+          "address": 1162477568,
+          "length": 65536
+        },
+        {
+          "offset": 722049,
+          "address": 1162543104,
+          "length": 65536
+        },
+        {
+          "offset": 787593,
+          "address": 1162608640,
+          "length": 65536
+        },
+        {
+          "offset": 853137,
+          "address": 1162674176,
+          "length": 65536
+        },
+        {
+          "offset": 918681,
+          "address": 1162739712,
+          "length": 65536
+        },
+        {
+          "offset": 984225,
+          "address": 1162805248,
+          "length": 65536
+        },
+        {
+          "offset": 1049769,
+          "address": 1162870784,
+          "length": 65536
+        },
+        {
+          "offset": 1115313,
+          "address": 1162936320,
+          "length": 65536
+        },
+        {
+          "offset": 1180857,
+          "address": 1163001856,
+          "length": 65536
+        },
+        {
+          "offset": 1246401,
+          "address": 1163067392,
+          "length": 65536
+        },
+        {
+          "offset": 1311945,
+          "address": 1163132928,
+          "length": 65536
+        },
+        {
+          "offset": 1377489,
+          "address": 1163198464,
+          "length": 65536
+        },
+        {
+          "offset": 1443033,
+          "address": 1163264000,
+          "length": 65536
+        },
+        {
+          "offset": 1508577,
+          "address": 1163329536,
+          "length": 65536
+        },
+        {
+          "offset": 1574121,
+          "address": 1163395072,
+          "length": 65536
+        },
+        {
+          "offset": 1639665,
+          "address": 1163460608,
+          "length": 65536
+        },
+        {
+          "offset": 1705209,
+          "address": 1163526144,
+          "length": 65536
+        },
+        {
+          "offset": 1770753,
+          "address": 1163591680,
+          "length": 65536
+        },
+        {
+          "offset": 1836297,
+          "address": 1163657216,
+          "length": 65536
+        },
+        {
+          "offset": 1901841,
+          "address": 1163722752,
+          "length": 65536
+        },
+        {
+          "offset": 1967385,
+          "address": 1163788288,
+          "length": 65536
+        },
+        {
+          "offset": 2032929,
+          "address": 1163853824,
+          "length": 65536
+        },
+        {
+          "offset": 2098473,
+          "address": 1163919360,
+          "length": 65536
+        },
+        {
+          "offset": 2164017,
+          "address": 1163984896,
+          "length": 65536
+        },
+        {
+          "offset": 2229561,
+          "address": 1164050432,
+          "length": 65536
+        },
+        {
+          "offset": 2295105,
+          "address": 1164115968,
+          "length": 65536
+        },
+        {
+          "offset": 2360649,
+          "address": 1164181504,
+          "length": 65536
+        },
+        {
+          "offset": 2426193,
+          "address": 1164247040,
+          "length": 65536
+        },
+        {
+          "offset": 2491737,
+          "address": 1164312576,
+          "length": 65536
+        },
+        {
+          "offset": 2557281,
+          "address": 1164378112,
+          "length": 65536
+        },
+        {
+          "offset": 2622825,
+          "address": 1164443648,
+          "length": 65536
+        },
+        {
+          "offset": 2688369,
+          "address": 1164509184,
+          "length": 65536
+        },
+        {
+          "offset": 2753913,
+          "address": 1164574720,
+          "length": 65536
+        },
+        {
+          "offset": 2819457,
+          "address": 1164640256,
+          "length": 65536
+        },
+        {
+          "offset": 2885001,
+          "address": 1164705792,
+          "length": 65536
+        },
+        {
+          "offset": 2950545,
+          "address": 1164771328,
+          "length": 65536
+        },
+        {
+          "offset": 3016089,
+          "address": 1164836864,
+          "length": 65536
+        },
+        {
+          "offset": 3081633,
+          "address": 1164902400,
+          "length": 65536
+        },
+        {
+          "offset": 3147177,
+          "address": 1164967936,
+          "length": 65536
+        },
+        {
+          "offset": 3212721,
+          "address": 1165033472,
+          "length": 65536
+        },
+        {
+          "offset": 3278265,
+          "address": 1165099008,
+          "length": 65536
+        },
+        {
+          "offset": 3343809,
+          "address": 1165164544,
+          "length": 65536
+        },
+        {
+          "offset": 3409353,
+          "address": 1165230080,
+          "length": 65536
+        },
+        {
+          "offset": 3474897,
+          "address": 1165295616,
+          "length": 65536
+        },
+        {
+          "offset": 3540441,
+          "address": 1165361152,
+          "length": 65536
+        },
+        {
+          "offset": 3605985,
+          "address": 1165426688,
+          "length": 65536
+        },
+        {
+          "offset": 3671529,
+          "address": 1165492224,
+          "length": 65536
+        },
+        {
+          "offset": 3737073,
+          "address": 1165557760,
+          "length": 65536
+        },
+        {
+          "offset": 3802617,
+          "address": 1165623296,
+          "length": 65536
+        },
+        {
+          "offset": 3868161,
+          "address": 1165688832,
+          "length": 65536
+        },
+        {
+          "offset": 3933705,
+          "address": 1165754368,
+          "length": 65536
+        },
+        {
+          "offset": 3999249,
+          "address": 1165819904,
+          "length": 65536
+        },
+        {
+          "offset": 4064793,
+          "address": 1165885440,
+          "length": 65536
+        },
+        {
+          "offset": 4130337,
+          "address": 1165950976,
+          "length": 65536
+        },
+        {
+          "offset": 4195881,
+          "address": 1166016512,
+          "length": 65536
+        },
+        {
+          "offset": 4261425,
+          "address": 1166082048,
+          "length": 65536
+        },
+        {
+          "offset": 4326969,
+          "address": 1166147584,
+          "length": 65536
+        },
+        {
+          "offset": 4392513,
+          "address": 1166213120,
+          "length": 65536
+        },
+        {
+          "offset": 4458057,
+          "address": 1166278656,
+          "length": 65536
+        },
+        {
+          "offset": 4523601,
+          "address": 1166344192,
+          "length": 65536
+        },
+        {
+          "offset": 4589145,
+          "address": 1166409728,
+          "length": 65536
+        },
+        {
+          "offset": 4654689,
+          "address": 1166475264,
+          "length": 65536
+        },
+        {
+          "offset": 4720233,
+          "address": 1166540800,
+          "length": 65536
+        },
+        {
+          "offset": 4785777,
+          "address": 1166606336,
+          "length": 65536
+        },
+        {
+          "offset": 4851321,
+          "address": 1166671872,
+          "length": 65536
+        },
+        {
+          "offset": 4916865,
+          "address": 1166737408,
+          "length": 65536
+        },
+        {
+          "offset": 4982409,
+          "address": 1166802944,
+          "length": 65536
+        },
+        {
+          "offset": 5047953,
+          "address": 1166868480,
+          "length": 65536
+        },
+        {
+          "offset": 5113497,
+          "address": 1166934016,
+          "length": 65536
+        },
+        {
+          "offset": 5179041,
+          "address": 1166999552,
+          "length": 65536
+        },
+        {
+          "offset": 5244585,
+          "address": 1167065088,
+          "length": 65536
+        },
+        {
+          "offset": 5310129,
+          "address": 1167130624,
+          "length": 65536
+        },
+        {
+          "offset": 5375673,
+          "address": 1167196160,
+          "length": 65536
+        },
+        {
+          "offset": 5441217,
+          "address": 1167261696,
+          "length": 65536
+        },
+        {
+          "offset": 5506761,
+          "address": 1167327232,
+          "length": 65536
+        },
+        {
+          "offset": 5572305,
+          "address": 1167392768,
+          "length": 65536
+        },
+        {
+          "offset": 5637849,
+          "address": 1167458304,
+          "length": 65536
+        },
+        {
+          "offset": 5703393,
+          "address": 1167523840,
+          "length": 65536
+        },
+        {
+          "offset": 5768937,
+          "address": 1167589376,
+          "length": 65536
+        },
+        {
+          "offset": 5834481,
+          "address": 1167654912,
+          "length": 65536
+        },
+        {
+          "offset": 5900025,
+          "address": 1167720448,
+          "length": 65536
+        },
+        {
+          "offset": 5965569,
+          "address": 1167785984,
+          "length": 65536
+        },
+        {
+          "offset": 6031113,
+          "address": 1167851520,
+          "length": 65536
+        },
+        {
+          "offset": 6096657,
+          "address": 1167917056,
+          "length": 65536
+        },
+        {
+          "offset": 6162201,
+          "address": 1167982592,
+          "length": 65536
+        },
+        {
+          "offset": 6227745,
+          "address": 1168048128,
+          "length": 65536
+        },
+        {
+          "offset": 6293289,
+          "address": 1168113664,
+          "length": 65536
+        },
+        {
+          "offset": 6358833,
+          "address": 1168179200,
+          "length": 65536
+        },
+        {
+          "offset": 6424377,
+          "address": 1168244736,
+          "length": 65536
+        },
+        {
+          "offset": 6489921,
+          "address": 1168310272,
+          "length": 65536
+        },
+        {
+          "offset": 6555465,
+          "address": 1168375808,
+          "length": 65536
+        },
+        {
+          "offset": 6621009,
+          "address": 1168441344,
+          "length": 65536
+        },
+        {
+          "offset": 6686553,
+          "address": 1168506880,
+          "length": 65536
+        },
+        {
+          "offset": 6752097,
+          "address": 1168572416,
+          "length": 65536
+        },
+        {
+          "offset": 6817641,
+          "address": 1168637952,
+          "length": 65536
+        },
+        {
+          "offset": 6883185,
+          "address": 1168703488,
+          "length": 65536
+        },
+        {
+          "offset": 6948729,
+          "address": 1168769024,
+          "length": 65536
+        },
+        {
+          "offset": 7014273,
+          "address": 1168834560,
+          "length": 65536
+        },
+        {
+          "offset": 7079817,
+          "address": 1168900096,
+          "length": 65536
+        },
+        {
+          "offset": 7145361,
+          "address": 1168965632,
+          "length": 65536
+        },
+        {
+          "offset": 7210905,
+          "address": 1169031168,
+          "length": 65536
+        },
+        {
+          "offset": 7276449,
+          "address": 1169096704,
+          "length": 65536
+        },
+        {
+          "offset": 7341993,
+          "address": 1169162240,
+          "length": 65536
+        },
+        {
+          "offset": 7407537,
+          "address": 1169227776,
+          "length": 65536
+        },
+        {
+          "offset": 7473081,
+          "address": 1169293312,
+          "length": 65536
+        },
+        {
+          "offset": 7538625,
+          "address": 1169358848,
+          "length": 65536
+        },
+        {
+          "offset": 7604169,
+          "address": 1169424384,
+          "length": 65536
+        },
+        {
+          "offset": 7669713,
+          "address": 1169489920,
+          "length": 65536
+        },
+        {
+          "offset": 7735257,
+          "address": 1169555456,
+          "length": 65536
+        },
+        {
+          "offset": 7800801,
+          "address": 1169620992,
+          "length": 65536
+        },
+        {
+          "offset": 7866345,
+          "address": 1169686528,
+          "length": 65536
+        },
+        {
+          "offset": 7931889,
+          "address": 1169752064,
+          "length": 65536
+        },
+        {
+          "offset": 7997433,
+          "address": 1169817600,
+          "length": 65536
+        },
+        {
+          "offset": 8062977,
+          "address": 1169883136,
+          "length": 65536
+        },
+        {
+          "offset": 8128521,
+          "address": 1169948672,
+          "length": 65536
+        },
+        {
+          "offset": 8194065,
+          "address": 1170014208,
+          "length": 65536
+        },
+        {
+          "offset": 8259609,
+          "address": 1170079744,
+          "length": 65536
+        },
+        {
+          "offset": 8325153,
+          "address": 1170145280,
+          "length": 65536
+        },
+        {
+          "offset": 8390697,
+          "address": 1170210816,
+          "length": 65536
+        },
+        {
+          "offset": 8456241,
+          "address": 1170276352,
+          "length": 65536
+        },
+        {
+          "offset": 8521785,
+          "address": 1170341888,
+          "length": 65536
+        },
+        {
+          "offset": 8587329,
+          "address": 1170407424,
+          "length": 65536
+        },
+        {
+          "offset": 8652873,
+          "address": 1170472960,
+          "length": 65536
+        },
+        {
+          "offset": 8718417,
+          "address": 1170538496,
+          "length": 65536
+        },
+        {
+          "offset": 8783961,
+          "address": 1170604032,
+          "length": 65536
+        },
+        {
+          "offset": 8849505,
+          "address": 1170669568,
+          "length": 65536
+        },
+        {
+          "offset": 8915049,
+          "address": 1170735104,
+          "length": 65536
+        },
+        {
+          "offset": 8980593,
+          "address": 1170800640,
+          "length": 65536
+        },
+        {
+          "offset": 9046137,
+          "address": 1170866176,
+          "length": 65536
+        },
+        {
+          "offset": 9111681,
+          "address": 1170931712,
+          "length": 65536
+        },
+        {
+          "offset": 9177225,
+          "address": 1170997248,
+          "length": 65536
+        },
+        {
+          "offset": 9242769,
+          "address": 1171062784,
+          "length": 65536
+        },
+        {
+          "offset": 9308313,
+          "address": 1171128320,
+          "length": 65536
+        },
+        {
+          "offset": 9373857,
+          "address": 1171193856,
+          "length": 65536
+        },
+        {
+          "offset": 9439401,
+          "address": 1171259392,
+          "length": 65536
+        },
+        {
+          "offset": 9504945,
+          "address": 1171324928,
+          "length": 65536
+        },
+        {
+          "offset": 9570489,
+          "address": 1171390464,
+          "length": 65536
+        },
+        {
+          "offset": 9636033,
+          "address": 1171456000,
+          "length": 65536
+        },
+        {
+          "offset": 9701577,
+          "address": 1171521536,
+          "length": 65536
+        },
+        {
+          "offset": 9767121,
+          "address": 1171587072,
+          "length": 65536
+        },
+        {
+          "offset": 9832665,
+          "address": 1171652608,
+          "length": 65536
+        },
+        {
+          "offset": 9898209,
+          "address": 1171718144,
+          "length": 65536
+        },
+        {
+          "offset": 9963753,
+          "address": 1171783680,
+          "length": 65536
+        },
+        {
+          "offset": 10029297,
+          "address": 1171849216,
+          "length": 65536
+        },
+        {
+          "offset": 10094841,
+          "address": 1171914752,
+          "length": 65536
+        },
+        {
+          "offset": 10160385,
+          "address": 1171980288,
+          "length": 65536
+        },
+        {
+          "offset": 10225929,
+          "address": 1172045824,
+          "length": 65536
+        },
+        {
+          "offset": 10291473,
+          "address": 1172111360,
+          "length": 65536
+        },
+        {
+          "offset": 10357017,
+          "address": 1172176896,
+          "length": 65536
+        },
+        {
+          "offset": 10422561,
+          "address": 1172242432,
+          "length": 65536
+        },
+        {
+          "offset": 10488105,
+          "address": 1172307968,
+          "length": 1028
+        }
+      ],
+      "record_stream_end": 10489133,
+      "payload_sha256": "1e8a8bcb49efc582add9612d3d35200568ed74c2cd6b0ec83f3240050f68cbbd",
+      "ranges": [
+        [
+          1161822208,
+          1172308996
+        ]
+      ]
+    }
+  ]
+}

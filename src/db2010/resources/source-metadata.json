@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "origin_repository": "git@github.com:danylokos/db2010-research.git",
+  "origin_commit": "47b9a8e019054275828eb244de16837a6becaf3b",
+  "boot_profile_origin": "runner experiment0271; configured storage export from w800-configured, with0268 device contracts",
+  "separation": "Paths, build setup, packaging and tests only; no device behavior or firmware changes.",
+  "native_gdfs": {
+    "format": "raw native GDFS NOR bank",
+    "image": "gdfs-nor.bin",
+    "address": "0x45f00000",
+    "end": "0x46000000",
+    "size_bytes": 1048576,
+    "sha256": "4118eb7369b5c2e8f8258591bd60c4a3e51eeeb9e6b6c917fb68e59b344a9e46",
+    "capture": "Immediately after native Close returned0 and drained982 imported unit writes, before native reopen/readback.",
+    "source_capture": "derived/experiments/0144-native-gdfs-full-restore/gdfs-nor-durable.bin",
+    "source_report": "0144-native-gdfs-full-restore/native-gdfs-restore.json.gz",
+    "logical_backup": "fw/w800i/gdfs/sony-ericsson/W800_GDFS.bin",
+    "logical_backup_sha256": "068022514e3dc40295b78a4ac81900f8917bb671744491ab68425abf3077c2e9",
+    "verified_records_after_reopen": 982,
+    "unchanged_by_reopen_and_reads": true
+  },
+  "configured_flash": {
+    "source_run": "w800-configured",
+    "source_run_created_utc": "2026-10-22T04:07:21.606583+00:00",
+    "source_run_identity": {
+      "size_bytes": 3013,
+      "sha256": "733bce0b69820e11f5ebc3fbaecc93bbab54bec66970e5771482f9a99c951135"
+    },
+    "source_flash_manifest_identity": {
+      "size_bytes": 1268,
+      "sha256": "158392aba8b9c75d3bebbfa4cba91cb6f7ed9fea90ca383b436fffbb05729615"
+    },
+    "images": {
+      "main": {
+        "input_path": "fw/provisioned/w800i-r1l002-cid49-main.bin",
+        "size_bytes": 20840448,
+        "sha256": "02b488e09aadebc67fa5346ff2d0a3b1379019b23b429027946c04f8eb9de69c"
+      },
+      "fs": {
+        "input_path": "fw/provisioned/w800i-r1l002-cid49-fs.bin",
+        "size_bytes": 11534336,
+        "sha256": "337433575500653d4af96223f065b8f56d15be3eb042d48de48a1ff1c0751a30"
+      },
+      "gdfs": {
+        "input_path": "fw/provisioned/w800i-r1l002-cid49-gdfs.bin",
+        "size_bytes": 1048576,
+        "sha256": "0f3d9fa732615ca64b32308b1ac680468eaba243f3e54024e72b73f04e511b4f"
+      },
+      "nand-main": {
+        "input_path": "fw/provisioned/w800i-r1l002-cid49-nand-main.bin",
+        "size_bytes": 33554432,
+        "sha256": "8e66eaaa540172c62d61138dbf97a7ab1cc2eedd5e73375dd419a3470b11ed96"
+      },
+      "nand-spare": {
+        "input_path": "fw/provisioned/w800i-r1l002-cid49-nand-spare.bin",
+        "size_bytes": 1048576,
+        "sha256": "8f084213d7f61fde43afaa0e9f9b52e553debd05117b1e541dc4aabb37e7e694"
+      }
+    },
+    "semantics": "Committed storage bytes only; fresh CPU/device state on every cold boot. Configured language and other native saved settings are storage data, not host-injected OS state.",
+    "unknown_byte_fill": 255
+  }
+}

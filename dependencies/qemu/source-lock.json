@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "upstream": "https://gitlab.com/qemu-project/qemu.git",
+  "tag": "v11.1.2",
+  "base_commit": "4fc49f46dc95d4a27de2509e7fceb2931e91faeb",
+  "fork_commit": "60db24c5ce984972a8d57a17ba61edafd08e09a2",
+  "configure": [
+    "--target-list=arm-softmmu",
+    "--without-default-devices",
+    "--enable-tcg",
+    "--enable-plugins",
+    "--disable-rust",
+    "--disable-docs",
+    "--disable-tools",
+    "--disable-guest-agent",
+    "--disable-werror",
+    "--disable-slirp",
+    "--disable-curses",
+    "--disable-gtk",
+    "--disable-sdl",
+    "--disable-opengl",
+    "--disable-vnc",
+    "--disable-capstone",
+    "--disable-virglrenderer",
+    "--disable-linux-aio",
+    "--disable-linux-io-uring",
+    "--disable-libnfs",
+    "--disable-libiscsi"
+  ],
+  "repository": "git@github.com:danylokos/qemu-db2010.git"
+}

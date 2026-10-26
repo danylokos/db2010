@@ -1,0 +1,51 @@
+{
+  "source": "W800i R1L002/CID49 EMEA1 FS /tpa/preset/system/settings/STARTUP_SOUND_SEMC.mp3",
+  "source_sha256": "d969ff2d51446652f4fa0363ab3815fcf3941bd62fd4d0ee8d24413aebb919a0",
+  "slice_offset": 0,
+  "slice_size_bytes": 7680,
+  "sha256": "05856b3e051d16be7b9c94d3745d6e20f09185f7be58e469ec4cc20140c8d30e",
+  "source_format": "MPEG1 LayerIII 320kbps 48000Hz stereo; eight960-byte frames,1152 sample frames each",
+  "purpose": "Compact native audio ingress/decoder regression fixture; no dependency on parent research artifacts.",
+  "scalar_minimp3_oracle": {
+    "1": {
+      "fnv1a64": "b54ec33c111e8b25",
+      "nonzero_samples": 0,
+      "pcm_frames": 1152
+    },
+    "2": {
+      "fnv1a64": "f3fb6a6deb5af325",
+      "nonzero_samples": 0,
+      "pcm_frames": 2304
+    },
+    "3": {
+      "fnv1a64": "f95006b412d75b25",
+      "nonzero_samples": 0,
+      "pcm_frames": 3456
+    },
+    "4": {
+      "fnv1a64": "68685c488793c325",
+      "nonzero_samples": 0,
+      "pcm_frames": 4608
+    },
+    "5": {
+      "fnv1a64": "35bc148944409b24",
+      "nonzero_samples": 41,
+      "pcm_frames": 5760
+    },
+    "6": {
+      "fnv1a64": "d7ec0d39dd6fbf6e",
+      "nonzero_samples": 2107,
+      "pcm_frames": 6912
+    },
+    "7": {
+      "fnv1a64": "5d0247ed0a45daa4",
+      "nonzero_samples": 4315,
+      "pcm_frames": 8064
+    },
+    "8": {
+      "fnv1a64": "f64ad83211642712",
+      "nonzero_samples": 6543,
+      "pcm_frames": 9216
+    }
+  }
+}

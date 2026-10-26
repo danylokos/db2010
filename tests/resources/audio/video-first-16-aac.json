@@ -1,0 +1,30 @@
+{
+  "source": "Original Demo Tour.mp4 first16 AAC units, with native4488E864 headers and per-unit halfword padding",
+  "media_sha256": "6894834956a3ba5cb9b1040fb7fe066da00ee015aaf7821c245b34d158dfeb44",
+  "size_bytes": 3980,
+  "sha256": "a55696ec1664f2f5bc7ced96231f79a5b51bc2bca77cd0b188122f19aa601c8a",
+  "source_frames": 16384,
+  "output_frames": 49152,
+  "output_pcm_sha256": "8b7fc82204260aaf8a40cb7b92e86d4a5af052cdc788a9ad954276d23cb5af05",
+  "output_pcm_fnv1a64": "5e566bb98f944f92",
+  "nonzero_samples": 88112,
+  "reference": "Continuous upstream FAAD2 2.11.2 fixed-point LC; retain priming unit; independent integer3:1 interpolation and final interval hold",
+  "aac_unit_padded_bytes": [
+    16,
+    122,
+    70,
+    210,
+    220,
+    238,
+    342,
+    348,
+    340,
+    324,
+    332,
+    342,
+    248,
+    220,
+    274,
+    334
+  ]
+}

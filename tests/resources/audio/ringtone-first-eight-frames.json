@@ -1,0 +1,22 @@
+{
+  "source": "W800i R1L002/CID49 /tpa/user/audio/Ringtones/Anybody there.mp3",
+  "source_sha256": "85325d87b2a9f24d9861b53e8f182fad25226f442a74ae6f3b692aa334f70a89",
+  "slice_offset": 2096,
+  "slice_size_bytes": 3344,
+  "sha256": "98e88dc002f429d22101b7488a49e8b60399e78fd846765cc781be3b9f7fdeed",
+  "source_format": "MPEG1 LayerIII128kbps44100Hz stereo; first eight418-byte padded frames",
+  "native_prefix": "First1000 encoded bytes match the guest source-adapter capture0244-ringtone-source-readonly. Leading2096-byte ID3v2 tag is skipped by native code.",
+  "purpose": "Compact native decode/conversion/checkpoint regression input; no parent research-data dependency.",
+  "scalar_minimp3_integer_linear_oracle": {
+    "encoded": {
+      "size_bytes": 3344,
+      "sha256": "98e88dc002f429d22101b7488a49e8b60399e78fd846765cc781be3b9f7fdeed"
+    },
+    "source_frames": 9216,
+    "output_frames": 10032,
+    "source_pcm_sha256": "1670538103ed32f6fc6a87c601edfc61b58885dc1473bfbab4deb72070f255d1",
+    "output_pcm_sha256": "057f69f7bc64496f25285de4c7801674c46b7777bd21b4643c360acc3e6ea253",
+    "output_pcm_fnv1a64": "2e91c22ac4229efc",
+    "nonzero_samples": 9373
+  }
+}

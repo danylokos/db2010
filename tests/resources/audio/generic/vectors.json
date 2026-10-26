@@ -1,0 +1,390 @@
+{
+  "generator": "generate_audio_vectors.py",
+  "generator_sha256": "fcc42a13643a9dab5b2e9310f4416983ac511110e5b543bd3fc635d03db42faa",
+  "encoder_version": "3.101 (beta 3, Feb  4 2026)",
+  "encoder_sha256": "e0676e6702b0095212724f2d298685d189dc3b54845c90cb1db1bd2970c29ed2",
+  "reference_source_sha256": "c9e6ac6d708eb9e30bad0cf504f50292a48300b342489a0f4ae4da78c95357c4",
+  "minimp3_sha256": "57e437c5c1f0e8b243885d3929c8973b5e6c778451e0100ab4251d19915cb3ad",
+  "numpy_version": "2.3.4",
+  "policy": "Whole-file scalar decode; global positions m*rate/48000; stereo duplication; integer linear interpolation, ties away from zero; final sample hold.",
+  "cases": [
+    {
+      "file": "8000-1ch.mp3",
+      "rate": 8000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 8000,
+        "out_samplerate": 8000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "c8989279b0b3ce0f8fc37055fdab1ce07245c39e735a2f2f5afcf3f1b8225012",
+      "source_frames": 2880,
+      "output_frames": 17280,
+      "output_sha256": "3b2a4a833a4f9310ee97778bfe76ba3211767fde697e5cce3c6fe2b7e1fc4f38",
+      "nonzero_samples": 31296
+    },
+    {
+      "file": "8000-2ch.mp3",
+      "rate": 8000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 8000,
+        "out_samplerate": 8000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "d7e6edadc3a8b88ead79e0e087b3d4fa17849aa7e8ab86b6f66c8a7d0e0d97e4",
+      "source_frames": 2880,
+      "output_frames": 17280,
+      "output_sha256": "dcbe3a4d856010d2d2d12082e72dbda956b6b44ccab2883fddf81b78f5fccacb",
+      "nonzero_samples": 32107
+    },
+    {
+      "file": "11025-1ch.mp3",
+      "rate": 11025,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 11025,
+        "out_samplerate": 11025,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "3e4b91a460e306ceb6f2541aaae95c59085d8a08e10df5661b96c53761d7561e",
+      "source_frames": 3456,
+      "output_frames": 15047,
+      "output_sha256": "ad31e4311b8cc5a804b95dfcfe0e49f2515bddf4bd79dbb5918a12faaed8ccc8",
+      "nonzero_samples": 27774
+    },
+    {
+      "file": "11025-2ch.mp3",
+      "rate": 11025,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 11025,
+        "out_samplerate": 11025,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "ff04e99406351215324430fbef629b8404a0da2c9cc5cc33bcb05e85d3368b9c",
+      "source_frames": 3456,
+      "output_frames": 15047,
+      "output_sha256": "0ed991e6384908779a15e8d085ca46907ff4607553999b168f3b83cb7454fcce",
+      "nonzero_samples": 28280
+    },
+    {
+      "file": "12000-1ch.mp3",
+      "rate": 12000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 12000,
+        "out_samplerate": 12000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "902afc201536ae67db123bc5790af231b3bfb89267c7ad58a28101c5feec44aa",
+      "source_frames": 4032,
+      "output_frames": 16128,
+      "output_sha256": "b2b990312fb1610b9d05a347326009096af61728ae469ef43999c0982ba8df3e",
+      "nonzero_samples": 29994
+    },
+    {
+      "file": "12000-2ch.mp3",
+      "rate": 12000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 12000,
+        "out_samplerate": 12000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 24,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "8096904b14e821c372f462cba71811b5cfee53f6e7d802e084461aa32a2a659f",
+      "source_frames": 4032,
+      "output_frames": 16128,
+      "output_sha256": "17155548d1d2b27b94c351ce5dafa9a8408262de47c00d8d3dca0ea7db8a0dfa",
+      "nonzero_samples": 29732
+    },
+    {
+      "file": "16000-1ch.mp3",
+      "rate": 16000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 16000,
+        "out_samplerate": 16000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "7de399e279a028694c22646875198aab5b673ebed6a69c58bd4c2e9f6cedfb15",
+      "source_frames": 4608,
+      "output_frames": 13824,
+      "output_sha256": "3378b58e1724ed74a50ff99cb09df55540d57ce55bfe00435b01298139e9ea20",
+      "nonzero_samples": 25888
+    },
+    {
+      "file": "16000-2ch.mp3",
+      "rate": 16000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 16000,
+        "out_samplerate": 16000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "2890719f51b53ab49588a842061c39ecb4d22c3e74a27cd37472d0964ecbd26c",
+      "source_frames": 4608,
+      "output_frames": 13824,
+      "output_sha256": "7fac609c8718dabbdf7208429e0f1418c9f84f715ab1170dc2fd96995afc4f87",
+      "nonzero_samples": 26166
+    },
+    {
+      "file": "22050-1ch.mp3",
+      "rate": 22050,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 22050,
+        "out_samplerate": 22050,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "6a12a6cae4a3be264ebde4322de81019eb2a95951900b0d1e3259b806d7667d2",
+      "source_frames": 5760,
+      "output_frames": 12539,
+      "output_sha256": "e9c771a4e1961ee95342a06711562590c80e2ec2cbcbb91d496a9f79508241ec",
+      "nonzero_samples": 23584
+    },
+    {
+      "file": "22050-2ch.mp3",
+      "rate": 22050,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 22050,
+        "out_samplerate": 22050,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "39e0718801834da284a79705226d26148f3189687e8a41c88e5c04b1be9304fa",
+      "source_frames": 5760,
+      "output_frames": 12539,
+      "output_sha256": "2c50708d0766c9859bd48d5ce0015b59e260fff3dbdba5cae93222b74be12fda",
+      "nonzero_samples": 23691
+    },
+    {
+      "file": "24000-1ch.mp3",
+      "rate": 24000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 24000,
+        "out_samplerate": 24000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "4d4fcc27438828844d6c264986e29f8a2698f5508493466957c72b07ad793e03",
+      "source_frames": 6336,
+      "output_frames": 12672,
+      "output_sha256": "12db35e763e42c6a9df97b6b08f95b8b650b4626cd18fb73264e810f55ee50f0",
+      "nonzero_samples": 23598
+    },
+    {
+      "file": "24000-2ch.mp3",
+      "rate": 24000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 24000,
+        "out_samplerate": 24000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 48,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "1adb72b5a94731ef48fa115597a288ba147ad1fe98299fe945f4a501f7334f33",
+      "source_frames": 6336,
+      "output_frames": 12672,
+      "output_sha256": "2f2d63ee3280a8618f1548a4370aa69118f33f7ba4098cd35e98d1e884b80062",
+      "nonzero_samples": 23085
+    },
+    {
+      "file": "32000-1ch.mp3",
+      "rate": 32000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 32000,
+        "out_samplerate": 32000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "7a0065be09532f0df3ed258a9f37a1d5063d8e276d9fcff028579927eba64c73",
+      "source_frames": 8064,
+      "output_frames": 12096,
+      "output_sha256": "8658a368a46636703574a16a9f79666901c4983567093e130583a7d984e5ca45",
+      "nonzero_samples": 21468
+    },
+    {
+      "file": "32000-2ch.mp3",
+      "rate": 32000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 32000,
+        "out_samplerate": 32000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "bfa86ddced4e888c1ff3f43e1650543aa2366c6fb64b55c1bbe66a66cb54af43",
+      "source_frames": 8064,
+      "output_frames": 12096,
+      "output_sha256": "c3369fb3c65c4d7fade008343f9f9ececf7df63427ca8bd7758dc69212f4e3e6",
+      "nonzero_samples": 20874
+    },
+    {
+      "file": "44100-1ch.mp3",
+      "rate": 44100,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 44100,
+        "out_samplerate": 44100,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "021a58d06933c18e8c80ed3fd19c2d2cd7f56e4080c342ea674182c01b3cd2e8",
+      "source_frames": 10368,
+      "output_frames": 11285,
+      "output_sha256": "00eb6f1a3796d8a547e8e7b641c8e640c49a4da5ba4a5c016f74779fb0139e32",
+      "nonzero_samples": 19446
+    },
+    {
+      "file": "44100-2ch.mp3",
+      "rate": 44100,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 44100,
+        "out_samplerate": 44100,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "386e2ccbc0ed6dbb9d5e477c7ce6fb9f9d90c2104490995802d6f584cc6445ab",
+      "source_frames": 10368,
+      "output_frames": 11285,
+      "output_sha256": "f331c818cf4a553a0d8b9db82aa789dc6854b37eeedfa68c13c11fb90257b77f",
+      "nonzero_samples": 19500
+    },
+    {
+      "file": "48000-1ch.mp3",
+      "rate": 48000,
+      "channels": 1,
+      "settings": {
+        "in_samplerate": 48000,
+        "out_samplerate": 48000,
+        "num_channels": 2,
+        "mode": 3,
+        "VBR": 0,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": true,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "ba4bebe83f06f2c1d9dde172a509eff43e7c9cb12f368c2d2d4974c94cd83012",
+      "source_frames": 11520,
+      "output_frames": 11520,
+      "output_sha256": "a6644b4386eda73e3c950075fe328b565b5b025d3ef7a71c78fb8d06f3562dba",
+      "nonzero_samples": 19668
+    },
+    {
+      "file": "48000-2ch.mp3",
+      "rate": 48000,
+      "channels": 2,
+      "settings": {
+        "in_samplerate": 48000,
+        "out_samplerate": 48000,
+        "num_channels": 2,
+        "mode": 1,
+        "VBR": 4,
+        "VBR_q": 4,
+        "brate": 96,
+        "error_protection": false,
+        "bWriteVbrTag": 0
+      },
+      "encoded_sha256": "032154ed4629c6ae6899a077280cc6afe9ec4c9d1500967603750bff6db0350e",
+      "source_frames": 11520,
+      "output_frames": 11520,
+      "output_sha256": "f07851f3808a405678823e6c4bfec02700eb1619bcdc6d53bb1732b5df40ace0",
+      "nonzero_samples": 19413
+    }
+  ]
+}

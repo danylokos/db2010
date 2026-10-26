@@ -1,0 +1,9 @@
+{
+  "policy": "Frozen pure-device regression oracles; no Unicorn CPU execution.",
+  "sources": {
+    "control/pl080.py": "4a8de900b84b162869878a450923252b738f2403f53dc484b9c1e562137bab03",
+    "serial/i2c.py": "8e6418ebb6394bd3b8de294e9396eef66e1dafe439391f59841db50c468a9647",
+    "memory/nand.py": "d79c35a1eb0e91e129b5ea4e8ac607f10ca3b7807f7e25ee06d8757d5dae7656",
+    "serial/serial_lines.py": "50469e27c9794b800277eac28c2597c7f867abe98d4ec97bdfdcea790c7a74f6"
+  }
+}

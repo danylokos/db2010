@@ -1,0 +1,15 @@
+{
+  "format": "raw native GDFS NOR bank",
+  "image": "gdfs-nor.bin",
+  "address": "0x45f00000",
+  "end": "0x46000000",
+  "size_bytes": 1048576,
+  "sha256": "4118eb7369b5c2e8f8258591bd60c4a3e51eeeb9e6b6c917fb68e59b344a9e46",
+  "capture": "Immediately after native Close returned0 and drained982 imported unit writes, before native reopen/readback.",
+  "source_capture": "derived/experiments/0144-native-gdfs-full-restore/gdfs-nor-durable.bin",
+  "source_report": "0144-native-gdfs-full-restore/native-gdfs-restore.json.gz",
+  "logical_backup": "fw/w800i/gdfs/sony-ericsson/W800_GDFS.bin",
+  "logical_backup_sha256": "068022514e3dc40295b78a4ac81900f8917bb671744491ab68425abf3077c2e9",
+  "verified_records_after_reopen": 982,
+  "unchanged_by_reopen_and_reads": true
+}
